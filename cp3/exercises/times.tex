@@ -1,0 +1,35 @@
+\begin{enumerate}[label=\alph*)]
+    \item Escriba un programa que, dada una hora inicial en formato de 24 horas (representada por dos enteros: horas y minutos) y un intervalo de tiempo (también representado por dos enteros: horas y minutos), calcule la nueva hora tras sumar el intervalo al tiempo inicial. Asegúrese de ajustar los minutos y las horas para mantener el formato de 24 horas.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \(h = 3, m = 30, \Delta h = 0, \Delta m = 70\)\\
+              Salida: \texttt{La nueva hora es 4:40.}
+        \item Entrada: \(h = 10, m = 45, \Delta h = 1, \Delta m = 30\)\\
+              Salida: \texttt{La nueva hora es 12:15.}
+        \item Entrada: \(h = 23, m = 50, \Delta h = 2, \Delta m = 20\)\\
+              Salida: \texttt{La nueva hora es 2:10.}
+        \item Entrada: \(h = 6, m = 10, \Delta h = 0, \Delta m = 50\)\\
+              Salida: \texttt{La nueva hora es 7:00.}
+        \item Entrada: \(h = 14, m = 30, \Delta h = 9, \Delta m = 90\)\\
+              Salida: \texttt{La nueva hora es 0:00.}
+    \end{itemize}
+
+    \item Escriba un programa que, dada la hora de salida de un avión y su hora de llegada (ambas representadas por dos enteros: horas y minutos en formato de 24 horas), determine el tiempo total de vuelo. Asegúrese de manejar correctamente los casos en los que el vuelo cruza la medianoche.\\
+    Se asegura que:
+    \begin{itemize}
+        \item El tiempo de vuelo no excederá las \(24\) horas.
+        \item No hay cambios de zonas horarias.
+    \end{itemize}
+    % \textbf{Pista:} Convierta las horas y minutos a un único valor en minutos, calcule la diferencia y convierta el resultado de vuelta a horas y minutos.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \(h_{\text{salida}} = 10, m_{\text{salida}} = 20, h_{\text{llegada}} = 13, m_{\text{llegada}} = 50\)\\
+              Salida: \texttt{El tiempo de vuelo es 3 horas y 30 minutos.}
+        \item Entrada: \(h_{\text{salida}} = 23, m_{\text{salida}} = 45, h_{\text{llegada}} = 2, m_{\text{llegada}} = 15\)\\
+              Salida: \texttt{El tiempo de vuelo es 2 horas y 30 minutos.}
+        \item Entrada: \(h_{\text{salida}} = 14, m_{\text{salida}} = 0, h_{\text{llegada}} = 14, m_{\text{llegada}} = 0\)\\
+              Salida: \texttt{El tiempo de vuelo es 0 horas y 0 minutos.}
+        \item Entrada: \(h_{\text{salida}} = 5, m_{\text{salida}} = 30, h_{\text{llegada}} = 8, m_{\text{llegada}} = 10\)\\
+              Salida: \texttt{El tiempo de vuelo es 2 horas y 40 minutos.}
+    \end{itemize}
+\end{enumerate}

@@ -1,0 +1,153 @@
+Imaginemos un array de tamaño $n = 5$. Nos podemos dar cuenta de que el resultado de rotar 3 veces es equivalente al de rotar 8, o al de rotar 13. Esto se debe a que al rotar el array tantas veces como su tamaño, el array vuelve a su estado original. Por lo tanto, al rotar más de $n$ veces, estamos realizando rotaciones adicionales que no cambian el resultado final. Al aplicar la operación módulo (\%), obtenemos el menor número de rotaciones necesarias para lograr el mismo resultado.
+
+Veamos qué pasa con las rotaciones negativas. Podemos darnos cuenta de que, en nuestro array de 5 elementos, rotar -2 veces es equivalente a rotar -7, o -22 veces, pero también es equivalente a rotar 3 veces. 
+
+Como la operación módulo (\%) en C\# da como resultado números en el rango \([-(k-1), k-1]\). Si el resultado es menor que 0, podemos sumarle \( k \) para obtener un valor positivo. Por ejemplo:
+
+\[
+-22 \% 5 = -2
+\]
+\[
+-2 + 5 = 3
+\]
+
+De esta manera, siempre obtenemos la mínima cantidad de veces que debemos rotar a la derecha para obtener el mismo resultado.
+
+Primero podemos resolver el problema de rotar una vez a la derecha. La rotación una vez a la derecha implica mover cada elemento del array una posición hacia adelante, y mover el último elemento al primer lugar.
+
+\begin{lstlisting}
+private static void RotateOnce(int[] array)
+{
+    int lastElement = array[^1]; // Notación de C# equivalente a array[array.Length - 1]
+    
+    for (int i = array.Length - 1; i > 0; i--)
+    {
+        array[i] = array[i - 1];
+    }
+    
+    array[0] = lastElement;
+}
+\end{lstlisting}
+
+Luego, podemos llamar $k$ veces a este método para lograr la rotación deseada:
+
+\begin{lstlisting}
+public static void Rotate(int[] array, int times)
+{
+    if (array.Length == 0)
+        return;
+
+    // Normalizar times para que esté dentro del rango de la longitud del array
+    times %= array.Length;
+    
+    if (times < 0)
+        times += array.Length;
+        
+    for (int i = 0; i < times; i++)
+    {
+        RotateOnce(array);
+    }
+}
+\end{lstlisting}
+
+En general, podemos determinar la posición final de cada elemento en la rotación, ya que al mover cada elemento $k$ posiciones a la derecha, este se ubicará en una posición específica calculable dentro del array. 
+
+\begin{lstlisting}
+public static void Rotate(int[] array, int times)
+{
+    if (array.Length == 0)
+            return;
+            
+    // Normalizar times para que esté dentro del rango de la longitud del array
+    times %= array.Length;
+
+    if (times < 0)
+        times += array.Length;
+        
+    // Copiar los elementos del array original en el array temporal
+    // en sus nuevas posiciones rotadas
+    int[] temp = new int[array.Length];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        temp[(i + times) % array.Length] = array[i];
+    }
+
+    // Copiar los elementos ya rotados al array original
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = temp[i];
+    }
+}
+\end{lstlisting}
+
+Podemos solucionar el problema sin usar un array auxiliar. Notemos que siempre sabemos en qué posición terminará el elemento, pero no podemos moverlo y ya, pues sobreescribiríamos el elemento que estaba en la posición a donde lo estamos moviendo.
+
+Supongamos que tenemos el array $[1, 2, 3, 4, 5, 6]$, de tamaño $n = 6$ y queremos rotar $k = 4$ veces. Comenzamos en la posición 0  y sigamos estos pasos:
+\begin{enumerate}
+    \item El valor en la posición 0 (valor 1) se mueve a la posición 4. 
+    \[[1, 2, 3, 4, 1, 6]\]
+    \item El valor que estaba en la posición 4 (valor 5) se mueve a la posición 2. 
+    \[[1, 2, 5, 4, 1, 6]\]
+    \item El valor que estaba en la posición 2 (valor 3) se mueve a la posición 0 (la posición de inicio). 
+    \[[3, 2, 5, 4, 1, 6]\]
+\end{enumerate}
+
+Notemos que ya hemos cubierto los índices [0, 2, 4], o sea, los valores que están en estos índices están correctamente rotados.
+
+Ahora hagamos lo mismo comenzando en la posición 1 en el array reultante $[3, 2, 5, 4, 1, 6]$:
+\begin{enumerate}
+    \item El valor en la posición 1 (valor 2) se mueve a la posición 5. 
+    \[[3, 2, 5, 4, 1, 2]\]
+    \item El valor que estaba en la posición 5 (valor 6) se mueve a la posición 3. 
+    \[[3, 2, 5, 6, 1, 2]\]
+    \item El valor que estaba en la posición 3 (valor 4) se mueve a la posición 1 (la posición de inicio). 
+    \[[3, 4, 5, 6, 1, 2]\]
+\end{enumerate}
+
+Notemos que ya hemos cubierto correctamente todos los índices del array, por tanto ya quedó completamente rotado.
+
+El siguiente código rota correctamente un array $k$ veces:
+
+\begin{lstlisting}
+public static void Rotate(int[] array, int times)
+{
+    if (array.Length == 0)
+        return;
+
+    // Normalizar times para que esté dentro del rango de la longitud del array
+    times %= array.Length;
+    if (times < 0)
+        times += array.Length;
+        
+    int startIndex = 0;
+    int totalCount = 0;
+    
+    while (totalCount < array.Length)
+    {
+        totalCount += RotateCycle(array, times, startIndex);
+    }
+}
+    
+// Ejecuta un ciclo de rotaciones comenzando desde 'startIndex'
+// y devuelve la cantidad de elementos que fueron rotados en ese ciclo
+public static int RotateCycle(int[] array, int times, int startIndex)
+{
+    int currentIndex = startIndex;
+    int currentElement = array[startIndex];
+    int count = 0;
+    do
+    {
+        int nextIndex = (currentIndex + times) % array.Length;
+        
+        int temp = array[nextIndex];
+        array[nextIndex] = currentElement;
+        currentElement = temp;
+        
+        currentIndex = nextIndex;
+        count++;
+    } while (currentIndex != startIndex);
+    return count;
+}
+\end{lstlisting}
+

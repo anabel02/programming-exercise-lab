@@ -1,0 +1,813 @@
+\section{Operaciones básicas}
+\begin{enumerate}
+% Basic
+    \item \textbf{Doble}\\
+    Escribe un programa que lea de la consola un número entero y muestre en la consola su doble.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{4}\\
+              Salida: \texttt{8}
+        \item Entrada: \texttt{-5}\\
+              Salida: \texttt{-10}
+        \item Entrada: \texttt{0}\\
+              Salida: \texttt{0}
+    \end{itemize}
+    
+    \item \textbf{Área de un triángulo}\\
+    Escribe un programa que lea de la consola la base \(b\) y la altura \(h\) de un triángulo, calcule su área y la escriba en la consola.\\
+    \[
+    \text{Área} = \frac{b \cdot h}{2}
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{b = 10, h = 5}\\
+              Salida: \texttt{Área = 25}
+        \item Entrada: \texttt{b = 3, h = 4}\\
+              Salida: \texttt{Área = 6}
+        \item Entrada: \texttt{b = 0, h = 7}\\
+              Salida: \texttt{Área = 0}
+    \end{itemize}
+
+    \item \textbf{Promedio de tres números}\\
+    Escribe un programa que lea tres números reales \(x\), \(y\) y \(z\) de la consola, calcule su promedio y lo muestre en la consola.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{3.0, 4.0, 5.0}\\
+              Salida: \texttt{Promedio = 4.0}
+        \item Entrada: \texttt{-1.0, -2.0, -3.0}\\
+              Salida: \texttt{Promedio = -2.0}
+        \item Entrada: \texttt{10.5, 20.5, 30.5}\\
+              Salida: \texttt{Promedio = 20.5}
+    \end{itemize}
+
+    \item \textbf{Cambio de temperatura}\\
+    Escribe un programa que lea de la consola una temperatura en grados Fahrenheit (\(F\)), la convierta a grados Celsius (\(C\)) y muestre el resultado en la consola.\\ 
+    \[
+    C = \frac{5}{9} \cdot (F - 32)
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{F = 50}\\
+              Salida: \texttt{C = 10}
+        \item Entrada: \texttt{F = 32}\\
+              Salida: \texttt{C = 0}
+        \item Entrada: \texttt{F = 100}\\
+              Salida: \texttt{C = 37.78}
+    \end{itemize}
+
+    \item \textbf{Perímetro y área de un círculo}\\
+    Escribe un programa que lea de la consola el radio \(r\) de un círculo, calcule su perímetro y su área, y muestre ambos resultados en la consola.\\   
+    \[
+    \text{Perímetro} = 2\pi r, \quad \text{Área} = \pi r^2
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{r = 3}\\
+              Salida: \texttt{Perímetro = 18.8496, Área = 28.2744}
+        \item Entrada: \texttt{r = 0}\\
+              Salida: \texttt{Perímetro = 0, Área = 0}
+        \item Entrada: \texttt{r = 1.5}\\
+              Salida: \texttt{Perímetro = 9.4248, Área = 7.0686}
+    \end{itemize}
+
+    \item \textbf{Hipotenusa}\\
+    Escribe un programa que lea de la consola los catetos \(a\) y \(b\) de un triángulo rectángulo, calcule la longitud de su hipotenusa y la escriba en la consola.\\
+    \[
+    c = \sqrt{a^2 + b^2}
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{a = 3, b = 4}\\
+              Salida: \texttt{c = 5}
+        \item Entrada: \texttt{a = 5, b = 12}\\
+              Salida: \texttt{c = 13}
+        \item Entrada: \texttt{a = 8, b = 15}\\
+              Salida: \texttt{c = 17}
+    \end{itemize}
+
+% Intermediate
+    \item \textbf{Suma de dígitos}\\
+    Escribe un programa que lea un número entero de tres cifras \(n\) de la consola, calcule la suma de sus dígitos y la muestre en la consola.\\
+    Ejemplo: Si \(n = 123\), entonces:
+    \[
+    \text{suma} = 1 + 2 + 3
+    \]
+    Pista: Usa la división y resto de la división para extraer los dígitos:
+    \[
+    \text{Centena} = \frac{n}{100}, \quad \text{Decena} = \frac{(n \% 100)}{10}, \quad \text{Unidad} = n \% 10
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{n = 123}\\
+              Salida: \texttt{Suma = 6}
+        \item Entrada: \texttt{n = 456}\\
+              Salida: \texttt{Suma = 15}
+        \item Entrada: \texttt{n = 789}\\
+              Salida: \texttt{Suma = 24}
+    \end{itemize}
+    
+    \item \textbf{Distancia entre dos puntos}\\
+    Escribe un programa que lea de la consola las coordenadas de dos puntos \( (x_1, y_1) \) y \( (x_2, y_2) \) en el plano, calcule la distancia entre ellos y escriba el resultado en la consola.\\
+    \[
+    \text{Distancia} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{(x1 = 1, y1 = 2), (x2 = 4, y2 = 6)}\\
+              Salida: \texttt{Distancia = 5}
+        \item Entrada: \texttt{(x1 = 0, y1 = 0), (x2 = 3, y2 = 4)}\\
+              Salida: \texttt{Distancia = 5}
+        \item Entrada: \texttt{(x1 = -1, y1 = -1), (x2 = 2, y2 = 3)}\\
+              Salida: \texttt{Distancia = 5}
+    \end{itemize}
+
+    \item \textbf{Ecuación cuadrática}\\
+    \input{cp2/exercises/quadratic_equation}
+
+\subsection*{Más avanzados}
+% Advanced
+    \item \textbf{Minutos a horas}\\
+    Escribe un programa que lea un número entero \(t\) que representa una cantidad de minutos de la consola, calcule cuántas horas completas y cuántos minutos sobran, y muestre ambos valores en la consola.\\
+    \textbf{Pista:} Usa la división y resto de la división para manejar cuando te pases de 60:
+    \[
+    \text{Horas} = \frac{t}{60}, \quad \text{Minutos} = t \% 60
+    \]
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+    \item Entrada: \texttt{t = 130}\\
+          Salida: \texttt{Horas = 2, Minutos = 10}
+    \item Entrada: \texttt{t = 75}\\
+          Salida: \texttt{Horas = 1, Minutos = 15}
+    \item Entrada: \texttt{t = 45}\\
+          Salida: \texttt{Horas = 0, Minutos = 45}
+\end{itemize}
+    
+    \item \textbf{Mayor}\\
+    Reciba dos números enteros de la consola y determine cuál de los dos es mayor sin utilizar $Math.Max$ y $Math.Min$. No utilice condicionales.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+    \item Entrada: \texttt{a = 5, b = 10}\\
+          Salida: \texttt{Mayor = 10}
+    \item Entrada: \texttt{a = -3, b = -7}\\
+          Salida: \texttt{Mayor = -3}
+    \item Entrada: \texttt{a = 12, b = 12}\\
+          Salida: \texttt{Mayor = 12}
+    \end{itemize}
+    
+    \item \textbf{Valor medio}\\
+    Reciba tres números enteros. Muestre en la consola el de valor medio (Utilice $Math.Max$ y $Math.Min$) y el promedio de estos.
+    \begin{itemize}
+    \subsection*{Ejemplos:}
+    \item Entrada: \texttt{a = 5, b = 10, c = 15}\\
+          Salida: \texttt{Valor medio = 10, Promedio = 10}
+    \item Entrada: \texttt{a = -3, b = 4, c = 8}\\
+          Salida: \texttt{Valor medio = 4, Promedio = 3}
+    \item Entrada: \texttt{a = 7, b = 7, c = 7}\\
+          Salida: \texttt{Valor medio = 7, Promedio = 7}
+\end{itemize}
+        
+    \item \textbf{Intercambio de variables}\\
+    \input{cp2/exercises/swap_variables}
+
+    \item \textbf{Circunferencias}\\
+    \input{cp2/exercises/circunferences}
+
+    \item \textbf{Velocidad de escritura}\\
+    \input{cp2/exercises/typing_speed}
+
+    \item \textbf{Fecha de nacimiento}\\
+    \input{cp2/exercises/birthdate}
+\end{enumerate}
+
+\newpage
+\section{Condicionales}
+\begin{enumerate}
+% Basic 
+    \item \textbf{Número positivo, negativo o cero}\\
+    Escribe un programa que lea un número entero y determine si es positivo, negativo o igual a cero.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{-5}\\
+              Salida: \texttt{El número es negativo.}
+        \item Entrada: \texttt{0}\\
+              Salida: \texttt{El número es igual a cero.}
+        \item Entrada: \texttt{8}\\
+              Salida: \texttt{El número es positivo.}
+    \end{itemize}
+
+    \item \textbf{Mayor de dos números}\\
+    Lee dos números enteros y muestra cuál de ellos es mayor, o indica si son iguales.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{12, 7}\\
+              Salida: \texttt{El número mayor es 12.}
+        \item Entrada: \texttt{4, 9}\\
+              Salida: \texttt{El número mayor es 9.}
+        \item Entrada: \texttt{10, 10}\\
+              Salida: \texttt{Ambos números son iguales.}
+    \end{itemize}
+
+    \item \textbf{Par o impar}\\
+    Escribe un programa que determine si un número entero no negativo dado es par o impar.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{6}\\
+              Salida: \texttt{El número es par.}
+        \item Entrada: \texttt{13}\\
+              Salida: \texttt{El número es impar.}
+        \item Entrada: \texttt{0}\\
+              Salida: \texttt{El número es par.}
+    \end{itemize}
+
+    \item \textbf{Calificación}\\
+    Lee una calificación numérica (de 0 a 100) y determina si el estudiante aprobó o reprobó (se aprueba con 60 o más).
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{75}\\
+              Salida: \texttt{El estudiante aprobó.}
+        \item Entrada: \texttt{50}\\
+              Salida: \texttt{El estudiante reprobó.}
+        \item Entrada: \texttt{60}\\
+              Salida: \texttt{El estudiante aprobó.}
+    \end{itemize}
+    
+    \item \textbf{Divisible}\\
+    \input{cp3/exercises/divisible}
+
+    \item \textbf{Valor absoluto}\\
+    \input{cp3/exercises/abs}
+
+% Intermediate
+    \item \textbf{Mayor de 3}\\
+    \input{cp3/exercises/maximum_of_three}
+
+    \item \textbf{Categoría de edad}\\
+    Escribe un programa que clasifique a una persona según su edad:
+    \begin{itemize}
+        \item Niño (0-12 años)
+        \item Adolescente (13-17 años)
+        \item Adulto (18-64 años)
+        \item Adulto mayor (65 o más años)
+    \end{itemize}
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{7}\\
+              Salida: \texttt{Niño}
+        \item Entrada: \texttt{15}\\
+              Salida: \texttt{Adolescente}
+        \item Entrada: \texttt{30}\\
+              Salida: \texttt{Adulto}
+        \item Entrada: \texttt{65}\\
+              Salida: \texttt{Adulto mayor}
+    \end{itemize}
+
+    \item \textbf{Triángulo válido}\\
+    Dados tres números que representan las longitudes de los lados de un triángulo, determina si forman un triángulo válido. Un triángulo es válido si la suma de las longitudes de dos lados es mayor que la longitud del tercer lado para cualquier combinación de lados.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{3, 4, 5}\\
+              Salida: \texttt{Triángulo válido}
+        \item Entrada: \texttt{1, 2, 3}\\
+              Salida: \texttt{No es un triángulo válido}
+        \item Entrada: \texttt{6, 8, 10}\\
+              Salida: \texttt{Triángulo válido}
+    \end{itemize}
+
+    \item \textbf{Número dentro de un rango}\\
+    Lee tres números \(a\), \(b\), y \(x\) (donde \(a \leq b\)) y determina si \(x\) se encuentra dentro del rango cerrado \([a, b]\).
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{2, 8, 5}\\
+              Salida: \texttt{Sí, 5 está dentro del rango [2, 8].}
+        \item Entrada: \texttt{1, 10, 15}\\
+              Salida: \texttt{No, 15 no está dentro del rango [1, 10].}
+        \item Entrada: \texttt{3, 9, 9}\\
+              Salida: \texttt{Sí, 9 está dentro del rango [3, 9].}
+    \end{itemize}
+
+% Advanced
+    \item \textbf{Días en un mes}\\
+    Escribe un programa que lea un número que representa un mes (1 para enero, 2 para febrero, etc.) y muestre la cantidad de días que tiene ese mes. Considera años no bisiestos, o sea, febrero siempre tendría 28 días.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{1}\\
+              Salida: \texttt{31 días}
+        \item Entrada: \texttt{2}\\
+              Salida: \texttt{28 días}
+        \item Entrada: \texttt{4}\\
+              Salida: \texttt{30 días}
+    \end{itemize}
+
+    \item \textbf{Año bisiesto}\\
+    Escribe un programa que determine si un año es bisiesto o no. Un año es bisiesto si es divisible entre 4, pero no es divisible entre 100, a menos que también sea divisible entre 400.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{2020}\\
+              Salida: \texttt{El año 2020 es bisiesto.}
+        \item Entrada: \texttt{1900}\\
+              Salida: \texttt{El año 1900 no es bisiesto.}
+        \item Entrada: \texttt{2000}\\
+              Salida: \texttt{El año 2000 es bisiesto.}
+    \end{itemize}
+
+    \item \textbf{Calculadora básica}\\
+    \input{cp3/exercises/calculator}
+
+\subsection*{Más avanzados}
+    \item \textbf{Cálculo de tarifas}\\
+    Escribe un programa que calcule el costo de estacionamiento según el tiempo de permanencia:
+    \begin{itemize}
+        \item Primera hora: \$70
+        \item Horas adicionales: \$50 cada una
+        \item Máximo diario: \$1000
+    \end{itemize}
+    Lee el tiempo de permanencia (en horas) y calcula el costo total.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{1}\\
+              Salida: \texttt{El costo total es: \$70}
+        \item Entrada: \texttt{5}\\
+              Salida: \texttt{El costo total es: \$270}
+        \item Entrada: \texttt{20}\\
+              Salida: \texttt{El costo total es: \$1000}
+    \end{itemize}
+    
+    \item \textbf{Determinando el sexo}\\
+    \input{cp3/exercises/gender_id}
+\end{enumerate}
+
+\newpage
+\section{Métodos}
+\begin{enumerate}
+% Basic
+    \item \textbf{Validando horas}\\
+     Dada una hora en formato de 24 horas representada por dos enteros horas y minutos, determine si es válida o no.
+     \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \texttt{h = 13, m = 45}\\
+              Salida: \texttt{La hora es válida.}
+        \item Entrada: \texttt{h = 25, m = 10}\\
+              Salida: \texttt{La hora no es válida.}
+        \item Entrada: \texttt{h = 7, m = 60}\\
+              Salida: \texttt{La hora no es válida.}
+        \item Entrada: \texttt{h = 0, m = 0}\\
+              Salida: \texttt{La hora es válida.}
+        \item Entrada: \texttt{h = 23, m = 59}\\
+              Salida: \texttt{La hora es válida.}
+    \end{itemize}
+
+     \item \textbf{Tipo de triángulo}\\
+    \input{cp3/exercises/triangle_type}
+
+% Intermediate
+    \item \textbf{Validando fechas}\\
+    \input{cp3/exercises/valid_date}
+    
+    \item \textbf{Conversión de Hora} \\
+    Escribe un método que reciba una hora en formato de 24 horas representada por dos enteros horas y minutos y devuelva una cadena que represente la hora en formato de 12 horas, incluyendo ``AM'' o ``PM''.
+    \subsection*{Ejemplos}
+    \begin{itemize}
+        \item Entrada: h = 14, m = 30 (\texttt{"14:30"})\\
+              Salida: \texttt{"2:30 PM"}
+        \item Entrada: h - 9, m = 15 (\texttt{"09:15"})\\
+              Salida: \texttt{"9:15 AM"}
+        \item Entrada: h = 0, m = 0 (\texttt{"00:00"})\\
+              Salida: \texttt{"12:00 AM"}
+        \item Entrada: h = 12, m = 12 (\texttt{"12:00"})\\
+              Salida: \texttt{"12:00 M"}
+    \end{itemize}
+
+\subsection*{Más avanzados}
+    % \item \textbf{Factorial}\\
+    % \input{cp3/exercises/factorial}
+    % No utilice ciclos.
+
+    % \item \textbf{Imprimiendo números}
+    % \input{cp3/exercises/print_numbers}
+
+    \item \textbf{Día siguiente}\\
+    \input{cp3/exercises/next_day}
+
+    \item \textbf{Horas}
+    \input{cp3/exercises/times}
+
+    \item \textbf{Signo zodiacal}\\
+    \input{cp3/exercises/zodiac_sign}
+
+% Advanced
+    \item \textbf{Día de la semana}\\
+    \input{cp3/exercises/day_of_week}
+
+    \item \textbf{Distancia entre fechas}\\
+    \input{cp3/exercises/days_between}
+
+    \item \textbf{Punto interior}\\
+    \input{cp3/exercises/interior_point}
+\end{enumerate}
+
+\newpage
+\section{Ciclos}
+\begin{enumerate}
+% Basic
+    \item \textbf{Factorial}\\
+    \input{cp3/exercises/factorial}
+
+    \item \textbf{Sumando impares}\\
+    \input{cp4/exercises/odds_sum}
+
+    \item \textbf{Máximo, mínimo y promedio}\\
+    \input{cp4/exercises/lazy_max_min_avg}
+
+    \item \textbf{Es primo}\\
+    Escribe un programa que determine si un entero es primo o no.
+    
+    Un número entero positivo \( n \) se dice que es \textit{primo} si tiene exactamente dos divisores distintos: \( 1 \) y el propio número \( n \). Es decir, \( n \) es primo si y solo si no existen otros divisores \( d \) tal que \( 1 < d < n \) y \( d \) divide a \( n \). Formalmente, podemos escribir:
+
+    \[
+    n \text{ es primo} \iff \forall d \in \mathbb{Z}^+ \, \text{se cumple que si} \, d \mid n \text{, entonces } d = 1 \text{ o } d = n.
+    \]
+    
+    Donde \( \mathbb{Z}^+ \) representa el conjunto de los números enteros positivos, y \( d \mid n \) denota que \( d \) divide a \( n \), es decir, \( n \) es divisible por \( d \).
+    \subsection*{Ejemplos}
+    \begin{itemize}
+        \item Entrada: \texttt{10}\\
+              Salida: \textcolor{blue}{false}
+        \item Entrada: \texttt{29}\\
+              Salida: \textcolor{blue}{true}
+        \item Entrada: \texttt{15}\\
+              Salida: \textcolor{blue}{false}
+        \item Entrada: \texttt{31}\\
+              Salida: \textcolor{blue}{true}
+    \end{itemize}
+% Intermediate
+    \item \textbf{n-ésimo primo}\\
+    Implemente un método que devuelva el $n$-ésimo primo de la sucesión de números primos.
+    \subsection*{Ejemplos:}
+    \begin{itemize} 
+        \item Entrada: \texttt{1}\\ 
+        Salida: \texttt{2}
+        \item Entrada: \texttt{3}\\
+        Salida: \texttt{5}
+    
+        \item Entrada: \texttt{5}\\
+              Salida: \texttt{11}
+        
+        \item Entrada: \texttt{10}\\
+              Salida: \texttt{29}
+        
+        \item Entrada: \texttt{15}\\
+              Salida: \texttt{47}
+    \end{itemize}
+    
+    \item \textbf{Es perfecto}\\
+    \input{cp4/exercises/perfect_number}
+
+    \item \textbf{Es narcisista}\\
+    \input{cp4/exercises/armstrong_number}
+
+    \item \textbf{Tabla de los productos}
+    \input{cp4/exercises/products_table}
+
+% Advanced
+\subsection*{Más avanzados}
+    \item \textbf{Primo más cercano}\\
+    Implemente un método que, dado un número entero positivo \( n \), encuentre y retorne el número primo más cercano a \( n \). Si existen dos números primos equidistantes de \( n \), retorne el menor de los dos. 
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada \( n = 10 \)\\
+        Salida: \texttt{11}
+    
+        \item Entrada \( n = 13 \)\\
+        Salida: \texttt{13}
+    
+        \item Entrada \( n = 21 \)\\
+        Salida: \texttt{19}\\
+        Explicación:
+        Los números primos más cercanos a \( 21 \) son \( 19 \) y \( 23 \). Como ambos están a igual distancia de \( 21 \), se retorna el menor.
+    
+        \item Entrada \( n = 2 \)\\
+        Salida: \texttt{2}
+    \end{itemize}
+    
+
+    \item \textbf{Descomponiendo en primos}\\
+    Implemente un método que reciba un número entero positivo \( n \) y escriba en la consola su descomposición en factores primos.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada \( n = 28 \)\\
+        Salida en consola: \( 2 \times 2 \times 7 \)
+    
+        \item Entrada \( n = 45 \)\\
+        Salida en consola: \( 3 \times 3 \times 5 \)
+    
+        \item Entrada \( n = 13 \)\\
+        Salida en consola: \( 13 \)
+    \end{itemize}
+    
+    \item \textbf{Son amigos}\\
+    \input{cp4/exercises/friendly_numbers}
+
+    \item \textbf{Representación binaria}
+    \input{cp4/exercises/binary_representation}
+\end{enumerate}
+
+\newpage
+\section{Arrays 1}
+\begin{enumerate}
+% Basic
+    \item \textbf{Mayor}\\
+    Implemente un método que reciba un array de enteros y devuelva el mayor elemento del array.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \( a = [3, 7, 2, 8, 4] \)\\
+        Salida: \texttt{8}
+        
+        \item Entrada: \( a = [-5, -1, -10, -3] \)\\
+        Salida: \texttt{-1}
+        
+        \item Entrada: \( a = [42] \)\\
+        Salida: \texttt{42}
+    \end{itemize}
+    
+    \item \textbf{Pertenece}\\
+     Implemente un método que reciba un array de enteros y devuelva si un número \(n\) pertenece al array \(a\).
+     \subsection*{Ejemplos:}
+     \begin{itemize}
+        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 7 \)\\
+        Salida: \textcolor{blue}{true} 
+        
+        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 10 \)\\
+        Salida: \textcolor{blue}{false}
+        
+        \item Entrada: \( a = [], \, n = 5 \)\\
+        Salida: \textcolor{blue}{false}
+    \end{itemize}
+     
+    \item \textbf{Índice}\\
+     Implemente un método que reciba un array de enteros y devuelva la posición (índice) de la primera aparición del número \(n\) en el array. Devuelve -1 si no aparece.
+     \subsection*{Ejemplos:}
+     \begin{itemize}
+        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 8 \)\\
+        Salida: \texttt{3}
+        
+        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 10 \)\\
+        Salida: \texttt{-1}
+        
+        \item Entrada: \( a = [5, 5, 5], \, n = 5 \)\\
+        Salida: \texttt{0}
+    \end{itemize}
+     
+% Intermediate
+    \item \textbf{Segundo menor}\\
+    Implemente un método que reciba un array de números enteros y determine el segundo menor valor presente en el array. El método debe considerar únicamente valores distintos, si el array contiene menos de dos elementos únicos, debe lanzar una excepción indicando que no es posible determinar un segundo menor.
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \( \text{array} = [4, 1, 3, 2, 5] \)\\
+        Salida: \textcolor{blue}{2}\\
+        Explicación: Los elementos únicos ordenados son: \(1, 2, 3, 4, 5\).
+        El segundo menor es \( 2 \).
+    
+        \item Entrada: \( \text{array} = [7, 7, 7, 7] \)\\
+        Salida: \textcolor{red}{\texttt{Exception: No se puede determinar el segundo menor}}\\
+        Explicación: El array solo tiene un valor único: \(7\).
+        Se lanza una excepción porque no hay suficientes valores únicos.
+    
+        \item Entrada: \( \text{array} = [10, -3, -3, 0, 5] \)\\
+        Salida: \textcolor{blue}{0}\\
+        Explicación: Los elementos únicos ordenados son: \(-3, 0, 5, 10\).
+        El segundo menor es \( 0 \).
+    
+        \item Entrada: \( \text{array} = [8] \)\\
+        Salida: \textcolor{red}{\texttt{Exception: No se puede determinar el segundo menor}}\\
+        Explicación: El array tiene un solo elemento. Se lanza una excepción porque no hay suficientes valores únicos.
+    \end{itemize}
+
+    \item \textbf{Promedio}\\
+    Implemente un método que reciba un array de enteros y devuelva: 
+    \begin{enumerate}
+        \item El promedio de todos los elementos de un array.
+        \item La cantidad de elementos que son mayor que el promedio en un array.
+    \end{enumerate}
+    \subsection*{Ejemplos:}
+    \begin{itemize}
+        \item Entrada: \( \text{array} = [4, 8, 6, 10, 2] \)\\
+        Salida: 
+        \begin{itemize}
+            \item Promedio: 6.0.
+            \item Elementos mayores que el promedio: 2.
+        \end{itemize}
+        Explicación: \(\frac{4 + 8 + 6 + 10 + 2}{5} = 6\).  
+        Los elementos mayores que \( 6 \) son \( 8, 10 \), lo que da un total de \( 2 \).
+    
+        \item Entrada: \( \text{array} = [1, 1, 1, 1] \)\\
+        Salida: 
+        \begin{itemize}
+            \item Promedio: 1.0.
+            \item Elementos mayores que el promedio: 0.
+        \end{itemize}
+        Explicación: \(\frac{1 + 1 + 1 + 1}{4} = 1\).  
+        No hay elementos mayores que \( 1 \), por lo que el resultado es \( 0 \).
+    
+        \item Entrada: \( \text{array} = [15, -5, 0, 10, 5] \)\\
+        Salida: 
+        \begin{itemize}
+            \item Promedio: 5.0.
+            \item Elementos mayores que el promedio: 2.
+        \end{itemize}
+        Explicación: \(\frac{15 + (-5) + 0 + 10 + 5}{5} = 5\).  
+        Los elementos mayores que \( 5 \) son \( 15, 10 \), lo que da un total de \( 2 \).
+    
+        \item Entrada: \( \text{array} = [-10, -20, -30] \)\\
+        Salida: 
+        \begin{itemize}
+            \item Promedio: -20.0.
+            \item Elementos mayores que el promedio: 1.
+        \end{itemize}
+        Explicación: \(\frac{-10 + (-20) + (-30)}{3} = -20\).  
+        El único elemento mayor que \( -20 \) es \( -10 \), por lo que el resultado es \( 1 \).
+    \end{itemize}
+
+    
+\subsection*{Más avanzados}
+% Advanced
+    \item \textbf{Palíndromo}
+    \input{cp4/exercises/is_palindrome}
+
+    \item \textbf{Mediana}\\
+    \input{cp4/exercises/median}
+
+    \item \textbf{Evaluando polinomios}\\
+    Sea \( p(x) \) un polinomio de grado \( n \) con coeficientes enteros, tal que:
+    
+    \[
+    p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+    \]
+    
+    Este polinomio puede ser representado mediante un arreglo \( A = [a_0, a_1, \dots, a_n] \), donde el coeficiente \( a_k \) (con \( 0 \leq k \leq n \)) corresponde al término de grado \( k \). Así, el coeficiente de mayor grado se encuentra en la última posición del arreglo.
+    
+    Por ejemplo:
+    
+    \begin{itemize}
+        \item El polinomio \( p(x) = 2x + 1 \) se representa como el arreglo \( A = [1, 2] \), donde \( a_0 = 1 \) y \( a_1 = 2 \).
+        \item El polinomio \( p(x) = x^3 - 5x + 1 \) se representa como el arreglo \( A = [1, -5, 0, 1] \), donde \( a_0 = 1 \), \( a_1 = -5 \), \( a_2 = 0 \) y \( a_3 = 1 \).
+    \end{itemize}
+    
+    Implemente un método que evalúe el valor del polinomio \( p(x) \) para un valor dado de \( x \). La evaluación del polinomio se realiza mediante la fórmula:
+    
+    \[
+    p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n
+    \]
+
+    \textbf{Ejemplos:}
+    \begin{itemize}
+        \item \textbf{Entrada:}
+        \begin{itemize}
+            \item Polinomio: \([1, 2]\) (representa \(p(x) = 2x + 1\))
+            \item Valor de \(x\): \(3\)
+        \end{itemize}
+        \textbf{Salida:} \( p(3) = 7 \)
+        
+        \item \textbf{Entrada:}
+        \begin{itemize}
+            \item Polinomio: \([1, -5, 0, 1]\) (representa \(p(x) = x^3 - 5x + 1\))
+            \item Valor de \(x\): \(2\)
+        \end{itemize}
+        \textbf{Salida:} \( p(2) = -1 \)
+    \end{itemize}
+    
+    \item \textbf{Perímetro de un polígono}\\
+    Implemente un método que reciba un conjunto de \(n\) vértices de un polígono en el plano cartesiano, donde cada vértice está representado por un par de coordenadas \((x, y)\). Los vértices están ordenados y el último vértice se conecta con el primero, el método debe calcular y devolver el perímetro del polígono.
+        
+    Sea \( P \) un polígono con \( n \) vértices, representados como un conjunto de pares ordenados de coordenadas en el plano cartesiano:
+
+    \[
+    P = \{ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n) \}
+    \]
+    
+    donde \( (x_i, y_i) \) representa el \( i \)-ésimo vértice del polígono y los vértices están ordenados en el sentido en que se recorren los lados del polígono. 
+    
+    El perímetro \( \text{Perímetro}(P) \) de un polígono es la suma de las longitudes de sus lados. Cada lado del polígono es la distancia euclidiana entre dos vértices consecutivos. Formalmente, la distancia entre dos vértices consecutivos \( (x_i, y_i) \) y \( (x_{i+1}, y_{i+1}) \) se calcula utilizando la fórmula de distancia euclidiana:
+    
+    \[
+    d_i = \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2}
+    \]
+    
+    donde \( i = 1, 2, \dots, n-1 \), y se debe considerar también la distancia entre el último vértice \( (x_n, y_n) \) y el primer vértice \( (x_1, y_1) \), para cerrar el polígono:
+    
+    \[
+    d_n = \sqrt{(x_1 - x_n)^2 + (y_1 - y_n)^2}
+    \]
+    
+    Por lo tanto, el perímetro \( P \) del polígono es la suma de todas las distancias de los lados:
+    
+    \[
+    \text{Perímetro}(P) = \sum_{i=1}^{n} d_i 
+    \]
+    \[
+    \text{Perímetro}(P) = \sum_{i=1}^{n-1} \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2} + \sqrt{(x_1 - x_n)^2 + (y_1 - y_n)^2}
+    \]
+    
+    \textbf{Ejemplos:}
+    
+    \begin{itemize}
+        \item \textbf{Entrada:} \([ (0, 0), (4, 0), (4, 3), (0, 3) ]\) \\
+        \textbf{Salida:} 14.0
+        \item \textbf{Entrada:} \([ (1, 1), (4, 1), (4, 5), (1, 5) ]\) \\
+        \textbf{Salida:} 12.0
+        \item \textbf{Entrada:} \([ (0, 0), (3, 0), (3, 3), (0, 3) ]\) \\
+        \textbf{Salida:} 12.0
+    \end{itemize}
+
+\end{enumerate}
+
+\newpage
+\section{Arrays 2}
+\begin{enumerate}
+% Intermediate
+    \item \textbf{Invirtiendo}\\
+    \input{cp4/exercises/reverse_array}
+
+    \item \textbf{Filtrando positivos}
+    \input{cp4/exercises/filter_positive_numbers}
+
+    \item \textbf{Subarray}\\
+    \input{cp4/exercises/subarray}
+
+    \item \textbf{Operaciones sobre arrays}
+    \input{cp4/exercises/modifying_arrays}
+
+\subsection*{Más avanzados}
+% Advanced
+     \item \textbf{Rotando arrays}\\
+    \input{cp4/exercises/rotate_array}
+
+    \item \textbf{Invirtiendo bloques}\\
+    \input{cp6/exercises/reverse_subarrays}
+
+    \item \textbf{Mezcla ordenada}\\
+    \input{cp4/exercises/merge_sorted_arrays}
+
+    \item \textbf{Ordenando}\\
+    \input{cp4/exercises/sort_array}
+
+    \item \textbf{Operaciones con conjuntos}\\
+    Dado dos conjuntos \( A \) y \( B \), representados mediante arreglos (arrays), implementa métodos para realizar las siguientes operaciones fundamentales de teoría de conjuntos. Cada método debe devolver un nuevo arreglo que represente el resultado de la operación, asegurándote de que los elementos no se repitan:
+    
+    \begin{enumerate}
+        \item \( A \cap B \): Devuelve los elementos que están en \( A \) \textbf{y} en \( B \) (intersección).
+        \item \( A \cup B \): Devuelve los elementos que están en \( A \) \textbf{o} en \( B \) (unión).
+        \item \( A \setminus B \): Devuelve los elementos que están en \( A \) pero \textbf{no} en \( B \) (diferencia).
+        \item \( A \, \Delta \, B \): Devuelve los elementos que están en \( A \) pero no en \( B \), \textbf{más} los elementos que están en \( B \) pero no en \( A \) (diferencia simétrica).
+    \end{enumerate}
+
+
+    \subsection*{Ejemplos}
+    \begin{itemize}
+        \item \textbf{Entrada:} \( A = [1, 2, 3, 4] \), \( B = [3, 4, 5, 6] \)
+        \begin{enumerate}
+            \item \( A \cap B \): Intersección\\
+            \textbf{Salida:} \([3, 4]\)
+    
+            \item \( A \cup B \): Unión\\
+            \textbf{Salida:} \([1, 2, 3, 4, 5, 6]\)
+    
+            \item \( A \setminus B \): Diferencia\\
+            \textbf{Salida:} \([1, 2]\)
+    
+            \item \( A \, \Delta \, B \): Diferencia simétrica\\
+            \textbf{Salida:} \([1, 2, 5, 6]\)\\
+            \textbf{Explicación:} Los elementos exclusivos de cada conjunto son \(1, 2\) (de \(A\)) y \(5, 6\) (de \(B\)).
+        \end{enumerate}
+    
+        \item \textbf{Entrada:} \( A = [10, 20, 30] \), \( B = [30, 40, 50] \)
+        \begin{enumerate}
+            \item \( A \cap B \): Intersección\\
+            \textbf{Salida:} \([30]\)
+    
+            \item \( A \cup B \): Unión\\
+            \textbf{Salida:} \([10, 20, 30, 40, 50]\)
+    
+            \item \( A \setminus B \): Diferencia\\
+            \textbf{Salida:} \([10, 20]\)
+    
+            \item \( A \, \Delta \, B \): Diferencia simétrica\\
+            \textbf{Salida:} \([10, 20, 40, 50]\)\\
+            \textbf{Explicación:} Los elementos exclusivos son \(10, 20\) (de \(A\)) y \(40, 50\) (de \(B\)).
+        \end{enumerate}
+    
+        \item \textbf{Entrada:} \( A = [1, 2, 3] \), \( B = [] \)
+        \begin{enumerate}
+            \item \( A \cap B \): Intersección\\
+            \textbf{Salida:} \([]\)
+    
+            \item \( A \cup B \): Unión\\
+            \textbf{Salida:} \([1, 2, 3]\)
+    
+            \item \( A \setminus B \): Diferencia\\
+            \textbf{Salida:} \([1, 2, 3]\)
+    
+            \item \( A \, \Delta \, B \): Diferencia simétrica\\
+            \textbf{Salida:} \([1, 2, 3]\)
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}

@@ -1,0 +1,46 @@
+\begin{lstlisting}
+public static int CountExactOccurrences(int[] values, int k)
+{
+    // Validar el array.
+    if (values == null || values.Length == 0 || k <= 0)
+        return 0;
+
+    // Inicializamos una lista para las tuplas (valor, frecuencia).
+    List<(int value, int frequency)> valueFrequencyPairs = new List<(int, int)>();
+
+    // Recorremos el array.
+    for (int i = 0; i < values.Length; i++)
+    {
+        bool found = false;
+
+        // Buscamos si ya tenemos el valor en las tuplas.
+        for (int j = 0; j < valueFrequencyPairs.Count; j++)
+        {
+            if (valueFrequencyPairs[j].value == values[i])
+            {
+                valueFrequencyPairs[j] = (valueFrequencyPairs[j].value, valueFrequencyPairs[j].frequency + 1);
+                found = true;
+                break;
+            }
+        }
+
+        // Si no encontramos el valor, lo añadimos con frecuencia inicial 1.
+        if (!found)
+        {
+            valueFrequencyPairs.Add((values[i], 1));
+        }
+    }
+
+    // Contamos cuántos valores tienen exactamente k de frecuencia.
+    int count = 0;
+    for (int i = 0; i < valueFrequencyPairs.Count; i++)
+    {
+        if (valueFrequencyPairs[i].frequency == k)
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
+\end{lstlisting}

@@ -1,0 +1,37 @@
+Sea \( A \) un array de enteros con \( n \) elementos (\( A = [a_1, a_2, \dots, a_n] \)), y supongamos que todos los elementos de \( A \) son \textbf{distintos}.
+
+Definimos las cantidades de elementos menores y mayores con respecto a un valor \( m \) como:
+\[
+\text{menores}(m, A) = \lvert \{x \in A : x < m\} \rvert, \quad 
+\text{mayores}(m, A) = \lvert \{x \in A : x > m\} \rvert.
+\]
+
+La \textbf{mediana} de \( A \) es un valor \( m \) que satisface las siguientes condiciones:
+
+1. Si \( n \) es impar, la mediana es el elemento \( m \) tal que:
+\[
+\text{menores}(m, A) = \text{mayores}(m, A) = \frac{n}{2}.
+\]
+
+2. Si \( n \) es par, la mediana es el elemento \( m \) tal que:
+\[
+\text{menores}(m, A) = \frac{n}{2}, \quad 
+\text{mayores}(m, A) = \frac{n}{2} - 1.
+\]
+
+Implemente un método que reciba un array de enteros distintos y devuelva el elemento mediana. 
+
+\subsection*{Ejemplos:}
+\begin{itemize}
+    \item Entrada: \texttt{[3, 5, 2, 8, 1]}\\
+    Salida: \texttt{3}\\
+    Explicación: La cantidad de números menores que 3 (\texttt{[2, 1]}) es igual a la cantidad de números mayores que 3 (\texttt{[5, 8]}). Por lo tanto, la mediana es \texttt{3}.
+    
+    \item Entrada: \texttt{[3, 5, 2, 8]}\\
+    Salida: \texttt{5}\\
+    Explicación: En este caso, \texttt{5} tiene dos elementos menores (\texttt{[3, 2]}) y uno mayor (\texttt{[8]}). Por lo tanto, la mediana es \texttt{5}.
+    
+    \item Entrada: \texttt{[10, 3, 7, 5, 2]}\\
+    Salida: \texttt{5}\\
+    Explicación: El número \texttt{5} tiene la misma cantidad de elementos menores (\texttt{[2, 3]}) y mayores (\texttt{[7, 10]}). Por lo tanto, la mediana es \texttt{5}.
+\end{itemize}

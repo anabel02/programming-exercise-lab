@@ -1,0 +1,28 @@
+Lea tres números enteros de la consola que representarán día, mes y año respectivamente. Si estos valores pueden formar una fecha, entonces muéstrela en la consola con el formato \texttt{día/mes/año}, si no imprima el No es fecha. Considere que las fechas con año menor que 1 no son válidas.
+
+\subsection*{Ejemplos}
+\begin{itemize}
+    \item Entrada: d = 15, m = 8, y = 0\\
+    Salida: No es fecha\\
+    Explicación: El año 0 no es válido
+
+    \item Entrada: d = 15, m = 13, y = 2023\\
+    Salida: No es fecha\\
+    Explicación: El mes 13 no es válido
+    
+    \item Entrada: d = 31, m = 4, y = 2023\\
+    Salida: No es fecha\\
+    Explicación: Abril tiene solo 30 días
+
+    \item Entrada: d = 15, m = 8, y = 2023\\
+    Salida: 15/8/2023
+    
+    \item Entrada: d = 29, m = 2, y = 2020\\
+    Salida: 29/2/2020\\
+    Explicación: 2020 es un año bisiesto
+
+    \item Entrada: d = 29, m = 2, y = 2023\\
+    Salida: No es fecha\\
+    Explicación: 2023 no es un año bisiesto
+    
+\end{itemize}

@@ -1,0 +1,36 @@
+\begin{lstlisting}
+string input;
+int max = int.MinValue;
+int min = int.MaxValue;
+int sum = 0;
+int count = 0;
+Console.WriteLine("Introduce números enteros (deja la línea en blanco para finalizar):");
+
+while (!string.IsNullOrWhiteSpace(input = Console.ReadLine()))
+{
+    if (int.TryParse(input, out int number))
+    {
+        if (number > max) max = number;
+        if (number < min) min = number;
+        sum += number;
+        count++;
+    }
+    else
+    {
+        Console.WriteLine("Entrada inválida, introduce un número entero.");
+    }
+}
+    
+if (count == 0)
+{
+    Console.WriteLine("No se introdujeron números.");
+}
+else
+{
+    double average = (double)sum / count;
+
+    Console.WriteLine($"El mayor: {max}");
+    Console.WriteLine($"El menor: {min}");
+    Console.WriteLine($"El promedio: {average}");
+}
+\end{lstlisting}

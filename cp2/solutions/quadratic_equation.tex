@@ -1,0 +1,35 @@
+Para la ecuación cuadrática, las soluciones son:
+
+$$
+x_1 = \frac{-b + \sqrt{D}}{2a}
+$$
+
+y
+
+$$
+x_2 = \frac{-b - \sqrt{D}}{2a}
+$$
+
+donde
+
+$$D = b^2 - 4ac$$
+
+Esta fórmula nos da las soluciones de la ecuación cuadrática, siempre y cuando el discriminante sea mayor o igual a cero.
+
+\begin{lstlisting}
+    Console.WriteLine("Ingrese el coeficiente a:");
+    double a = double.Parse(Console.ReadLine());
+    
+    Console.WriteLine("Ingrese el coeficiente b:");
+    double b = double.Parse(Console.ReadLine());
+    
+    Console.WriteLine("Ingrese el coeficiente c:");
+    double c = double.Parse(Console.ReadLine());
+    
+    double discriminant = b * b - 4 * a * c;
+    
+    double x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+    double x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+    
+    Console.WriteLine($"Las soluciones son x1 = {x1} y x2 = {x2}"
+\end{lstlisting}

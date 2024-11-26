@@ -1,0 +1,20 @@
+Implemente una clase llamada \textcolor{cyan}{Polygon} que reciba una secuencia de puntos en su constructor, representando los vértices del polígono.
+
+\subsection*{Funcionalidades a implementar}
+\begin{itemize}
+    \item \textbf{Verificar si es un polígono cerrado (\texttt{IsPolygon})}: 
+    Método que verifica si la secuencia de puntos constituye un polígono cerrado. Para esto:
+    \begin{itemize}
+        \item Asegúrese de que no haya tres puntos consecutivos alineados.
+        \item Verifique que el primer punto coincida con el último para formar un cierre.
+    \end{itemize}
+    
+    \item \textbf{Calcular el perímetro (\texttt{Perimeter})}: 
+    Método que calcula la longitud total del contorno del polígono, sumando las distancias entre puntos consecutivos, incluyendo la distancia entre el último punto y el primero para cerrar el polígono.
+    
+    \item * \textbf{Calcular el área (\texttt{Area})}: 
+    Método que calcula el área del polígono usando la fórmula para polígonos simples. Esta fórmula es válida tanto para polígonos convexos como cóncavos simples. La fórmula se basa en la suma de áreas de triángulos formados por los vértices del polígono.
+
+    \item ** \textbf{Punto interior (\texttt{IsPointInside})}: 
+    Método que verifica si un punto dado se encuentra dentro del polígono.
+\end{itemize}

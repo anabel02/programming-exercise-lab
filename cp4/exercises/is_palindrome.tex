@@ -1,0 +1,30 @@
+\begin{enumerate}[label=\alph*)]
+    \item Implemente un método que determine si el string \texttt{s} es un palíndromo, es decir, si se lee igual de izquierda a derecha que de derecha a izquierda.
+    
+    \begin{itemize}
+        \item Entrada: \texttt{s = ana}\\
+        Salida: \textcolor{blue}{true}
+
+        \item Entrada: \texttt{s = anitalavalatina}\\
+        Salida: \textcolor{blue}{true}
+
+        \item Entrada: \texttt{s = palabra}\\
+        Salida: \textcolor{blue}{false}
+    \end{itemize}
+
+    \item * Implemente un método que compute el menor string \texttt{t} tal que la concatenación de \texttt{s + t} forme un palíndromo.
+
+    \begin{itemize}
+        \item Entrada: \texttt{s = race}\\
+        Salida: \texttt{car}\\
+        Explicación: El string \texttt{''race''} no es un palíndromo. Para que la concatenación \texttt{s + t} sea un palíndromo, debemos agregar \texttt{''car''} al final, formando el palíndromo \texttt{''racecar''}.
+
+        \item Entrada: \texttt{s = aba}\\
+        Salida: \texttt{''''}\\
+        Explicación: El string \texttt{''aba''} ya es palíndromo.
+
+        \item Entrada: \texttt{s = anan}\\
+        Salida: \texttt{a}\\
+        Explicación: El string \texttt{''anan''} no es un palíndromo. Al agregar \texttt{''a''} al final, obtenemos el palíndromo \texttt{''anana''}.
+    \end{itemize}
+\end{enumerate}

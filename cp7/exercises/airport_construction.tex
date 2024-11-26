@@ -1,0 +1,27 @@
+En un terreno de NxM expresado por la cantidad de filas y columnas de una matriz en metros se quiere construir un aeropuerto con área rectangular de Alto x Ancho (que debe caber dentro de la matríz anterior). En cada celda de la matriz se tiene la altura del terreno en ese lugar. El aeropuerto se quiere construir en la zona más "pareja" del terreno, es decir, que teniendo el área requerida en cuanto a cantidad de celdas por la horizontal y por la vertical la diferencia entre la máxima altura y la mínima altura sea la menor.
+
+\textbf{Ejemplo:} La figura a continuación nos muestra en el rectángulo indicado en verde el área adecuada para una pista que tenga que ser de \(3 \times 2\). El rectángulo en rojo nos indica un área que es menos pareja.
+
+\begin{center}
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    \cellcolor{blue!20} 4 & \cellcolor{blue!20} 3 & \cellcolor{blue!20} 5 & \cellcolor{blue!20} 1 & \cellcolor{blue!20} 2 & \cellcolor{blue!20} 1 \\
+    \hline
+    \cellcolor{red!20} 2 & \cellcolor{red!20} 7 & \cellcolor{blue!20} 6 & \cellcolor{blue!20} 3 & \cellcolor{green!20} 2 & \cellcolor{green!20} 3 \\
+    \hline
+    \cellcolor{red!20} 3 & \cellcolor{red!20} 8 & \cellcolor{blue!20} 5 & \cellcolor{blue!20} 2 & \cellcolor{green!20} 2 & \cellcolor{green!20} 3 \\
+    \hline
+    \cellcolor{red!20} 5 & \cellcolor{red!20} 7 & \cellcolor{blue!20} 6 & \cellcolor{blue!20} 4 & \cellcolor{green!20} 2 & \cellcolor{green!20} 3 \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Implemente un método que devuelva la mínima diferencia de alturas de un terreno válido para construir el aeropuerto.
+    
+    Note que en el área encerrada en verde la diferencia de alturas es \(1\) y en la otra es \(6\), de modo que si se invoca con \(3\) de alto y \(2\) de ancho, debe devolver como resultado \(1.\)
+    
+    \item * Haga una variante del método anterior pero que devuelva en lugar de la diferencia entre las alturas, las coordenadas del terreno adecuado dadas por la posición fila y columna de la celda esquina superior izquierda del terreno y la fila y columna de la celda esquina inferior derecha del terreno. 
+    
+    En este caso para la invocación del ejemplo anterior debe devolver el array: \(\{1,4,3,5\}\).
+\end{enumerate}

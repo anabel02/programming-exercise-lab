@@ -1,0 +1,17 @@
+\begin{lstlisting}
+    Console.WriteLine("Empiece a escribir su texto y presione Enter cuando termine:");
+
+    // Capturar el tiempo inicial
+    int initialTime = Environment.TickCount;
+    
+    string text = Console.ReadLine();
+    
+    // Capturar el tiempo final
+    int finalTime = Environment.TickCount;
+    
+    double elapsedTime = (finalTime - initialTime) / 1000.0;
+    double typingSpeed = text.Length / elapsedTime;
+    
+    Console.WriteLine($"Ha escrito {text.Length} caracteres en {elapsedTime} segundos.");
+    Console.WriteLine($"Su velocidad de escritura es {typingSpeed:F2} chars/s.");
+\end{lstlisting}

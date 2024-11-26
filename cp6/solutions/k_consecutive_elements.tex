@@ -1,0 +1,63 @@
+Podemos resolver este problema verificando si existen \( k \) elementos consecutivos en el array que sean iguales al elemento en la posición \( i \). Para ello, evaluamos cada elemento \( i \) y comprobamos si los \( k-1 \) elementos que le siguen en el array también son iguales a \( i \).
+
+\begin{lstlisting}
+public static bool HasKConsecutiveElements(int[] array, int k)
+{
+    if (k < 0)
+        throw new ArgumentException("k debe ser mayor o igual que 0.");
+    
+    // Iteramos sobre el array para verificar 
+    // si hay k elementos consecutivos iguales a array[i].
+    for (int i = 0; i <= array.Length - k; i++)
+    {
+        if (AreKElementsEqual(array, i, k))
+            return true;
+    }
+    
+    return false;
+}
+
+// Método auxiliar para verificar si los k elementos consecutivos 
+// son iguales a partir de una posición dada.
+private static bool AreKElementsEqual(int[] array, int startIndex, int k)
+{
+    for (int j = 1; j < k; j++)
+    {
+        if (array[startIndex] != array[startIndex + j])
+            return false;
+    }
+    return true;
+}
+\end{lstlisting}
+
+Si ejecutamos el algoritmo anterior para buscar 4 elementos consecutivos en el array \([1, 1, 1, 2, 2, 2, 3, 3, 3]\), realizaremos comprobaciones innecesarias. Por ejemplo, al analizar la posición 1 (valor 1), ya sabemos que, si en la posición 0 (también valor 1) no encontramos \( k \) elementos consecutivos, tampoco será posible encontrarlos comenzando desde la posición 1.
+
+Podemos optimizar esto utilizando un contador que registre cuántos elementos consecutivos iguales al índice actual hemos visto, y si alguna vez el contador llega a \(k\) retornamos \textcolor{blue}{true}.
+
+\begin{lstlisting}
+public static bool HasKConsecutiveElements(int[] numbers, int k)
+{
+    if (k < 0)
+        throw new ArgumentException("k debe ser mayor o igual que 0.");
+       
+    int count = 1;
+    
+    // Iteramos por el array y contamos consecutivos iguales.
+    for (int i = 1; i < numbers.Length; i++)
+    {
+        if (numbers[i] == numbers[i - 1])
+        {
+            count++;
+            
+            if (count == k)
+                return true; // Encontramos k consecutivos.
+        }
+        else
+        {
+            count = 1; // Reiniciamos el conteo.
+        }
+    }
+    
+    return false; // No se encontraron k consecutivos iguales.
+}
+\end{lstlisting}

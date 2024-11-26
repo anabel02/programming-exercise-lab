@@ -1,0 +1,39 @@
+\begin{lstlisting}
+public static int[] MergeSortedArrays(int[] a, int[] b)
+{
+    int[] result = new int[a.Length + b.Length];
+
+    // Inicializa los índices para recorrer los arrays 'a', 'b' y 'result'
+    int i = 0, j = 0, k = 0;
+
+    // Itera mientras haya elementos en ambos arrays 'a' y 'b'
+    while (i < a.Length && j < b.Length)
+    {
+        // Si el elemento actual de 'a' es menor que el de 'b'
+        if (a[i] < b[j])
+        {
+            // Copia el elemento de 'a' en 'result' y avanza los índices 'i' y 'k'
+            result[k++] = a[i++];
+        }
+        else
+        {
+            // Copia el elemento de 'b' en 'result' y avanza los índices 'j' y 'k'
+            result[k++] = b[j++];
+        }
+    }
+
+    // Copia los elementos restantes de 'a' en 'result', si los hay
+    while (i < a.Length)
+    {
+        result[k++] = a[i++];
+    }
+
+    // Copia los elementos restantes de 'b' en 'result', si los hay
+    while (j < b.Length)
+    {
+        result[k++] = b[j++];
+    }
+
+    return result;
+}
+\end{lstlisting}

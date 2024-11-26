@@ -1,0 +1,39 @@
+\begin{lstlisting}
+public static int[] SortByProximity(int[] array, int pivot)
+{
+    // Creamos un array auxiliar para almacenar las distancias y los valores originales.
+    (int Value, int Distance)[] distances = new (int Value, int Distance)[array.Length];
+    
+    // Calculamos las distancias al pivote.
+    for (int i = 0; i < array.Length; i++)
+    {
+        distances[i] = (array[i], Math.Abs(array[i] - pivot));
+    }
+
+    // Ordenamos, en este caso usando Bubble Sort
+    for (int i = 0; i < distances.Length - 1; i++)
+    {
+        for (int j = 0; j < distances.Length - i - 1; j++)
+        {
+            // Ordenar primero por distancia y luego por valor en caso de empate.
+            if (distances[j].Distance > distances[j + 1].Distance ||
+                (distances[j].Distance == distances[j + 1].Distance 
+                 && distances[j].Value > distances[j + 1].Value))
+            {
+                var temp = distances[j];
+                distances[j] = distances[j + 1];
+                distances[j + 1] = temp;
+            }
+        }
+    }
+
+    // Extraemos solo los valores ordenados en el resultado final.
+    int[] result = new int[array.Length];
+    for (int i = 0; i < distances.Length; i++)
+    {
+        result[i] = distances[i].Value;
+    }
+
+    return result;
+}
+\end{lstlisting}

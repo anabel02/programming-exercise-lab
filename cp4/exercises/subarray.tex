@@ -1,0 +1,18 @@
+Dado un array \(a\) y dos posiciones \(i\) y \(j\) (con \(i \leq j\)), implemente un método que devuelva un nuevo array que contenga el rango de elementos del array original comprendido entre las posiciones \(i\) y \(j\) (inclusive). Es decir, el subarray debe estar formado por los elementos desde el índice \(i\) hasta el índice \(j\) del array original.
+
+Si el array \(a\) tiene \(n\) elementos, y \(a = [a_1, a_2, \dots, a_n]\), el subarray que corresponde al rango \([i..j]\) se obtiene seleccionando los elementos \([a_i, a_{i+1}, \dots, a_j]\).
+
+\textbf{Ejemplos:}
+\begin{itemize}
+    \item \textbf{Entrada:} \(a = [10, 20, 30, 40, 50]\), \(i = 1\), \(j = 3\) \\
+    \textbf{Salida:} \([20, 30, 40]\) \\
+    En este caso, el subarray es el que va desde el índice \(1\) (valor \(20\)) hasta el índice \(3\) (valor \(40\)), ambos inclusive.
+
+    \item \textbf{Entrada:} \(a = [1, 2, 3, 4, 5]\), \(i = 0\), \(j = 4\) \\
+    \textbf{Salida:} \([1, 2, 3, 4, 5]\) \\
+    En este caso, el subarray incluye todos los elementos del array original, ya que \(i = 0\) y \(j = 4\).
+    
+    \item \textbf{Entrada:} \(a = [7, 8, 9, 10, 11]\), \(i = 3\), \(j = 3\) \\
+    \textbf{Salida:} \([10]\) \\
+    El subarray contiene solo el elemento en la posición \(3\), que es \(10\), ya que \(i = j = 3\).
+\end{itemize}

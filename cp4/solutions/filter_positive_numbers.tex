@@ -1,0 +1,72 @@
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Solución:}
+    \begin{lstlisting}
+    public static int[] FilterPositive(int[] a)
+    {
+        // Contar los elementos positivos
+        int count = 0;
+        
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (a[i] > 0)
+            {
+                count++;
+            }
+        }
+        
+        // Crear un nuevo array para almacenar los elementos positivos
+        int[] positiveArray = new int[count];
+        
+        // Índice para recorrer el array de positivos
+        int index 
+        
+        for (int i = 0; i < a.Length; i++)
+        {
+            var num = a[i];
+            if (num > 0)
+            {
+                positiveArray[index++] = num;
+            }
+        }
+        
+        return positiveArray;
+    }
+    \end{lstlisting}
+    
+    Podemos notar que la parte de contar los elementos mayores que 0 se parece mucho a contar los elementos mayores que el promedio. Para evitar duplicar código y mejorar la mantenibilidad, podríamos crear un método que cuente los elementos mayores que un valor \( x \) y reutilizarlo en ambas situaciones.
+    
+    \begin{lstlisting}
+    private static int CountGreaterThan(int[] a, int x)
+    {
+        int count = 0;
+        
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (a[i] > x)
+            {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+    
+    public static int[] FilterPositive(int[] a)
+    {
+        int count = CountGreaterThan(a, 0);
+        int[] positiveArray = new int[count];
+        int index = 0;
+        
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (a[i] > 0)
+            {
+                positiveArray[index++] = a[i];
+            }
+        }
+    
+        return positiveArray;
+    }
+    \end{lstlisting}
+    \item \textbf{Hint:} Reutiliza el método auxiliar implementado en el inciso anterior.
+\end{enumerate}

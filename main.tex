@@ -1,0 +1,140 @@
+\documentclass[11pt,oneside]{article}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{mathpazo}
+\usepackage{float}
+\usepackage{braket}
+\setlength {\marginparwidth }{3cm}
+\usepackage{todonotes}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{amsmath,blkarray,booktabs,bigstrut}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{todonotes}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue, % Color de los enlaces internos
+    filecolor=magenta, % Color de los enlaces a archivos
+    urlcolor=blue % Color de los enlaces a URLs
+}
+
+\floatstyle{ruled}
+\restylefloat{table}
+
+\usepackage{listings}
+\usepackage{color}
+\lstloadlanguages{csh}
+
+\definecolor{red}{rgb}{0.6,0,0} 
+\definecolor{blue}{rgb}{0,0,0.6}
+\definecolor{green}{rgb}{0,0.8,0}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{white}{rgb}{1,1,1}
+
+% Configuración global para todos los recuadros
+\tcbset{
+    colback=blue!3!white,     % Fondo
+    colframe=blue!50!white,   % Borde 
+    boxrule=0.5mm,            % Grosor del borde (opcionalmente más delgado)
+    title=Información         % Título predeterminado
+}
+
+\lstset{
+language=csh,
+basicstyle=\footnotesize\ttfamily,
+% numbers=left,
+% numberstyle=\tiny,
+% numbersep=5pt,
+tabsize=2,
+extendedchars=true,
+% breaklines=true,
+% frame=b,
+stringstyle=\color{red}\ttfamily,
+showspaces=false,
+showtabs=false,
+% xleftmargin=17pt,
+framexleftmargin=17pt,
+% framexrightmargin=5pt,
+framexbottommargin=4pt,
+commentstyle=\color{green},
+morecomment=[l]{//}, %use comment-line-style!
+morecomment=[s]{/*}{*/}, %for multiline comments
+showstringspaces=false,
+morekeywords={ abstract, event, new, struct,
+as, explicit, null, switch,
+base, extern, object, this,
+bool, false, operator, throw,
+break, finally, out, true,
+byte, fixed, override, try,
+case, float, params, typeof,
+catch, for, private, uint,
+char, foreach, protected, ulong,
+checked, goto, public, unchecked,
+class, if, readonly, unsafe,
+const, implicit, ref, ushort,
+continue, in, return, using,
+decimal, int, sbyte, virtual,
+default, interface, sealed, volatile,
+delegate, internal, short, void,
+do, is, sizeof, while,
+double, lock, stackalloc,
+else, long, static, get,
+enum, namespace, string},
+keywordstyle=\color{blue},
+identifierstyle=\color{black},
+backgroundcolor=\color{white},
+inputencoding=utf8,
+    literate=%
+    {á}{{\'a}}1
+    {é}{{\'e}}1
+    {í}{{\'i}}1
+    {ó}{{\'o}}1
+    {ú}{{\'u}}1
+    {Á}{{\'A}}1
+    {É}{{\'E}}1
+    {Í}{{\'I}}1
+    {Ó}{{\'O}}1
+    {Ú}{{\'U}}1
+    {ñ}{{\~n}}1
+    {Ñ}{{\~N}}1
+    {¡}{{\textexclamdown}}1
+    {¿}{{\textquestiondown}}1
+}
+
+% Definir tipos personalizados en cian
+\lstset{
+    classoffset=1,
+    morekeywords={
+    Program, Console, List, StringBuilder, Array,
+    TypeOfTriangle, DayOfWeek,
+    NotImplementedException, DivideByZeroException, ArgumentException, 
+    ChessPiece,
+    BigInt, Fraction, Poly, Set, Book, Genre},
+    keywordstyle=\color{cyan},
+    classoffset=0,
+}
+
+% Define la variable para controlar la visibilidad de las respuestas
+\newif\ifshowanswers
+
+% Define la variable que representa el curso
+\def\academicyear{2024 - 2025}
+
+% \showanswerstrue  % Comenta esta línea para ocultar las respuestas
+
+\begin{document}
+    \input{exercises}
+\end{document}

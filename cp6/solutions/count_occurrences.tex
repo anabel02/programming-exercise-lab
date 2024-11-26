@@ -1,0 +1,38 @@
+\begin{lstlisting}
+public static int CountOccurrences(string text, string word)
+{
+    // Validación de entradas
+    if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(word))
+        throw new ArgumentException("El texto y la palabra no pueden estar vacíos.");
+
+    int count = 0;
+
+    // Iteramos sobre el texto para buscar la palabra
+    for (int i = 0; i <= text.Length - word.Length; i++)
+    {
+        // Usamos IsMatch para verificar coincidencia
+        if (IsMatch(text, word, i))
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+private static bool IsMatch(string text, string word, int startIndex)
+{
+    // Comprobamos que la subsecuencia desde startIndex tiene suficiente espacio
+    if (startIndex + word.Length > text.Length)
+        return false;
+
+    // Comparamos carácter por carácter
+    for (int j = 0; j < word.Length; j++)
+    {
+        if (text[startIndex + j] != word[j])
+            return false;
+    }
+
+    return true;
+}
+\end{lstlisting}

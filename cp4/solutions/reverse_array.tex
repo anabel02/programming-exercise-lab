@@ -1,0 +1,13 @@
+\begin{lstlisting}
+public static int[] Reverse(int[] array)
+{
+    int[] reversed = new int[array.Length];
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        reversed[i] = array[array.Length - 1 - i];
+    }
+    
+    return reversed;
+}
+\end{lstlisting}

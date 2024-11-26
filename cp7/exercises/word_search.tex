@@ -1,0 +1,16 @@
+Implemente el método \texttt{bool EstaEnLaSopa(char[,] sopa, string palabra)} que determine si el string \texttt{palabra} se encuentra en \texttt{sopa}. 
+\begin{itemize}
+    \item Ejemplo: 
+    \begin{lstlisting}
+    string palabra = "pelo"; 
+    char[,] sopa = { 
+        { 'a', 'a', 'f', 't', 'j', 'q', 'w', 'e', 'r', 'o', 'p' }, 
+        { 'g', 'j', 'p', 'b', 'j', 'e', 'r', 'o', 'a', 's', 'k' }, 
+        { 'l', 'x', 'c', 'e', 't', 'y', 'e', 'r', 'a', 'o', 'n' }, 
+        { 'b', 'g', 'j', 'f', 'l', 'd', 'e', 'r', 's', 't', 'o' }, 
+        { 'q', 'u', 'e', 'r', 't', 'o', 'g', 's', 'e', 'm', 't' } 
+    }; 
+    EstaEnLaSopa(sopa, palabra); // true
+    \end{lstlisting}
+    \textbf{Nota:} Solo palabras que se lean de izquierda a derecha, de arriba hacia abajo y la diagonalcorrespondiente.
+\end{itemize}

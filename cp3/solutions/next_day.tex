@@ -1,0 +1,15 @@
+En el ejercicio \textit{Forman una fecha} definimos el método CalculateLastDayInMonth que, dado el mes y el año calcula el último día del mes correspondiente, reutilicemos este método.
+
+\begin{lstlisting}
+public static (int Day, int Month, int Year) CalculateNextDay(int day, int month, int year)
+{
+    if (!ValidateDate(day, month, year))
+        throw new Exception("Invalid date");
+        
+    return day == CalculateLastDayInMonth(month, year)
+        ? month == 12
+            ? (1, 1, year + 1) // si es 31 de diciembre
+            : (1, month + 1, year) // si es el último dia de un mes que no es diciembre
+        : (day + 1, month, year);
+}
+\end{lstlisting}

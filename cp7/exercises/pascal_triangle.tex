@@ -1,0 +1,28 @@
+Dado un entero \( n \), se quiere construir una matriz de enteros que represente el Triángulo de Pascal hasta el nivel \( n \):
+$$
+{n\choose k} = {n-1\choose k-1} + {n-1\choose k}
+$$
+\textbf{Ejemplo:} 
+
+Para \( n = 4\):
+\[
+\begin{array}{ccccccccc}
+    &  &   &   & 1 &   &   \\
+    &  &   & 1 &   & 1 &   \\
+    &  & 1 &   & 2 &   & 1 \\
+    &  1 &  & 3 &   & \textcolor{red}{3} &  & \textcolor{red}{1} \\
+  1 & & 4 & & 6 & & \textcolor{green}{4} & & 1 
+\end{array}
+\]
+Quedaría representado por la matriz:
+\[
+\begin{bmatrix}
+    1 & 0 & 0 & 0 & 0 \\
+    1 & 1 & 0 & 0 & 0 \\
+    1 & 2 & 1 & 0 & 0 \\
+    1 & 3 & \textcolor{red}{3} & \textcolor{red}{1} & 0 \\
+    1 & 4 & 6 & \textcolor{green}{4} & 1 \\
+\end{bmatrix}
+\]
+Cada término se calcula a partir de la suma de los términos que están justo encima de él  
+(\textcolor{green}{4} = \textcolor{red}{3} + \textcolor{red}{1}). El nivel cero es solo un uno. 

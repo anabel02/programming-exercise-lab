@@ -1,0 +1,11 @@
+\begin{lstlisting}
+public static string Elimina(string original, string s)
+{
+    int index = original.IndexOf(s);
+    
+    if (index == -1) 
+        return original; // Si no se encuentra, devolvemos el original
+        
+    return original[..index] + original[(index + s.Length)..];
+}  
+\end{lstlisting}

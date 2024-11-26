@@ -1,0 +1,15 @@
+\begin{lstlisting}
+Console.WriteLine("Introduce el dividendo:");
+int a = int.Parse(Console.ReadLine() ?? string.Empty);
+Console.WriteLine("Introduce el divisor:");
+int b = int.Parse(Console.ReadLine() ?? string.Empty);
+
+if (b != 0 && a % b == 0)
+{
+    Console.WriteLine($"{a} es divisible por {b}");
+}
+else
+{
+    Console.WriteLine($"{a} no es divisible por {b}");
+}
+\end{lstlisting}

@@ -1,0 +1,29 @@
+El factorial de un número $n$ (denotado como $n!$) se define como el producto de todos los números enteros positivos desde 1 hasta $n$, o sea:
+
+\[
+n! = \prod_{k=1}^{n} k
+\]
+
+o lo que es lo mismo:
+
+\[
+n! =
+\begin{cases} 
+1 & \text{si } n = 0 \\
+n \cdot (n-1)! & \text{si } n > 0
+\end{cases}
+\]
+
+Implemente un programa que reciba un número entero no negativo \(n\) de la consola y calcule el factorial de ese número.
+
+\subsection*{Ejemplos:}
+\begin{itemize}
+    \item Entrada: \texttt{0}\\
+          Salida: \texttt{El factorial de 0 es 1.}
+    \item Entrada: \texttt{1}\\
+          Salida: \texttt{El factorial de 1 es 1.}
+    \item Entrada: \texttt{5}\\
+          Salida: \texttt{El factorial de 5 es 120.}
+    \item Entrada: \texttt{7}\\
+          Salida: \texttt{El factorial de 7 es 5040.}
+\end{itemize}

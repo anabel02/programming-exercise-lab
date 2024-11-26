@@ -1,0 +1,18 @@
+\begin{lstlisting}
+    Console.WriteLine("Ingrese el número de identidad:");
+    long idNumber = long.Parse(Console.ReadLine());
+    
+    // Extraer la parte de la fecha del número de identidad
+    int date = (int)(idNumber / 100000);
+    
+    // Extraer el año de la fecha
+    int year = date / 10000;
+    
+    // Extraer el mes de la fecha
+    int month = date / 100 % 100;
+    
+    // Extraer el día de la fecha
+    int day = date % 100;
+    
+    Console.WriteLine($"La fecha de nacimiento es: {day}/{month}/{year}");
+\end{lstlisting}

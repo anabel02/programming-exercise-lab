@@ -1,0 +1,83 @@
+\begin{enumerate}[label=\alph*)]
+    \item El mayor elemento de un array.
+    \begin{lstlisting}
+    public static int FindMax(int[] array)
+    {
+        int max = int.MinValue;
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+            var num = array[i];
+            if (num > max) max = num;
+        }
+
+        return max;
+    }
+    \end{lstlisting}
+    \item El segundo menor elemento de un array.
+    \begin{lstlisting}
+    public static int FindSecondMin(int[] array)
+    {
+        int min = int.MaxValue;
+        int secondMin = int.MaxValue;
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+            int num = array[i];
+            if (num < min)
+            {
+                secondMin = min;
+                min = num;
+            }
+            else if (num < secondMin && num != min)
+            {
+                secondMin = num;
+            }
+        }
+
+        return secondMin;
+    }
+    \end{lstlisting}
+    \item Si un número \(n\) pertenece al array \(a\).
+    \begin{lstlisting}
+    public static bool Contains(int[] array, int n)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            int num = array[i];
+            if (num == n)
+                return true;
+        }
+
+        return false;
+    }
+    \end{lstlisting}
+    \item El promedio de todos los elementos de un array.
+    \begin{lstlisting}
+    public static double CalculateAverage(int[] array)
+    {
+        int sum = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            sum += array[i];
+        }
+
+        return (double)sum / array.Length;
+    }
+    \end{lstlisting}
+    \item La cantidad de elementos que son mayor que el promedio en un array.
+    \begin{lstlisting}
+    public static int CountAboveAverage(int[] array)
+    {
+        double average = CalculateAverage(array);
+        int count = 0;
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] > average) count++;
+        }
+
+        return count;
+    }
+    \end{lstlisting}
+\end{enumerate}

@@ -1,0 +1,28 @@
+Implemente un método que reciba un array \(a\) y un entero \(veces\) y rote los elementos del array tantas veces como indique el parámetro \(veces\). Si \(veces\) es positivo, rota los elementos a la derecha; si es negativo, rota los elementos a la izquierda. Si \(veces\) es 0, el array no se %ifica.
+
+
+\subsection*{Ejemplos}
+
+\begin{itemize}
+    \item Entrada: \(a = [25, 40, 17, 83, 9]\), \(veces = 2\)\\
+    Salida: \([83, 9, 25, 40, 17]\)\\
+    % Explicación: Al rotar el array dos veces hacia la derecha, los últimos dos elementos (\(83, 9\)) se mueven al inicio, mientras que los demás se desplazan hacia la derecha.
+
+    \item Entrada: \(a = [25, 40, 17, 83, 9]\), \(veces = -2\)\\
+    Salida: \([17, 83, 9, 25, 40]\)\\
+    % Explicación: Al rotar el array dos veces hacia la izquierda, los dos primeros elementos (\(25, 40\)) se mueven al final, mientras que los demás se desplazan hacia la izquierda.
+
+    \item Entrada: \(a = [1, 2, 3, 4, 5]\), \(veces = 0\)\\
+    Salida: \([1, 2, 3, 4, 5]\)\\
+    % Explicación: No se realiza ninguna rotación, ya que \(veces = 0\), por lo que el array permanece sin cambios.
+
+    \item Entrada: \(a = [7, 14, 21]\), \(veces = 7\)\\
+    Salida: \([21, 7, 14]\)\\
+    Explicación: Rotar \(veces = 7\) es equivalente a rotar \(veces = 1\) (ya que \(7 \% 3 = 1\), donde \(3\) es el tamaño del array). 
+    % Esto mueve el último elemento (\(21\)) al inicio y desplaza los demás hacia la derecha.
+
+    \item Entrada: \(a = [5, 10, 15, 20]\), \(veces = -5\)\\
+    Salida: \([10, 15, 20, 5]\)\\
+    Explicación: Rotar \(veces = -5\) es equivalente a rotar \(veces = -1\) (ya que \(-5 \% 4 = -1\), donde \(4\) es el tamaño del array). 
+    % Esto mueve el primer elemento (\(5\)) al final y desplaza los demás hacia la izquierda.
+\end{itemize}

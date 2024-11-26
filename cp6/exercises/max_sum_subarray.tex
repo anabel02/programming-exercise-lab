@@ -1,0 +1,32 @@
+Implemente un método que dado un array de números enteros, devuelva la suma del subarray de suma máxima. Si todos los números son negativos devolver 0.
+
+\subsection*{Ejemplos}
+
+\begin{itemize}
+    \item Para el arreglo \([1, 1, -3, 4, 2, 2, -1, 2, -3, 2]\):
+    \begin{itemize}
+        \item El subarray de suma máxima es \([1, 1, -3, \textcolor{green}{4}, \textcolor{green}{2}, \textcolor{green}{2}, \textcolor{green}{-1}, \textcolor{green}{2}, -3, 2]\).
+        \item La suma es \(4 + 2 + 2 - 1 + 2 = 9\).
+    \end{itemize}
+    Resultado: \(9\).
+    
+    \item Para el arreglo \([-4, -2, -7, -1]\):
+    \begin{itemize}
+        \item Todos los números son negativos, por lo que no existe un subarray positivo.
+        \item El resultado es \(0\), representando un subarray vacío.
+    \end{itemize}
+    Resultado: \(0\).
+    
+    \item Para el arreglo \([3, -2, 5, -1, 6, -3, 2]\):
+    \begin{itemize}
+        \item El subarray de suma máxima es \([\textcolor{green}{3}, \textcolor{green}{-2}, \textcolor{green}{5}, \textcolor{green}{-1}, \textcolor{green}{6}, -3, 2]\).
+        \item La suma es \(3 - 2 + 5 - 1 + 6 = 11\).
+    \end{itemize}
+    Resultado: \(11\).
+
+    \item Para el arreglo \([0, -1, 0, -2, 0, -3]\):
+    \begin{itemize}
+        \item Todos los números son negativos o ceros, por lo que no existe un subarray con suma positiva. Un subarray de suma máxima sería \([\textcolor{green}{0}, -1, 0, -2, 0, -3]\)
+    \end{itemize}
+    Resultado: \(0\).
+\end{itemize}

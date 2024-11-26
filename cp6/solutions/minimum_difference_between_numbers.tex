@@ -1,0 +1,56 @@
+Podemos resolver este ejercicio calculando la diferencia entre todos los pares de elementos y quedándonos con la menor.
+
+\begin{lstlisting}
+public static int MinDifference(int[] numbers)
+{
+    // Validación para asegurar que el array tiene al menos dos elementos
+    if (numbers.Length < 2)
+        throw new ArgumentException("El array debe contener al menos dos elementos.");
+       
+    int minDifference = int.MaxValue;
+
+    // Comparamos la diferencia de todos los pares de elementos
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        for (int j = i + 1; j < numbers.Length; j++)
+        {
+            int difference = Math.Abs(numbers[i] - numbers[j]);
+            
+            if (difference < minDifference)
+            {
+                minDifference = difference;
+            }
+        }
+    }
+    
+    // Devolvemos la menor diferencia encontrada
+    return minDifference;
+}
+\end{lstlisting}
+
+Para encontrar la mínima diferencia entre dos números en un array podemos aprovechar el hecho de que en un array ordenado, las diferencias mínimas necesariamente se encuentran entre elementos consecutivos. Por tanto podemos ordenarlo y luego comparar las diferencias de los elementos consecutivos para quedarnos con la mínima. Esto permite evitar comparar todos los pares posibles, simplificando el cálculo.
+
+\begin{lstlisting}
+public static int MinDifference(int[] numbers)
+{
+    // Aseguramos que el array tiene al menos dos elementos.
+    if (numbers == null || numbers.Length < 2)
+            throw new ArgumentException("El array debe tener al menos dos elementos.");
+    
+    // Ordenamos el array para encontrar diferencias consecutivas.
+    Array.Sort(numbers);
+    
+    int minDifference = int.MaxValue;
+    
+    // Comparamos elementos consecutivos.
+    for (int i = 1; i < numbers.Length; i++)
+    {
+        int difference = numbers[i] - numbers[i - 1];
+        
+        if (difference < minDifference)
+            minDifference = difference;
+    }
+    
+    return minDifference;
+}
+\end{lstlisting}

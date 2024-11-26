@@ -1,0 +1,66 @@
+Implemente una clase \textcolor{cyan}{Poly} para representar el comportamiento de un polinomio. Para representar un polinomio de grado n con coeficientes enteros se puede usar un array, de tal manera que en la posición k del array esté el coeficiente de grado k del polinomio. Así, para representar al polinomio \(p(x)=2 x+1\) se puede usar el array \([1,2]\) y para representar al polinomio \(p(x)=x^3-5x+1\) se puede usar el array \([1,-5,0,1]\).
+
+\subsection*{Funcionalidades a implementar}
+
+\begin{itemize}
+    \item \textbf{Obtener el grado del polinomio}: Método que devuelve el grado del polinomio (índice más alto con coeficiente no nulo).
+    
+    \item \textbf{Obtener el coeficiente de una potencia específica}: Método que recibe un exponente \(k\) y devuelve el coeficiente de \(x^k\). Si \(k\) es mayor que el grado del polinomio, debe devolver 0.
+    
+    \item \textbf{Obtener el string que representa al polinomio}: Método que construye una representación en texto del polinomio. Ejemplo: si el array de coeficientes es \([0, -2, 1]\), debe devolver el string \(x^2 - 2x\). Los términos con coeficiente 0 no deben mostrarse, y los signos de cada término deben manejarse correctamente.
+    
+    \item \textbf{Comparar dos polinomios}: Métodos para compara dos polinomios $==, !=, >=, >, <=, <$.
+    
+    \item \textbf{Sumar dos polinomios}: Método que recibe otro polinomio y devuelve un nuevo polinomio que es la suma de ambos.
+    
+    \item \textbf{Multiplicar dos polinomios}: Método que recibe otro polinomio y devuelve un nuevo polinomio que es el producto de ambos.
+    
+    \item \textbf{Multiplicar un polinomio por un escalar \(e\)}: Método que recibe un entero \(e\) y devuelve un nuevo polinomio resultante de multiplicar todos los coeficientes por \(e\).
+    
+    \item * \textbf{Dividir dos polinomios}: Método que realiza la división entre dos polinomios, devolviendo el cociente como polinomio.
+
+     \item * \textbf{Resto de dividir dos polinomios}: Método que realiza la división entre dos polinomios, devolviendo el residuo como polinomio.
+    
+    \item \textbf{Evaluar el polinomio en \(x\)}: Método que recibe un valor \(x\) y devuelve el resultado de evaluar el polinomio en ese valor.
+    
+    \item \textbf{Derivar el polinomio}: Método que devuelve un nuevo polinomio resultante de la derivada del polinomio actual, aplicando la regla de derivación \(\frac{d(x^k)}{dx} = k \cdot x^{k-1}\).
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+Poly.Poly p1 = new Poly.Poly([ 1, -5, 0, 1, 0, 0 ]); // x^3 - 5x + 1
+Poly.Poly p2 = new Poly.Poly([ 2, 3 ]); // 3x + 2
+
+// Obtener grado del polinomio
+Console.WriteLine($"Grado de p1: {p1.Degree}");
+// Esperado: 3
+
+// Obtener coeficiente de una potencia específica
+Console.WriteLine($"Coeficiente de x^2 en p2: {p2[2]}");
+// Esperado: 0
+
+// Suma de polinomios
+Poly.Poly sum = p1 + p2;
+Console.WriteLine(sum.ToString());
+// Esperado: x^3 - 2x + 3
+
+// Resta de polinomios
+Poly.Poly diff = p1 - p2;
+Console.WriteLine(diff.ToString());
+// Esperado: x^3 - 8x - 1
+
+// Multiplicación de polinomios
+Poly.Poly product = p1 * p2;
+Console.WriteLine(product.ToString());
+// Esperado: 3x^4 + 2x^3 - 15x^2 - 7x + 2
+
+// Evaluación del polinomio en un valor específico
+int result = p1.Evaluate(2);
+Console.WriteLine(result);
+// Esperado: -1
+
+// Derivada del polinomio
+Poly.Poly derivative = p1.Derivative();
+Console.WriteLine(derivative.ToString());
+// Esperado: 3x^2 - 5
+\end{lstlisting}

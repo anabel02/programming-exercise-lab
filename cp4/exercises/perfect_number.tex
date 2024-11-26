@@ -1,0 +1,30 @@
+Determina si un número entero positivo es perfecto. Un número entero positivo \( n \) se denomina \textit{perfecto} si la suma de sus divisores propios (excluyendo a \( n \)) es igual a \( n \).
+\[
+n \text{ es perfecto} \iff \sum_{\substack{d \mid n \\ d < n}} d = n
+\]
+
+donde \( d \mid n \) indica que \( d \) es un divisor de \( n \), es decir, \( n \) es divisible por \( d \). 
+
+\subsection*{Ejemplos:}
+\begin{itemize}
+    \item Entrada \( n = 28 \)\\
+    Salida: \textcolor{blue}{true}\\
+    Explicación:
+    \(
+    \text{Divisores propios de 28: } 1, 2, 4, 7, 14, \quad \text{y} \quad 1 + 2 + 4 + 7 + 14 = 28.
+    \)
+    
+    \item Entrada \( n = 6 \)\\
+    Salida: \textcolor{blue}{true}\\
+    Explicación:
+    \(
+    \text{Divisores propiosd de 6: } 1, 2, 3, \quad \text{y } 1 + 2 + 3 = 6.
+    \)
+
+    \item Entrada \( n = 12 \)\\
+    Salida: \textcolor{blue}{false}\\
+    Explicación:
+    \(
+    \text{Divisores propios de 12: } 1, 2, 3, 4, 6, \quad \text{y } 1 + 2 + 3 + 4 + 6 = 16 \neq 12.
+    \)
+\end{itemize}

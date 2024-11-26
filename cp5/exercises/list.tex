@@ -1,0 +1,78 @@
+Implemente la clase \textcolor{cyan}{MyList} para representar una lista de enteros. 
+
+\subsection*{Funcionalidades a Implementar}
+\begin{itemize}
+    \item \textbf{Obtener el número de elementos (\texttt{Count})}: 
+     Propiedad que devuelve el número de elementos en la lista.
+    
+    \item \textbf{Añadir un elemento (\texttt{Add})}:
+     Método para añadir un elemento a la lista.
+    
+    \item \textbf{Vaciar la Lista (\texttt{Clear})}:
+    Método para eliminar todos los elementos de la lista.
+    
+    \item \textbf{Verificar contenido (\texttt{Contains})}:
+    Método que comprueba si un elemento está presente en la lista.
+     
+    \item \textbf{Obtener el Índice de un Elemento (\texttt{IndexOf})}:
+    Método que devuelve el índice de la primera aparición de un elemento específico en la lista.
+    
+    \item \textbf{Insertar en un Índice Específico (\texttt{Insert})}:
+    Método para insertar un elemento en un índice específico de la lista.
+    
+    \item \textbf{Eliminar un Elemento (\texttt{Remove})}:
+    Método para eliminar la primera aparición de un elemento específico de la lista.
+    
+    \item \textbf{Eliminar en un Índice Específico (\texttt{RemoveAt})}:
+    Método para eliminar el elemento en un índice específico de la lista.
+    
+    \item \textbf{Acceder a un Elemento por Índice (\texttt{this[int index]})}:
+    Propiedad indexadora que permite acceder a los elementos de la lista mediante su índice.
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+// Crear una instancia de MyList
+MyList myList = new MyList();
+
+// Añadir elementos a la lista
+myList.Add(10);
+myList.Add(20);
+myList.Add(30);
+Console.WriteLine("Count: " + myList.Count);
+// Esperado: Count: 3
+
+// Acceder a elementos por índice
+Console.WriteLine("Elemento en índice 1: " + myList[1]);
+// Esperado: Elemento en índice 1: 20
+
+// Verificar si un elemento está en la lista
+bool contains = myList.Contains(20);
+Console.WriteLine("¿Contiene 20?: " + contains);
+// Esperado: ¿Contiene 20?: True
+
+// Obtener el índice de un elemento
+int index = myList.IndexOf(30);
+Console.WriteLine("Índice de 30: " + index);
+// Esperado: Índice de 30: 2
+
+// Insertar un elemento en un índice específico
+myList.Insert(1, 15);
+Console.WriteLine("Elemento en índice 1 después de Insert: " + myList[1]);
+// Esperado: Elemento en índice 1 después de Insert: 15
+
+// Eliminar un elemento por valor
+myList.Remove(20);
+Console.WriteLine("¿Contiene 20 después de Remove?: " + myList.Contains(20));
+// Esperado: ¿Contiene 20 después de Remove?: False
+
+// Eliminar un elemento por índice
+myList.RemoveAt(0);
+Console.WriteLine("Elemento en índice 0 después de RemoveAt: " + myList[0]);
+// Esperado: Elemento en índice 0 después de RemoveAt: 15
+
+// Vaciar la lista
+myList.Clear();
+Console.WriteLine("Count después de Clear: " + myList.Count);
+// Esperado: Count después de Clear: 0
+\end{lstlisting}

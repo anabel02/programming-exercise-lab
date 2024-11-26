@@ -1,0 +1,23 @@
+Dado un arreglo \( arr \) de \( n \) elementos, encuentra el número total de \textit{inversiones}. Una inversión se define como un par de índices \( (i, j) \) tal que:
+
+\[
+i < j \quad \text{y} \quad arr[i] > arr[j].
+\]
+
+\subsection*{Ejemplos}
+\begin{itemize}
+    \item Entrada: \( arr = [2, 4, 1, 3, 5] \) \\
+     Salida: \( 3 \)\\
+     Explicación:  Las inversiones son:
+    \(
+    (2, 1), (4, 1), (4, 3)
+    \)
+
+    \item Entrada: \( arr = [5, 4, 3, 2, 1] \) \\
+    Salida: \( 10 \)\\
+    Explicación:  Todas las parejas \( (i, j) \) con \( i < j \) son inversiones, ya que el arreglo está completamente desordenado.
+
+    \item Entrada: \( arr = [1, 2, 3, 4, 5] \) \\
+    Salida: \( 0 \)\\
+    Explicación:  El arreglo está completamente ordenado, por lo que no hay inversiones.
+\end{itemize}

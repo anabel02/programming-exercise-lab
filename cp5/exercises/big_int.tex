@@ -1,0 +1,44 @@
+Implemente una clase \textcolor{cyan}{BigInt} para representar números enteros no negativos potencialmente grandes (pueden tener más de 1000 cifras). Esta clase debe permitir realizar operaciones aritméticas básicas de forma precisa, sin limitarse al rango de tipos numéricos tradicionales.
+
+\subsection*{Funcionalidades a implementar}
+\begin{itemize}
+    \item \textbf{Obtener representación en cadena de caracteres}: Devuelve el número como un \texttt{string} que representa el valor completo del entero grande.
+    \item \textbf{Suma}: Implementa la suma de dos objetos \textcolor{cyan}{BigInt}.
+    \item \textbf{Resta}: Calcula la diferencia entre dos \textcolor{cyan}{BigInt}. \textbf{Nota:} asegúrese de que no se permitan resultados negativos.
+    \item \textbf{Multiplicación}: Realiza la multiplicación entre dos objetos \textcolor{cyan}{BigInt}.
+    \item * \textbf{División}: Implementa la división entre dos \textcolor{cyan}{BigInt}, devolviendo solo la parte entera del cociente.
+    \item * \textbf{Resto de la división}: Calcula el residuo de la división entre dos \textcolor{cyan}{BigInt}.
+    \item \textbf{Potenciación}: Permite elevar el número a una potencia \texttt{b} de tipo \texttt{int}.
+    \item \textbf{Comparación}: Métodos para compara dos objetos \textcolor{cyan}{BigInt} $==, !=, >=, >, <=, <$.
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+BigInt bigInt1 = new BigInt("1000000000000000000000");
+BigInt bigInt2 = new BigInt("100000000000000000000");
+
+// Suma de enteros grandes
+BigInt sum = bigInt1 + bigInt2;
+Console.WriteLine(sum.ToString());
+// Esperado: 1100000000000000000000
+
+// Resta de enteros grandes
+BigInt diff = bigInt1 - bigInt2;
+Console.WriteLine(diff.ToString());
+// Esperado: 900000000000000000000
+
+// Multiplicación de enteros grandes
+BigInt product = bigInt1 * bigInt2;
+Console.WriteLine(product.ToString());
+// Esperado: 100000000000000000000000000000000000000000
+
+// Potenciación
+int exponent = 2;
+BigInt pow = BigInt.Pow(bigInt2, exponent);
+Console.WriteLine(pow.ToString());
+// Esperado: 10000000000000000000000000000000000000000
+
+// Comparación de enteros grandes
+Console.WriteLine(bigInt1 < bigInt2);
+// Esperado: False
+\end{lstlisting}

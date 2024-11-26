@@ -1,0 +1,6 @@
+\begin{lstlisting}
+Console.WriteLine("Ingrese su número de identidad:");
+long idNumber = long.Parse(Console.ReadLine() ?? string.Empty);
+long penultimateDigit = idNumber / 10 % 10;
+Console.WriteLine(penultimateDigit % 2 == 0 ? "Masculino" : "Femenino");
+\end{lstlisting}

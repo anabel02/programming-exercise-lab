@@ -1,0 +1,19 @@
+Un sistema de numeración está definido por una secuencia ordenada de símbolos a los cuales se les asocia valores. Por ejemplo, el sistema decimal (de base diez) que más comúnmente utilizamos está constituido por diez símbolos '0', '1', '2', '3', '4', '5', '6', '7', '8', y '9', que corresponden en este caso a los valores enteros 0, 1, 2, 3, 4, 5, 6, 7, 8, y 9 respectivamente. En este sistema, la secuencia ''475'' expresa el número cuatrocientos setenta y cinco, que es el resultado de:
+
+\[
+4 \times 10^2 + 7 \times 10^1 + 5 \times 10^0
+\]
+
+Si el sistema estuviese constituido por los tres símbolos 'a', 'b', 'c' (que se asocian a los valores enteros 0, 1 y 2 respectivamente), entonces la secuencia "baac" denotaría al número cuyo valor es \( 1 \times 3^3 + 0 \times 3^2 + 0 \times 3^1 + 2 \times 3^0 \), es decir, 29 en el sistema decimal.
+
+\begin{enumerate}[label=\alph*)]
+    \item Implemente un método que, a partir de una secuencia expresada por el string \texttt{numero} representada en una base que es la cantidad de caracteres en el array \texttt{digitosBase}, devuelve el valor de tipo \texttt{int} correspondiente a ese número según la base.
+
+    \textbf{Ejemplo:}
+    Para \texttt{numero} = $"baac"$ en la base \texttt{digitosBase} = $['a', 'b', 'c']$ debería devolver 29.
+
+    \item Recíprocamente, implemente un método que devuelva un \texttt{string} que contenga la secuencia de caracteres que representa un número entero en la base dada por el conjunto de caracteres especificado por el parámetro \texttt{digitosBase}.
+
+    \textbf{Ejemplo:}
+    Para \texttt{numero} = $29$ en la base \texttt{digitosBase} = $['a', 'b', 'c']$ debería devolver $"baac"$.
+\end{enumerate}

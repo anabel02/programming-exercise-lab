@@ -1,0 +1,94 @@
+Implemente la clase \textcolor{cyan}{Set} para representar el comportamiento de un conjunto de enteros. Un conjunto es una colección de elementos únicos, es decir, no repetidos.
+
+\subsection*{Funcionalidades a implementar}
+\begin{itemize}
+    \item \textbf{Obtener la cardinalidad}: 
+    Método que devuelve el número de elementos en el conjunto.
+    
+    \item \textbf{Añadir un elemento}: 
+    Método que agrega un nuevo elemento al conjunto. Si el elemento ya existe, no debe ser agregado de nuevo.
+    
+    \item \textbf{Eliminar un elemento}: 
+    Método que elimina un elemento específico del conjunto. Si el elemento no existe en el conjunto, no se realiza ninguna acción.
+    
+    \item \textbf{Vaciar el conjunto}: 
+    Método que elimina todos los elementos del conjunto, dejándolo vacío.
+
+    \item \textbf{Pertenencia}: 
+    Método que verifica si un elemento específico está presente en el conjunto (\(x \in B\)).
+    
+    \item \textbf{Intersección}: 
+    Método que devuelve un nuevo conjunto con los elementos comunes entre dos conjuntos (\(A \cap B\)).
+    
+    \item \textbf{Unión}: 
+    Método que devuelve un nuevo conjunto con todos los elementos de dos conjuntos (\(A \cup B\)),
+    
+    \item \textbf{Diferencia}: 
+    Método que devuelve un nuevo conjunto con los elementos de \(A\) que no están en \(B\) (\(A - B\)).
+    
+    \item \textbf{Subconjunto}: 
+    Método que determina si un conjunto está contenido dentro de otro (\(A \subseteq B\)).
+    
+    \item \textbf{Igualdad}: 
+    Método que compara si dos conjuntos son iguales (\(A = B\)), es decir, si tienen exactamente los mismos elementos.
+\end{itemize}
+
+\textbf{Ejemplo de uso}
+
+\begin{lstlisting}
+Set s1 = new Set();
+s1.Add(1);
+s1.Add(2);
+s1.Add(3);
+
+Set s2 = new Set([2, 3, 4]);
+
+// Obtener cardinalidad
+Console.WriteLine($"Cardinalidad de s1: {s1.Cardinality}");
+// Esperado: Cardinalidad de s1: 3
+
+// Agregar un elemento
+s1.Add(4);
+Console.WriteLine($"Cardinalidad de s1 después de agregar 4: {s1.Cardinality}");
+// Esperado: Cardinalidad de s1 después de agregar 4: 4
+
+// Eliminar un elemento
+s1.Remove(2);
+Console.WriteLine($"Cardinalidad de s1 después de eliminar 2: {s1.Cardinality}");
+// Esperado: Cardinalidad de s1 después de eliminar 2: 3
+
+// Pertenencia
+bool contains = s2.Contains(3);
+Console.WriteLine($"¿s2 contiene 3?: {contains}");
+// Esperado: ¿s2 contiene 3?: True
+
+// Intersección
+Set intersection = Set.Intersection(s1, s2);
+Console.WriteLine($"Intersección de s1 y s2: [{string.Join(", ", intersection.Elements)}]");
+// Esperado: Intersección de s1 y s2: [3, 4]
+
+// Unión
+Set union = Set.Union(s1, s2);
+Console.WriteLine($"Unión de s1 y s2: [{string.Join(", ", union.Elements)}]");
+// Esperado: Unión de s1 y s2: [1, 2, 3, 4]
+
+// Diferencia
+Set difference = Set.Difference(s2, s1);
+Console.WriteLine($"Diferencia de s2 y s1: [{string.Join(", ", difference.Elements)}]");
+// Esperado: Diferencia de s2 y s1: [2]
+
+// Vaciar
+s1.Clear()
+Console.WriteLine($"Cardinalidad de s1 después de vaciar: {s1.Cardinality}");
+// Esperado: Cardinalidad de s1 después de vaciar: 0
+
+// Subconjunto
+bool isSubset = Set.IsSubset(s1, s2);
+Console.WriteLine($"¿s1 es subconjunto de s2?: {isSubset}");
+// Esperado: ¿s1 es subconjunto de s2?: True
+
+// Igualdad
+bool isEqual = s1 == s2;
+Console.WriteLine($"¿s1 es igual a s2?: {isEqual}");
+// Esperado: ¿s1 es igual a s2?: False
+\end{lstlisting}

@@ -1,0 +1,79 @@
+\section{Mínimo elemento}
+\input{cp8/exercises/min}
+
+\section{Palíndromo}
+Implemente un método que determine si \texttt{s} es palíndromo (se lee igual al derecho que al revés). Ejemplos: \texttt{ana}, \texttt{anitalavalatina}, \texttt{zz}.
+
+\section{Cantidad de dígitos}
+\input{cp8/exercises/digits_count}
+
+\section{Secuencia de Collatz}
+\input{cp8/exercises/collatz}
+
+\section{Potencia}
+\input{cp8/exercises/pow}
+
+% \[ PotenciaSucesiva(a, b) = \begin{cases}
+% a \cdot PotenciaSucesiva(a, b-1) & \text{si } b > 0 \\
+% 1 & \text{si } b = 0
+% \end{cases} \]
+
+\section{Sucesión de Fibonacci}
+\input{cp8/exercises/fibonacci}
+
+\section{Descomposición en factores primos}
+\input{cp8/exercises/prime_factors}
+
+\section{Máximo común divisor}
+\input{cp8/exercises/gcd}
+
+\[ mcd(a, b) = \begin{cases}
+b & \text{si } a \mod b = 0 \\
+mcd(b, a \% b) & \text{de lo contrario}
+\end{cases} \]
+
+\section{Torres de Hanoi}
+¿Recuerdas el problema de las Torres de Hanoi? Este consiste en mover una pila de discos de una torre a otra, respetando las siguientes reglas:
+\begin{itemize}
+    \item Solo se puede mover un disco a la vez.
+    \item Un disco nunca puede colocarse sobre otro más pequeño.
+    \item Solo se puede usar una torre auxiliar.
+\end{itemize}
+
+Escribe un método recursivo para resolver el problema de las Torres de Hanoi, mostrando los movimientos de los discos.
+
+\textbf{Ejemplo:}
+Si tienes 3 discos, la secuencia de movimientos sería:
+\begin{itemize}
+    \item Mover disco 1 de A a C
+    \item Mover disco 2 de A a B
+    \item Mover disco 1 de C a B
+    \item Mover disco 3 de A a C
+    \item Mover disco 1 de B a A
+    \item Mover disco 2 de B a C
+    \item Mover disco 1 de A a C
+\end{itemize}
+
+\section{Representación binaria}
+\input{cp4/exercises/binary_representation}
+
+\section{Super primo}
+\input{cp8/exercises/super_prime}
+
+\section{Conjunto de Wirth}
+\input{cp8/exercises/wirth_set}
+
+\section{Paréntesis balanceados}
+\input{cp8/exercises/parentheses}
+
+\section{Búsqueda binaria}
+\input{cp8/exercises/binary_search}
+
+\section{Máximo y mínimo}
+Implemente un método que, dado un array de enteros \(a\), encuentre el máximo y el mínimo. Encuentre un algoritmo que realice menos de \(\frac{3 n}{2}\) comparaciones para el ejercicio anterior.
+
+% \section{Cantidad de caminos}
+% \input{cp8/exercises/paths_count}
+
+% \section{Recorrido del caballo}
+% \input{cp8/exercises/knight_tour}

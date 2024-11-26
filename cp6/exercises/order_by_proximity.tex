@@ -1,0 +1,22 @@
+Implemente un método que devuelva los elementos de un array de enteros por orden de cercanía a otro entero dado que llamaremos \texttt{pivote}. En caso de que existan varios elementos en el array a la misma distancia del elemento pivote, estos se deberán ordenar de menor a mayor entre ellos.
+
+\subsection*{Ejemplos}
+
+\begin{itemize}
+    \item Para el array \([5, 3, 7, 10]\) y \texttt{pivote} = 7, los elementos del array quedarían: 
+    \[
+    [7,5,10,3]
+    \]
+    
+    \item Para el array \([4, 2, 11, 8]\) y \texttt{pivote} = 7, los elementos del array quedarían:
+    \[
+    [8, 4, 11, 2]
+    \]
+    Note que el elemento pivote puede o no pertenecer al array.
+
+    \item Para el array \([2, 10, 8, 4]\) y \texttt{pivote} = 7, los elementos del array quedarían:
+    \[
+    [8, 4, 10, 2]
+    \]
+    Note que los elementos 4 y 10 están a la misma distancia del pivote. En este caso, el orden correcto es que 4 aparezca antes de 10, ya que es menor.
+\end{itemize}

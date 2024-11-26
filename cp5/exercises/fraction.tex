@@ -1,0 +1,44 @@
+Implemente una clase llamada \textcolor{cyan}{Fraction} para representar el comportamiento de una fracción. Una fracción consta de dos enteros, el numerador y el denominador, donde el denominador no puede ser cero. Dos fracciones se consideran iguales si la relación entre el numerador y el denominador es la misma (por ejemplo, $\frac{1}{2}$ y $\frac{2}{4}$ son equivalentes).
+
+\subsection*{Funcionalidades a implementar}
+\begin{itemize}
+    \item \textbf{Obtener el numerador (simplificado)}: Devuelve el numerador de la fracción en su forma simplificada.
+    \item \textbf{Obtener el denominador (simplificado)}: Devuelve el denominador de la fracción en su forma simplificada.
+    \item \textbf{Representación en cadena de caracteres}: Devuelve una cadena que representa la fracción en el formato \texttt{num/den} (por ejemplo, \texttt{1/2}).
+    \item \textbf{Suma de fracciones}: Realiza la suma de dos fracciones y devuelve el resultado como una nueva fracción.
+    \item \textbf{Resta de fracciones}: Resta una fracción de otra y devuelve el resultado como una nueva fracción.
+    \item \textbf{Multiplicación de fracciones}: Multiplica dos fracciones y devuelve el resultado como una nueva fracción.
+    \item \textbf{División de fracciones}: Divide una fracción por otra y devuelve el resultado como una nueva fracción.
+    \item \textbf{Comparación de fracciones}: Permite comparar dos fracciones para determinar si una es menor, mayor o igual a la otra.
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+Fraction f1 = new Fraction(2, 4);
+Fraction f2 = new Fraction(1, 3);
+
+// Suma de fracciones
+Fraction sum = f1 + f2;
+Console.WriteLine(sum.ToString());
+// Esperado: 5/6
+
+// Resta de fracciones
+Fraction diff = f1 - f2;
+Console.WriteLine(diff.ToString());
+// Esperado: 1/6
+
+// Multiplicación de fracciones
+Fraction product = f1 * f2;
+Console.WriteLine(product.ToString());
+// Esperado: 1/6
+
+// División de fracciones
+Fraction quotient = f1 / f2;
+Console.WriteLine(quotient.ToString());
+// Esperado: 3/2
+
+// Comparación de fracciones
+bool isEqual = f1 == f2;
+Console.WriteLine(isEqual);
+// Esperado: False
+\end{lstlisting}

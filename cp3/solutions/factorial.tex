@@ -1,0 +1,13 @@
+Al igual que podemos llamar otros métodos, un método puede llamarse a sí mismo. Esto es útil en situaciones como el cálculo del factorial, donde el problema puede definirse en términos de sí mismo.
+
+En CalculateFactorial(int n), el método se llama a sí mismo con un número menor. Sin embargo, es crucial tener un \textbf{caso base} para detener las llamadas. En este caso, el caso base es cuando n es 0, devolviendo 1. Sin este caso base, el método se llamaría indefinidamente, causando un bucle infinito.
+
+\begin{lstlisting}
+static long CalculateFactorial(int n)
+{
+    if (n == 0)
+        return 1;
+        
+    return n * CalculateFactorial(n - 1);
+}
+\end{lstlisting}

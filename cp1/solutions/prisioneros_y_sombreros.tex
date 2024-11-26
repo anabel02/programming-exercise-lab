@@ -1,0 +1,14 @@
+Analicemos una estrategia con la que siempre al menos $n - 1$ prisioneros son liberados. En esta estrategia, el último, el prisionero $n$, tiene una tarea crucial, este prisionero cuenta el número de sombreros negros que puede ver delante de él. Si el número de sombreros negros es par, dirá ''blanco''. Si el número de sombreros negros es impar, dirá ''negro''.
+
+Los demás prisioneros, desde el prisionero $n - 1$ hasta el prisionero $1$, siguen una estrategia basada en la respuesta del prisionero anterior. Cada prisionero escucha la respuesta del prisionero anterior y cuenta el número de sombreros negros que puede ver delante de él. Luego, compara este número con la paridad anunciada por el prisionero anterior, quedándole estas cuatro opciones:
+
+ \begin{itemize}
+    \item Si el prisionero anterior dijo ''blanco'' y el número de sombreros negros que ve es par, entonces su propio sombrero debe ser blanco para mantener la paridad.
+    \item Si el prisionero anterior dijo ''blanco'' y el número de sombreros negros que ve es impar, entonces su propio sombrero debe ser negro para cambiar la paridad.
+    \item Si el prisionero anterior dijo ''negro'' y el número de sombreros negros que ve es par, entonces su propio sombrero debe ser negro para cambiar la paridad.
+    \item Si el prisionero anterior dijo ''negro'' y el número de sombreros negros que ve es impar, entonces su propio sombrero debe ser blanco para mantener la paridad.
+\end{itemize}
+
+Es importante destacar que el prisionero $n$ tiene un 50\% de probabilidad de salvarse. Esto se debe a que su respuesta inicial (blanco o negro) se basa únicamente en la paridad del número de sombreros negros que puede ver, sin información sobre el color de su propio sombrero. Por lo tanto, tiene una probabilidad del 50\% de adivinar correctamente el color de su sombrero.
+
+Sin embargo, su respuesta es crucial para que los demás prisioneros puedan deducir el color de sus propios sombreros. Los prisioneros restantes (del prisionero $n - 1$ al prisionero $1$) pueden utilizar la información proporcionada por el prisionero $n$ y la paridad de los sombreros que ven para determinar con certeza el color de sus propios sombreros. De esta manera, al menos $n - 1$ prisioneros serán liberados con seguridad.

@@ -1,0 +1,28 @@
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Solución:}
+    
+    Para imprimir los números de $n$ hasta 0, podemos plantear el problema de la siguiente manera:  imprimir el número $n$ y luego imprimir los números de $n-1$ hasta 0. El caso de parada podríamos definirlo como si $n < 0$, no hacer nada (return).
+    \begin{lstlisting}
+    static void PrintNumbersDesc(int n)
+    {
+        if (n < 0) return;
+        
+        Console.WriteLine(n);
+        
+        PrintNumbersDesc(n - 1);
+    }
+    \end{lstlisting}
+    \item \textbf{Solución:}
+    
+    Similar al ejercicio anterior, podemos plantear el problema de imprimir los números de 0 hasta $n$ como: imprimir los números de 0 hasta $n-1$ y luego imprimir el número $n$. 
+    \begin{lstlisting}
+    static void PrintNumbersAsc(int n)
+    {
+        if (n < 0) return;
+            
+        PrintNumbersAsc(n - 1);
+            
+        Console.WriteLine(n);
+    }
+    \end{lstlisting}
+\end{enumerate}

@@ -1,0 +1,50 @@
+Estamos desarrollando un sistema para gestionar una biblioteca digital que permita a los usuarios agregar reseñas y calificaciones a los libros, y necesitamos tu ayuda para implementar una clase que represente los libros en este sistema. Tu tarea es diseñar una clase \textcolor{cyan}{Book} que encapsule de manera segura toda la información de un libro.
+
+\begin{itemize}
+    \item \textbf{Propiedades (de solo lectura):}
+    \begin{itemize}
+        \item \texttt{Title} (string): el título del libro.
+        \item \texttt{Author} (string): el nombre del autor.
+        \item \texttt{Genre} (enum): el género del libro (Ficción, No Ficción, Ciencia, Historia, etc).
+        \item \texttt{ISBN} (string): el identificador único del libro, que debe ser inmutable tras la creación del objeto.
+    \end{itemize}
+    
+    \item \textbf{Métodos Públicos:}
+    \begin{itemize}
+        \item \texttt{AddReview(string reviewText, int rating)}: agrega una reseña al libro con un texto y una calificación (de 1 a 5).
+        \item \texttt{GetReviews()}: devuelve todas las reseñas del libro como un solo string, mostrando el texto y la calificación de cada reseña, separadas por saltos de línea.
+        \item \texttt{GetAverageRating()}: calcula y devuelve el promedio de todas las calificaciones de las reseñas.
+        \item \texttt{GetSummary()}: devuelve un breve resumen del libro en el siguiente formato:
+        \begin{verbatim}
+    Title: [Título]
+    Author: [Autor]
+    Genre: [Género]
+    ISBN: [ISBN]
+        \end{verbatim}
+    \end{itemize}
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+Book book = new Book("The Great Gatsby", "F. Scott Fitzgerald",
+                     Genre.Fiction, "978-0743273565");
+book.AddReview("Amazing classic!", 5); 
+book.AddReview("A timeless tale of love and loss.", 4); 
+
+Console.WriteLine(book.GetSummary()); 
+// Esperado: 
+// Title: The Great Gatsby
+// Author: F. Scott Fitzgerald
+// Genre: Fiction
+// ISBN: 978-0743273565
+
+Console.WriteLine("Reviews:");
+Console.WriteLine(book.GetReviews()); 
+// Esperado:
+// Review 1: Amazing classic! (Rating: 5)
+// Review 2: A timeless tale of love and loss. (Rating: 4)"
+
+Console.WriteLine("Average Rating: " + book.GetAverageRating()); 
+// Esperado: 
+// Average Rating: 4.5
+\end{lstlisting}

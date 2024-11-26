@@ -1,0 +1,60 @@
+Analicemos qué deben cumplir estos enteros para formar una fecha:
+\begin{enumerate}
+    \item El año debe ser positivo.
+    \item El mes debe estar entre 1 y 12.
+    \item El día debe estar dentro del rango de días válidos para el mes y el año dados, notemos que tenemos que tener en cuenta el año ya que $29/2/2001$ no es una fecha válida mientras que $29/2/2004$ sí lo es.
+\end{enumerate}
+
+Podemos definir el siguiente método para validar una fecha
+\begin{lstlisting}
+public static bool ValidateDate(int day, int month, int year)
+{
+    return year > 0 &&
+           month > 0 && month <= 12 &&
+           day > 0 && day <= CalculateLastDayInMonth(month, year);
+}
+\end{lstlisting}
+
+Notemos que, con una implementación correcta de \textit{CalculateLastDayInMonth}, tendríamos el problema resuelto. Podemos implementar este método así:
+\begin{lstlisting}
+private static int CalculateLastDayInMonth(int month, int year)
+{
+    switch (month)
+    {
+        // Los meses con 30 días
+        case 4 or 6 or 9 or 11:
+            return 30;
+        // Febrero
+        case 2:
+            return IsLeapYear(year) ? 29 : 28;
+        // Los meses con 31 días
+        default:
+            return 31;
+    }
+}
+\end{lstlisting}
+
+Ahora solo nos faltaría implementar \textit{IsLeapYear} que determina si un año es bisiesto o no.
+
+\begin{tcolorbox}
+    Antes de 1582, los años bisiestos se determinaban según el calendario juliano, donde un año era bisiesto si era divisible por 4. Este sistema acumulaba un pequeño desfase con el tiempo.
+
+    Con la introducción del calendario gregoriano en 1582, se ajustaron las reglas: un año es bisiesto si es divisible por 4 y no por 100, a menos que también sea divisible por 400. Esto ayuda a mantener el calendario alineado con el ciclo solar y las estaciones del año.
+
+    Por ejemplo, 1600 y 2000 son años bisiestos, pero 1700, 1800 y 1900 no lo son.
+\end{tcolorbox}
+
+Podemos implementar \textit{IsLeapYear} de la siguiente manera
+
+\begin{lstlisting}
+private static bool IsLeapYear(int year)
+{
+    return year <= 1582
+        ? year % 4 == 0
+        : (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+}
+\end{lstlisting}
+
+Finalmente, el código completo nos quedaría:
+
+\lstinputlisting{cp3/code/ValidateDate.cs}

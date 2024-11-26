@@ -1,0 +1,93 @@
+Implemente una clase llamada \textcolor{cyan}{MyComplex} que represente el comportamiento de un número complejo, compuesto por una parte real y una parte imaginaria. Esta clase debe proporcionar métodos para realizar operaciones y obtener propiedades específicas de los números complejos.
+
+\subsection*{Funcionalidades a implementar}
+\begin{itemize}
+    \item \textbf{Obtener la parte real}: Devuelve la parte real del número complejo.
+    \item \textbf{Obtener la parte imaginaria}: Devuelve la parte imaginaria del número complejo.
+    \item \textbf{Representación en cadena de caracteres}: Devuelve una cadena en el formato estándar “$a + bi$”, donde \texttt{a} es la parte real y \texttt{b} es la parte imaginaria.
+    \item \textbf{Conjugado}: Calcula el conjugado del número complejo. Si el número es $z = a + bi$, su conjugado es:
+    \[
+    \overline{z} = a - bi
+    \]
+    \item \textbf{Módulo}: Calcula el módulo del número complejo, es decir, la distancia desde el origen en el plano complejo. Para $z = a + bi$, el módulo es:
+    \[
+    |z| = \sqrt{a^2 + b^2}
+    \]
+    \item \textbf{Ángulo (argumento)}: Calcula el ángulo del número complejo en radianes, medido desde el eje positivo de las abscisas. 
+    % Para $z = a + bi$, el ángulo es:
+    % \[
+    % \theta = 
+    % \begin{cases} 
+    % \arctan\left(\frac{b}{a}\right) & \text{si } a > 0 \, (\text{Primer o Cuarto cuadrante}), \\
+    % \arctan\left(\frac{b}{a}\right) + \pi & \text{si } a < 0 \text{ y } b \geq 0 \, (\text{Segundo cuadrante}), \\
+    % \arctan\left(\frac{b}{a}\right) - \pi & \text{si } a < 0 \text{ y } b < 0 \, (\text{Tercer cuadrante}), \\
+    % \frac{\pi}{2} & \text{si } a = 0 \text{ y } b > 0 \, (\text{Eje positivo imaginario}), \\
+    % -\frac{\pi}{2} & \text{si } a = 0 \text{ y } b < 0 \, (\text{Eje negativo imaginario}), \\
+    % 0 & \text{si } b = 0 \text{ y } a > 0 \, (\text{Eje positivo real}), \\
+    % \pi & \text{si } b = 0 \text{ y } a < 0 \, (\text{Eje negativo real}).
+    % \end{cases}
+    % \]
+    % Considerando el cuadrante correspondiente.
+    \item \textbf{Suma de números complejos}: Realiza la suma de dos números complejos. Dados $z_1 = a + bi$ y $z_2 = c + di$, su suma es:
+    \[
+    z_1 + z_2 = (a + c) + (b + d)i
+    \]
+    \item \textbf{Resta de números complejos}: Calcula la diferencia entre dos números complejos. Dados $z_1 = a + bi$ y $z_2 = c + di$, su resta es:
+    \[
+    z_1 - z_2 = (a - c) + (b - d)i
+    \]
+    \item \textbf{Multiplicación de números complejos}: Realiza la multiplicación de dos números complejos. Dados $z_1 = a + bi$ y $z_2 = c + di$, su producto es:
+    \[
+    z_1 \cdot z_2 = (ac - bd) + (ad + bc)i
+    \]
+    \item \textbf{División de números complejos}: Realiza la división entre dos números complejos, devolviendo el resultado en forma de otro número complejo. Dados $z_1 = a + bi$ y $z_2 = c + di$, su división es:
+    \[
+    \frac{z_1}{z_2} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}
+    \]
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+MyComplex c1 = new MyComplex(3, 4); // 3 + 4i
+MyComplex c2 = new MyComplex(1, -2); // 1 - 2i
+
+// Suma de números complejos
+MyComplex sum = c1 + c2;
+Console.WriteLine(sum.ToString());
+// Esperado: 4 + 2i
+
+// Resta de números complejos
+MyComplex diff = c1 - c2;
+Console.WriteLine(diff.ToString());
+// Esperado: 2 + 6i
+
+// Multiplicación de números complejos
+MyComplex product = c1 * c2;
+Console.WriteLine(product.ToString());
+// Esperado: 11 - 2i
+
+// División de números complejos
+MyComplex quotient = c1 / c2;
+Console.WriteLine(quotient.ToString());
+// Esperado: -1.4 + 2.2i
+
+// Conjugado de un número complejo
+MyComplex conjugate = c1.Conjugate;
+Console.WriteLine(conjugate.ToString());
+// Esperado: 3 - 4i
+
+// Módulo de un número complejo
+double modulus = c1.Modulus;
+Console.WriteLine(modulus);
+// Esperado: 5 (porque sqrt(3^2 + 4^2) = 5)
+
+// Ángulo (argumento) de un número complejo
+double angle = c1.Argument;
+Console.WriteLine(angle);
+// Esperado: 0.9273 (en radianes)
+
+// Comparación de igualdad
+bool isEqual = c1 == c2;
+Console.WriteLine(isEqual);
+// Esperado: False
+\end{lstlisting}

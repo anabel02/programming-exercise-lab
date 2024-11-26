@@ -1,0 +1,53 @@
+Implemente una clase llamada \textcolor{cyan}{Date} para representar una fecha, que incluya día, mes y año. Esta clase debe permitir realizar operaciones y consultas básicas sobre fechas.
+
+\subsection*{Funcionalidades a implementar}
+\begin{itemize}
+    \item \textbf{Obtener el día}: Devuelve el día correspondiente de la fecha.
+    \item \textbf{Obtener el mes}: Devuelve el mes correspondiente de la fecha.
+    \item \textbf{Obtener el año}: Devuelve el año correspondiente de la fecha.
+    \item \textbf{Obtener el día de la semana}: Calcula y devuelve el día de la semana en el que cae la fecha (por ejemplo, Lunes, Martes).
+    \item \textbf{Comparar fechas}: Permite comparar dos fechas, indicando si una fecha es anterior, igual o posterior a otra.
+    \item \textbf{Avanzar un día}: Ajusta la fecha actual avanzando un día, manejando correctamente los cambios de mes y año cuando sea necesario.
+    \item \textbf{Retroceder un día}: Ajusta la fecha actual retrocediendo un día, manejando correctamente los cambios de mes y año cuando sea necesario.
+    \item \textbf{Calcular la diferencia en días}: Calcula y devuelve la cantidad de días entre dos fechas dadas.
+    \item \textbf{Representación en cadena de caracteres}: Devuelve la fecha en formato \texttt{día/mes/año} (por ejemplo, \texttt{12/10/2024}).
+\end{itemize}
+
+\textbf{Ejemplo de uso:}
+\begin{lstlisting}
+Date date1 = new Date(12, 10, 2024);
+Date date2 = new Date(15, 10, 2024);
+
+// Obtener el día, mes, año y el día de la semana
+int day = date1.Day;                // Esperado: 12
+int month = date1.Month;            // Esperado: 10
+int year = date1.Year;              // Esperado: 2024
+string dayOfWeek = date1.DayOfWeek; // Esperado: "Saturday"
+
+// Comparar fechas con operadores
+if (date1 < date2)
+{
+    Console.WriteLine($"{date1} es anterior a {date2}");
+}
+else if (date1 > date2)
+{
+    Console.WriteLine($"{date1} es posterior a {date2}");
+}
+else
+{
+    Console.WriteLine($"{date1} es igual a {date2}");
+}
+// Esperado: "12/10/2024 es anterior a 15/10/2024"
+
+// Avanzar un día
+date1.AdvanceOneDay();
+Console.WriteLine(date1.ToString()); // Esperado: 13/10/2024
+
+// Retroceder un día
+date2.RetreatOneDay();
+Console.WriteLine(date2.ToString()); // Esperado: 14/10/2024
+
+// Calcular la diferencia en días entre dos fechas
+int daysDifference = Date.DaysBetween(date1, date2);
+Console.WriteLine($"Días de diferencia: {daysDifference}"); // Esperado: 1
+\end{lstlisting}

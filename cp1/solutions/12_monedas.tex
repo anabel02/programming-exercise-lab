@@ -1,0 +1,18 @@
+Procedemos haciendo tres montones de cuatro monedas cada uno y comparamos los montones \{1, 2, 3, 4\} y \{5, 6, 7, 8\}, colocando cada uno en un plato de la balanza. El resultado puede ser:
+
+\begin{itemize}
+    \item \textbf{Los platos están en equilibrio:} Entonces la moneda falsa está entre las cuatro monedas \{9, 10, 11, 12\} que no fueron pesadas y nos quedan dos oportunidades para descubrirla. Vamos a utilizar una de las monedas buenas (la 1), de las ocho ya utilizadas para proceder con la siguiente pesada, poniendo en un platillo las monedas \{1, 9\} y en el otro las monedas \{10, 11\}.
+    \begin{itemize}
+        \item Si hay equilibrio significa que la moneda 12 es la defectuosa y nos queda una pesada para determinar si pesa más o pesa menos, lo cual se logra comparándola con la moneda 1, por ejemplo.
+        \item Si \{1, 9\} pesa menos que \{10, 11\} significa que o bien 9 es la falsa y pesa menos o bien 10 o 11 es falsa y pesa más. Comparamos ahora en la última pesada \{10\} con \{11\}. Si hay equilibrio la falsa es 9 y pesa menos, en caso contrario, la que más pese es la falsa y tiene un mayor peso que las auténticas.
+        \item Si \{1, 9\} pesa más que \{10, 11\} es análogo al caso anterior.
+    \end{itemize}
+    \item \textbf{Los platos están desequilibrados.} En este caso tenemos ocho monedas candidatas a falsas y cuatro buenas. Sin pérdida de generalidad, supongamos que el platillo con \{1, 2, 3, 4\} es el más alto, es decir con menor peso. Vamos a proceder agregando una moneda buena, la 9, al grupo de las ocho y formamos tres montones de tres monedas cada uno así: \{1, 5, 9\}, \{2, 3, 7\} y \{4, 6, 8\}. El siguiente paso es usar ahora la segunda pesada para comparar estos dos primeros montones. Hay tres posibilidades:
+    \begin{itemize}
+        \item Hay equilibrio. Significa que la falsa está en el grupo \{4, 6, 8\}. Entonces en la última pesada comparamos \{6\} y \{8\}. Si hay equilibrio entre ellas, la falsa es 4 y pesa menos; si no es así, la más pesada es la falsa y pesa más que las auténticas.
+        \item \{1, 5, 9\} pesa más que \{2, 3, 7\}. Significa que o bien la 5 es falsa y pesa más o bien 2 o 3 es falsa y pesa menos. Comparamos estas últimas para saber cuál pesa menos y esa será la defectuosa, pero si hay equilibrio entre ellas, la falsa es la 5.
+        \item \{1, 5, 9\} pesa menos que \{2, 3, 7\}. Significa que o bien 1 pesa menos o bien 7 pesa más. Comparamos cualquiera de ellas, en la última pesada, con una cualquiera de las auténticas ya determinadas y así sabemos cuál es la falsa y si pesa más o menos que una buena.
+    \end{itemize}
+\end{itemize}
+
+Hemos considerado ya todos los posibles casos y con tres pesadas hemos podido determinar la moneda falsa y saber si pesa más o pesa menos. Cabe mencionar que existen varias soluciones al problema, y esta es solo una de las posibles estrategias.

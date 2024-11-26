@@ -1,0 +1,37 @@
+\textbf{Usando una variable auxiliar:}
+\begin{lstlisting}
+    Console.WriteLine("Ingrese dos números enteros:");
+    int a = int.Parse(Console.ReadLine());
+    int b = int.Parse(Console.ReadLine());
+    
+    int temp = a;
+    a = b;
+    b = temp;
+    
+    Console.WriteLine($"El valor de a es {a} y el valor de b es {b}.");
+\end{lstlisting}
+
+\textbf{Usando operaciones aritméticas:}
+\begin{lstlisting}
+    Console.WriteLine("Ingrese dos números enteros:");
+    int a = int.Parse(Console.ReadLine());
+    int b = int.Parse(Console.ReadLine());
+    
+    // Valores iniciales: a = x, b = y
+    // Paso 1: Sumar ambos números y almacenar el resultado en 'a'
+    a += b;
+    // Ahora, a = x + y, b = y
+    
+    // Paso 2: Restar el nuevo valor de 'a' (que es x + y) por 'b' (que es y)
+    // Esto nos da el valor original de 'a' (que es x) y lo almacena en 'b'
+    b = a - b;
+    // Ahora, b = x, a = x + y
+    
+    // Paso 3: Restar el nuevo valor de 'b' (que es x) de 'a' (que es x + y)
+    // Esto nos da el valor original de 'b' (que es y) y lo almacena en 'a'
+    a -= b;
+    // Ahora, a = y, b = x
+    
+    // En este punto, los valores de 'a' y 'b' han sido intercambiados
+    Console.WriteLine($"El valor de a es {a} y el valor de b es {b}.");
+\end{lstlisting}

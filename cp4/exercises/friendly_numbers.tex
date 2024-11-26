@@ -1,0 +1,60 @@
+Implemente un método que diga si los números $a$ y $b$ son amigos. Dos números son amigos si la suma de los divisores de $a$ (sin contarlo a él) es $b$ y la suma de los divisores de $b$ (sin contarlo a él) es $a$. Por ejemplo, los números 220 y 284 son amigos pues los divisores propios de 220 son:
+\[
+1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110
+\]
+y los divisores propios de 284 son:
+\[
+1, 2, 4, 71, 142
+\]
+y se cumple que:
+\[
+284 = 1 + 2 + 4 + 5 + 10 + 11 + 20 + 22 + 44 + 55 + 110
+\]
+\[
+220 = 1 + 2 + 4 + 71 + 142
+\]
+
+\item \textbf{Números amigos}\\
+Dos números enteros positivos \( a \) y \( b \) se denominan \textit{amigos} si cumplen las siguientes condiciones:
+\[
+b = \sum_{d \mid a, d < a}d \quad \text{y} \quad a = \sum_{d \mid b, d < b} d,
+\]
+donde la notación \( d \mid a \) denota que \( d \) es un divisor de \( a \). 
+
+Es decir, la suma de los divisores propios de \( a \) debe ser igual a \( b \), y la suma de los divisores propios de \( b \) debe ser igual a \( a \).
+
+\subsection*{Ejemplos:}
+\begin{itemize}
+    \item \textbf{Entrada:} \( a = 220, \, b = 284 \)\\
+    \textbf{Salida:} \textcolor{blue}{true}\\
+    \textbf{Explicación:}
+    \[
+    \text{Divisores propios de } 220: 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110, \quad \text{y su suma es } 284.
+    \]
+    \[
+    \text{Divisores propios de } 284: 1, 2, 4, 71, 142, \quad \text{y su suma es } 220.
+    \]
+    Por lo tanto, \( 220 \) y \( 284 \) son números amigos.
+
+    \item \textbf{Entrada:} \( a = 1184, \, b = 1210 \)\\
+    \textbf{Salida:} \textcolor{blue}{true}\\
+    \textbf{Explicación:}
+    \[
+    \text{Divisores propios de } 1184: 1, 2, 4, 8, 16, 32, 37, 74, 148, 296, 592, \quad \text{y su suma es } 1210.
+    \]
+    \[
+    \text{Divisores propios de } 1210: 1, 2, 5, 10, 11, 22, 55, 110, 121, 242, 605, \quad \text{y su suma es } 1184.
+    \]
+    Por lo tanto, \( 1184 \) y \( 1210 \) son números amigos.
+
+    \item \textbf{Entrada:} \( a = 30, \, b = 42 \)\\
+    \textbf{Salida:} \textcolor{blue}{false}\\
+    \textbf{Explicación:}
+    \[
+    \text{Divisores propios de } 30: 1, 2, 3, 5, 6, 10, 15, \quad \text{y su suma es } 42.
+    \]
+    \[
+    \text{Divisores propios de } 42: 1, 2, 3, 6, 7, 14, 21, \quad \text{y su suma es } 54.
+    \]
+    Aunque la suma de los divisores propios de \( 30 \) es \( 42 \), no se cumple que la suma de los divisores propios de \( 42 \) sea \( 30 \). Por lo tanto, no son números amigos.
+\end{itemize}
