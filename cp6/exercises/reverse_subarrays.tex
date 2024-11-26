@@ -3,9 +3,9 @@ Implemente un método que, dado un número entero \(k\), invierta cada subarray 
 \subsection*{Ejemplos}
 
 \begin{itemize}
-    \item \textbf{Entrada:} \(a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], \, k = 3\)\\
-    \textbf{Salida:} \([3, 2, 1, 6, 5, 4, 9, 8, 7, 10]\)\\
-    \textbf{Explicación:} 
+    \item Entrada: \(a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], \, k = 3\)\\
+    Salida: \([3, 2, 1, 6, 5, 4, 9, 8, 7, 10]\)\\
+    Explicación: 
     \begin{itemize}
         \item El subarray \([1, 2, 3]\) se invierte en \([3, 2, 1]\).
         \item El subarray \([4, 5, 6]\) se invierte en \([6, 5, 4]\).
@@ -13,24 +13,24 @@ Implemente un método que, dado un número entero \(k\), invierta cada subarray 
         \item El último elemento \(10\), aunque no forma un subarray completo, también se invierte, resultando en sí mismo.
     \end{itemize}
 
-    \item \textbf{Entrada:} \(a = [1, 2, 3, 4, 5, 6, 7], \, k = 4\)\\
-    \textbf{Salida:} \([4, 3, 2, 1, 7, 6, 5]\)\\
-    \textbf{Explicación:}
+    \item Entrada: \(a = [1, 2, 3, 4, 5, 6, 7], \, k = 4\)\\
+    Salida: \([4, 3, 2, 1, 7, 6, 5]\)\\
+    Explicación:
     \begin{itemize}
         \item El subarray \([1, 2, 3, 4]\) se invierte en \([4, 3, 2, 1]\).
         \item El subarray incompleto \([5, 6, 7]\) se invierte en \([7, 6, 5]\).
     \end{itemize}
 
-    \item \textbf{Entrada:} \(a = [7, 14, 21, 28, 35, 42], \, k = 6\)\\
-    \textbf{Salida:} \([42, 35, 28, 21, 14, 7]\)\\
-    \textbf{Explicación:}
+    \item Entrada: \(a = [7, 14, 21, 28, 35, 42], \, k = 6\)\\
+    Salida: \([42, 35, 28, 21, 14, 7]\)\\
+    Explicación:
     \begin{itemize}
         \item Todo el array \([7, 14, 21, 28, 35, 42]\) forma un único subarray que se invierte completamente, resultando en \([42, 35, 28, 21, 14, 7]\).
     \end{itemize}
 
-    \item \textbf{Entrada:} \(a = [1, 2, 3], \, k = 1\)\\
-    \textbf{Salida:} \([1, 2, 3]\)\\
-    \textbf{Explicación:}
+    \item Entrada: \(a = [1, 2, 3], \, k = 1\)\\
+    Salida: \([1, 2, 3]\)\\
+    Explicación:
     \begin{itemize}
         \item Como \(k = 1\), cada subarray tiene un solo elemento, por lo que no hay cambios.
     \end{itemize}
