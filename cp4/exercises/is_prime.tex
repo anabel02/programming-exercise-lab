@@ -1,6 +1,19 @@
-\begin{enumerate}[label=\alph*)]
-    \item Determine si un número entero positivo es primo. Un número es primo si solo tiene dos divisores: 1 y el propio número.
-    \item Implemente un método que devuelva el $n$-ésimo de la sucesión de números primos.
-    \item Implemente un método que retorne el número primo más cercano al número $n$.
-    \item Implemente un método que escriba en la consola la descomposición en números primos de $n$.
-\end{enumerate}
+Escribe un programa que determine si un entero es primo o no.
+    
+Un número entero positivo \( n \) se dice que es \textit{primo} si tiene exactamente dos divisores distintos: \( 1 \) y el propio número \( n \). Es decir, \( n \) es primo si y solo si no existen otros divisores \( d \) tal que \( 1 < d < n \) y \( d \) divide a \( n \). Formalmente, podemos escribir:
+\[
+n \text{ es primo} \iff \forall d \in \mathbb{Z}^+ \, \text{se cumple que si} \, d \mid n \text{, entonces } d = 1 \text{ o } d = n.
+\]
+
+Donde \( \mathbb{Z}^+ \) representa el conjunto de los números enteros positivos, y \( d \mid n \) denota que \( d \) divide a \( n \), es decir, \( n \) es divisible por \( d \).
+\subsection*{Ejemplos}
+\begin{itemize}
+    \item Entrada: \texttt{10}\\
+          Salida: \textcolor{blue}{false}
+    \item Entrada: \texttt{29}\\
+          Salida: \textcolor{blue}{true}
+    \item Entrada: \texttt{15}\\
+          Salida: \textcolor{blue}{false}
+    \item Entrada: \texttt{31}\\
+          Salida: \textcolor{blue}{true}
+\end{itemize}

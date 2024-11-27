@@ -155,96 +155,33 @@
     \input{cp4/exercises/lazy_max_min_avg.tex}
 
     \item \textbf{Es primo}\\
-    Escribe un programa que determine si un entero es primo o no.
-    
-    Un número entero positivo \( n \) se dice que es \textit{primo} si tiene exactamente dos divisores distintos: \( 1 \) y el propio número \( n \). Es decir, \( n \) es primo si y solo si no existen otros divisores \( d \) tal que \( 1 < d < n \) y \( d \) divide a \( n \). Formalmente, podemos escribir:
-
-    \[
-    n \text{ es primo} \iff \forall d \in \mathbb{Z}^+ \, \text{se cumple que si} \, d \mid n \text{, entonces } d = 1 \text{ o } d = n.
-    \]
-    
-    Donde \( \mathbb{Z}^+ \) representa el conjunto de los números enteros positivos, y \( d \mid n \) denota que \( d \) divide a \( n \), es decir, \( n \) es divisible por \( d \).
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{10}\\
-              Salida: \textcolor{blue}{false}
-        \item Entrada: \texttt{29}\\
-              Salida: \textcolor{blue}{true}
-        \item Entrada: \texttt{15}\\
-              Salida: \textcolor{blue}{false}
-        \item Entrada: \texttt{31}\\
-              Salida: \textcolor{blue}{true}
-    \end{itemize}
+    \input{cp4/exercises/is_prime.tex}
 
 % Intermediate
     \item \textbf{n-ésimo primo}\\
-    Implemente un método que devuelva el $n$-ésimo primo de la sucesión de números primos.
-    \subsection*{Ejemplos}
-    \begin{itemize} 
-        \item Entrada: \texttt{1}\\ 
-        Salida: \texttt{2}
-        \item Entrada: \texttt{3}\\
-        Salida: \texttt{5}
-    
-        \item Entrada: \texttt{5}\\
-              Salida: \texttt{11}
-        
-        \item Entrada: \texttt{10}\\
-              Salida: \texttt{29}
-        
-        \item Entrada: \texttt{15}\\
-              Salida: \texttt{47}
-    \end{itemize}
+    \input{cp4/exercises/n-th_prime.tex}
     
     \item \textbf{Es perfecto}\\
-    \input{cp4/exercises/perfect_number}
+    \input{cp4/exercises/perfect_number.tex}
 
     \item \textbf{Es narcisista}\\
-    \input{cp4/exercises/armstrong_number}
+    \input{cp4/exercises/armstrong_number.tex}
 
     \item \textbf{Tabla de los productos}
-    \input{cp4/exercises/products_table}
+    \input{cp4/exercises/products_table.tex}
 
 % Advanced
     \item \textbf{Primo más cercano}\\
-    Implemente un método que, dado un número entero positivo \( n \), encuentre y retorne el número primo más cercano a \( n \). Si existen dos números primos equidistantes de \( n \), retorne el menor de los dos. 
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada \( n = 10 \)\\
-        Salida: \texttt{11}
-    
-        \item Entrada \( n = 13 \)\\
-        Salida: \texttt{13}
-    
-        \item Entrada \( n = 21 \)\\
-        Salida: \texttt{19}\\
-        Explicación:
-        Los números primos más cercanos a \( 21 \) son \( 19 \) y \( 23 \). Como ambos están a igual distancia de \( 21 \), se retorna el menor.
-    
-        \item Entrada \( n = 2 \)\\
-        Salida: \texttt{2}
-    \end{itemize}
-    
+    \input{cp4/exercises/nearest_prime.tex}
 
     \item \textbf{Descomponiendo en primos}\\
-    Implemente un método que reciba un número entero positivo \( n \) y escriba en la consola su descomposición en factores primos.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada \( n = 28 \)\\
-        Salida en consola: \( 2 \times 2 \times 7 \)
-    
-        \item Entrada \( n = 45 \)\\
-        Salida en consola: \( 3 \times 3 \times 5 \)
-    
-        \item Entrada \( n = 13 \)\\
-        Salida en consola: \( 13 \)
-    \end{itemize}
+    \input{cp4/exercises/prime_descomposition.tex}
     
     \item \textbf{Son amigos}\\
-    \input{cp4/exercises/friendly_numbers}
+    \input{cp4/exercises/friendly_numbers.tex}
 
     \item \textbf{Representación binaria}
-    \input{cp4/exercises/binary_representation}
+    \input{cp4/exercises/binary_representation.tex}
 \end{enumerate}
 
 \newpage
