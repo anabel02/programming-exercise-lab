@@ -1,0 +1,57 @@
+Dado dos conjuntos \( A \) y \( B \), representados mediante arreglos (arrays), implementa métodos para realizar las siguientes operaciones fundamentales de teoría de conjuntos. Cada método debe devolver un nuevo arreglo que represente el resultado de la operación, asegurándote de que los elementos no se repitan:
+    
+\begin{enumerate}
+    \item \( A \cap B \): Devuelve los elementos que están en \( A \) \textbf{y} en \( B \) (intersección).
+    \item \( A \cup B \): Devuelve los elementos que están en \( A \) \textbf{o} en \( B \) (unión).
+    \item \( A \setminus B \): Devuelve los elementos que están en \( A \) pero \textbf{no} en \( B \) (diferencia).
+    \item \( A \, \Delta \, B \): Devuelve los elementos que están en \( A \) pero no en \( B \), \textbf{más} los elementos que están en \( B \) pero no en \( A \) (diferencia simétrica).
+\end{enumerate}
+\subsection*{Ejemplos}
+\begin{itemize}
+    \item Entrada: \( A = [1, 2, 3, 4] \), \( B = [3, 4, 5, 6] \)
+    \begin{enumerate}
+        \item \( A \cap B \): Intersección\\
+        Salida: \([3, 4]\)
+
+        \item \( A \cup B \): Unión\\
+        Salida: \([1, 2, 3, 4, 5, 6]\)
+
+        \item \( A \setminus B \): Diferencia\\
+        Salida: \([1, 2]\)
+
+        \item \( A \, \Delta \, B \): Diferencia simétrica\\
+        Salida: \([1, 2, 5, 6]\)\\
+        Explicación: Los elementos exclusivos de cada conjunto son \(1, 2\) (de \(A\)) y \(5, 6\) (de \(B\)).
+    \end{enumerate}
+
+    \item Entrada: \( A = [10, 20, 30] \), \( B = [30, 40, 50] \)
+    \begin{enumerate}
+        \item \( A \cap B \): Intersección\\
+        Salida: \([30]\)
+
+        \item \( A \cup B \): Unión\\
+        Salida: \([10, 20, 30, 40, 50]\)
+
+        \item \( A \setminus B \): Diferencia\\
+        Salida: \([10, 20]\)
+
+        \item \( A \, \Delta \, B \): Diferencia simétrica\\
+        Salida: \([10, 20, 40, 50]\)\\
+        Explicación: Los elementos exclusivos son \(10, 20\) (de \(A\)) y \(40, 50\) (de \(B\)).
+    \end{enumerate}
+
+    \item Entrada: \( A = [1, 2, 3] \), \( B = [] \)
+    \begin{enumerate}
+        \item \( A \cap B \): Intersección\\
+        Salida: \([]\)
+
+        \item \( A \cup B \): Unión\\
+        Salida: \([1, 2, 3]\)
+
+        \item \( A \setminus B \): Diferencia\\
+        Salida: \([1, 2, 3]\)
+
+        \item \( A \, \Delta \, B \): Diferencia simétrica\\
+        Salida: \([1, 2, 3]\)
+    \end{enumerate}
+\end{itemize}

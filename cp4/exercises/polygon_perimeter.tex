@@ -1,0 +1,38 @@
+Implemente un método que reciba un conjunto de \(n\) vértices de un polígono en el plano cartesiano, donde cada vértice está representado por un par de coordenadas \((x, y)\). Los vértices están ordenados y el último vértice se conecta con el primero, el método debe calcular y devolver el perímetro del polígono.
+        
+Sea \( P \) un polígono con \( n \) vértices, representados como un conjunto de pares ordenados de coordenadas en el plano cartesiano:
+\[
+P = \{ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n) \}
+\]
+
+donde \( (x_i, y_i) \) representa el \( i \)-ésimo vértice del polígono y los vértices están ordenados en el sentido en que se recorren los lados del polígono. 
+
+El perímetro \( \text{Perímetro}(P) \) de un polígono es la suma de las longitudes de sus lados. Cada lado del polígono es la distancia euclidiana entre dos vértices consecutivos. Formalmente, la distancia entre dos vértices consecutivos \( (x_i, y_i) \) y \( (x_{i+1}, y_{i+1}) \) se calcula utilizando la fórmula de distancia euclidiana:
+
+\[
+d_i = \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2}
+\]
+
+donde \( i = 1, 2, \dots, n-1 \), y se debe considerar también la distancia entre el último vértice \( (x_n, y_n) \) y el primer vértice \( (x_1, y_1) \), para cerrar el polígono:
+
+\[
+d_n = \sqrt{(x_1 - x_n)^2 + (y_1 - y_n)^2}
+\]
+
+Por lo tanto, el perímetro \( P \) del polígono es la suma de todas las distancias de los lados:
+
+\[
+\text{Perímetro}(P) = \sum_{i=1}^{n} d_i 
+\]
+\[
+\text{Perímetro}(P) = \sum_{i=1}^{n-1} \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2} + \sqrt{(x_1 - x_n)^2 + (y_1 - y_n)^2}
+\]
+
+\textbf{Ejemplos:}
+
+\begin{itemize}
+    \item Entrada: \([ (0, 0), (4, 0), (4, 3), (0, 3) ]\) \\
+    Salida: 14.0
+    \item Entrada: \([ (0, 0), (3, 0), (3, 3), (0, 3) ]\) \\
+    Salida: 12.0
+\end{itemize}

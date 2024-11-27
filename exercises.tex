@@ -2,167 +2,42 @@
 \begin{enumerate}
 % Basic
     \item \textbf{Doble}\\
-    Escribe un programa que lea de la consola un número entero y muestre en la consola su doble.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{4}\\
-              Salida: \texttt{8}
-        \item Entrada: \texttt{-5}\\
-              Salida: \texttt{-10}
-        \item Entrada: \texttt{0}\\
-              Salida: \texttt{0}
-    \end{itemize}
+    \input{cp2/exercises/double.tex}
     
     \item \textbf{Área de un triángulo}\\
-    Escribe un programa que lea de la consola la base \(b\) y la altura \(h\) de un triángulo, calcule su área y la escriba en la consola.\\
-    \[
-    \text{Área} = \frac{b \cdot h}{2}
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{b = 10, h = 5}\\
-              Salida: \texttt{Área = 25}
-        \item Entrada: \texttt{b = 3, h = 4}\\
-              Salida: \texttt{Área = 6}
-    \end{itemize}
+    \input{cp2/exercises/triangle_area.tex}
 
     \item \textbf{Promedio de tres números}\\
-    Escribe un programa que lea tres números reales \(x\), \(y\) y \(z\) de la consola, calcule su promedio y lo muestre en la consola.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{3.0, 4.0, 5.0}\\
-              Salida: \texttt{Promedio = 4.0}
-        \item Entrada: \texttt{-1.0, -2.0, -3.0}\\
-              Salida: \texttt{Promedio = -2.0}
-        \item Entrada: \texttt{10.5, 20.5, 30.5}\\
-              Salida: \texttt{Promedio = 20.5}
-    \end{itemize}
+    \input{cp2/exercises/average_of_3.tex}
 
     \item \textbf{Cambio de temperatura}\\
-    Escribe un programa que lea de la consola una temperatura en grados Fahrenheit (\(F\)), la convierta a grados Celsius (\(C\)) y muestre el resultado en la consola.\\ 
-    \[
-    C = \frac{5}{9} \cdot (F - 32)
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{F = 50}\\
-              Salida: \texttt{C = 10}
-        \item Entrada: \texttt{F = 32}\\
-              Salida: \texttt{C = 0}
-        \item Entrada: \texttt{F = 100}\\
-              Salida: \texttt{C = 37.78}
-    \end{itemize}
+    \input{cp2/exercises/temperature_converter.tex}
 
     \item \textbf{Perímetro y área de un círculo}\\
-    Escribe un programa que lea de la consola el radio \(r\) de un círculo, calcule su perímetro y su área, y muestre ambos resultados en la consola.\\   
-    \[
-    \text{Perímetro} = 2\pi r, \quad \text{Área} = \pi r^2
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{r = 3}\\
-              Salida: \texttt{Perímetro = 18.8496, Área = 28.2744}
-        \item Entrada: \texttt{r = 0}\\
-              Salida: \texttt{Perímetro = 0, Área = 0}
-        \item Entrada: \texttt{r = 1.5}\\
-              Salida: \texttt{Perímetro = 9.4248, Área = 7.0686}
-    \end{itemize}
+    \input{cp2/exercises/circle_perimeter_area.tex}
 
     \item \textbf{Hipotenusa}\\
-    Escribe un programa que lea de la consola los catetos \(a\) y \(b\) de un triángulo rectángulo, calcule la longitud de su hipotenusa y la escriba en la consola.\\
-    \[
-    c = \sqrt{a^2 + b^2}
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{a = 3, b = 4}\\
-              Salida: \texttt{c = 5}
-        \item Entrada: \texttt{a = 5, b = 12}\\
-              Salida: \texttt{c = 13}
-        \item Entrada: \texttt{a = 8, b = 15}\\
-              Salida: \texttt{c = 17}
-    \end{itemize}
+    \input{cp2/exercises/hipotenuse.tex}
 
 % Intermediate
     \item \textbf{Suma de dígitos}\\
-    Escribe un programa que lea un número entero de tres cifras \(n\) de la consola, calcule la suma de sus dígitos y la muestre en la consola.\\
-    Ejemplo: Si \(n = 123\), entonces:
-    \[
-    \text{suma} = 1 + 2 + 3
-    \]
-    Pista: Usa la división y resto de la división para extraer los dígitos:
-    \[
-    \text{Centena} = \frac{n}{100}, \quad \text{Decena} = \frac{(n \% 100)}{10}, \quad \text{Unidad} = n \% 10
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{n = 123}\\
-              Salida: \texttt{Suma = 6}
-        \item Entrada: \texttt{n = 456}\\
-              Salida: \texttt{Suma = 15}
-        \item Entrada: \texttt{n = 789}\\
-              Salida: \texttt{Suma = 24}
-    \end{itemize}
+    \input{cp2/exercises/sum_of_3_digits.tex}
     
     \item \textbf{Distancia entre dos puntos}\\
-    Escribe un programa que lea de la consola las coordenadas de dos puntos \( (x_1, y_1) \) y \( (x_2, y_2) \) en el plano, calcule la distancia entre ellos y escriba el resultado en la consola.\\
-    \[
-    \text{Distancia} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{(x1 = 1, y1 = 2), (x2 = 4, y2 = 6)}\\
-              Salida: \texttt{Distancia = 5}
-        \item Entrada: \texttt{(x1 = 0, y1 = 0), (x2 = 3, y2 = 4)}\\
-              Salida: \texttt{Distancia = 5}
-        \item Entrada: \texttt{(x1 = -1, y1 = -1), (x2 = 2, y2 = 3)}\\
-              Salida: \texttt{Distancia = 5}
-    \end{itemize}
+    \input{cp2/exercises/distance_between_points.tex}
 
     \item \textbf{Ecuación cuadrática}\\
-    \input{cp2/exercises/quadratic_equation}
+    \input{cp2/exercises/quadratic_equation.tex}
 
-\subsection*{Más avanzados}
 % Advanced
     \item \textbf{Minutos a horas}\\
-    Escribe un programa que lea un número entero \(t\) que representa una cantidad de minutos de la consola, calcule cuántas horas completas y cuántos minutos sobran, y muestre ambos valores en la consola.\\
-    \textbf{Pista:} Usa la división y resto de la división para manejar cuando te pases de 60:
-    \[
-    \text{Horas} = \frac{t}{60}, \quad \text{Minutos} = t \% 60
-    \]
-    \subsection*{Ejemplos}
-    \begin{itemize}
-    \item Entrada: \texttt{t = 130}\\
-          Salida: \texttt{Horas = 2, Minutos = 10}
-    \item Entrada: \texttt{t = 75}\\
-          Salida: \texttt{Horas = 1, Minutos = 15}
-    \item Entrada: \texttt{t = 45}\\
-          Salida: \texttt{Horas = 0, Minutos = 45}
-\end{itemize}
+    \input{cp2/exercises/minutes_converter.tex}
     
     \item \textbf{Mayor}\\
-    Reciba dos números enteros de la consola y determine cuál de los dos es mayor sin utilizar $Math.Max$ y $Math.Min$. No utilice condicionales.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-    \item Entrada: \texttt{a = 5, b = 10}\\
-          Salida: \texttt{Mayor = 10}
-    \item Entrada: \texttt{a = -3, b = -7}\\
-          Salida: \texttt{Mayor = -3}
-    \item Entrada: \texttt{a = 12, b = 12}\\
-          Salida: \texttt{Mayor = 12}
-    \end{itemize}
+    \input{cp2/exercises/max_of_2_without_cond.tex}
     
     \item \textbf{Valor medio}\\
-    Reciba tres números enteros. Muestre en la consola el de valor medio (Utilice $Math.Max$ y $Math.Min$) y el promedio de estos.
-    \begin{itemize}
-    \subsection*{Ejemplos}
-    \item Entrada: \texttt{a = 5, b = 10, c = 15}\\
-          Salida: \texttt{Valor medio = 10, Promedio = 10}
-    \item Entrada: \texttt{a = -3, b = 4, c = 8}\\
-          Salida: \texttt{Valor medio = 4, Promedio = 3}
-    \item Entrada: \texttt{a = 7, b = 7, c = 7}\\
-          Salida: \texttt{Valor medio = 7, Promedio = 7}
-\end{itemize}
+    \input{cp2/exercises/medium_of_3.tex}
         
     \item \textbf{Intercambio de variables}\\
     \input{cp2/exercises/swap_variables}
@@ -375,14 +250,7 @@
               Salida: \texttt{"12:00 M"}
     \end{itemize}
 
-\subsection*{Más avanzados}
-    % \item \textbf{Factorial}\\
-    % \input{cp3/exercises/factorial}
-    % No utilice ciclos.
-
-    % \item \textbf{Imprimiendo números}
-    % \input{cp3/exercises/print_numbers}
-
+% Advanced
     \item \textbf{Día siguiente}\\
     \input{cp3/exercises/next_day}
 
@@ -392,7 +260,6 @@
     \item \textbf{Signo zodiacal}\\
     \input{cp3/exercises/zodiac_sign}
 
-% Advanced
     \item \textbf{Día de la semana}\\
     \input{cp3/exercises/day_of_week}
 
@@ -629,91 +496,16 @@
 \subsection*{Más avanzados}
 % Advanced
     \item \textbf{Palíndromo}
-    \input{cp4/exercises/is_palindrome}
+    \input{cp4/exercises/is_palindrome.tex}
 
     \item \textbf{Mediana}\\
-    \input{cp4/exercises/median}
+    \input{cp4/exercises/median.tex}
 
     \item \textbf{Evaluando polinomios}\\
-    Sea \( p(x) \) un polinomio de grado \( n \) con coeficientes enteros, tal que:
-    
-    \[
-    p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
-    \]
-    
-    Este polinomio puede ser representado mediante un arreglo \( A = [a_0, a_1, \dots, a_n] \), donde el coeficiente \( a_k \) (con \( 0 \leq k \leq n \)) corresponde al término de grado \( k \). Así, el coeficiente de mayor grado se encuentra en la última posición del arreglo.
-    
-    Por ejemplo:
-    
-    \begin{itemize}
-        \item El polinomio \( p(x) = 2x + 1 \) se representa como el arreglo \( A = [1, 2] \), donde \( a_0 = 1 \) y \( a_1 = 2 \).
-        \item El polinomio \( p(x) = x^3 - 5x + 1 \) se representa como el arreglo \( A = [1, -5, 0, 1] \), donde \( a_0 = 1 \), \( a_1 = -5 \), \( a_2 = 0 \) y \( a_3 = 1 \).
-    \end{itemize}
-    
-    Implemente un método que evalúe el valor del polinomio \( p(x) \) para un valor dado de \( x \). La evaluación del polinomio se realiza mediante la fórmula:
-    
-    \[
-    p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n
-    \]
-
-    \textbf{Ejemplos:}
-    \begin{itemize}
-        \item Entrada:
-        \begin{itemize}
-            \item Polinomio: \([1, 2]\) (representa \(p(x) = 2x + 1\))
-            \item Valor de \(x\): \(3\)
-        \end{itemize}
-        Salida: \( p(3) = 7 \)
-        
-        \item Entrada:
-        \begin{itemize}
-            \item Polinomio: \([1, -5, 0, 1]\) (representa \(p(x) = x^3 - 5x + 1\))
-            \item Valor de \(x\): \(2\)
-        \end{itemize}
-        Salida: \( p(2) = -1 \)
-    \end{itemize}
+    \input{cp4/exercises/evaluate_polys.tex}
     
     \item \textbf{Perímetro de un polígono}\\
-    Implemente un método que reciba un conjunto de \(n\) vértices de un polígono en el plano cartesiano, donde cada vértice está representado por un par de coordenadas \((x, y)\). Los vértices están ordenados y el último vértice se conecta con el primero, el método debe calcular y devolver el perímetro del polígono.
-        
-    Sea \( P \) un polígono con \( n \) vértices, representados como un conjunto de pares ordenados de coordenadas en el plano cartesiano:
-
-    \[
-    P = \{ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n) \}
-    \]
-    
-    donde \( (x_i, y_i) \) representa el \( i \)-ésimo vértice del polígono y los vértices están ordenados en el sentido en que se recorren los lados del polígono. 
-    
-    El perímetro \( \text{Perímetro}(P) \) de un polígono es la suma de las longitudes de sus lados. Cada lado del polígono es la distancia euclidiana entre dos vértices consecutivos. Formalmente, la distancia entre dos vértices consecutivos \( (x_i, y_i) \) y \( (x_{i+1}, y_{i+1}) \) se calcula utilizando la fórmula de distancia euclidiana:
-    
-    \[
-    d_i = \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2}
-    \]
-    
-    donde \( i = 1, 2, \dots, n-1 \), y se debe considerar también la distancia entre el último vértice \( (x_n, y_n) \) y el primer vértice \( (x_1, y_1) \), para cerrar el polígono:
-    
-    \[
-    d_n = \sqrt{(x_1 - x_n)^2 + (y_1 - y_n)^2}
-    \]
-    
-    Por lo tanto, el perímetro \( P \) del polígono es la suma de todas las distancias de los lados:
-    
-    \[
-    \text{Perímetro}(P) = \sum_{i=1}^{n} d_i 
-    \]
-    \[
-    \text{Perímetro}(P) = \sum_{i=1}^{n-1} \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2} + \sqrt{(x_1 - x_n)^2 + (y_1 - y_n)^2}
-    \]
-    
-    \textbf{Ejemplos:}
-    
-    \begin{itemize}
-        \item Entrada: \([ (0, 0), (4, 0), (4, 3), (0, 3) ]\) \\
-        Salida: 14.0
-        \item Entrada: \([ (0, 0), (3, 0), (3, 3), (0, 3) ]\) \\
-        Salida: 12.0
-    \end{itemize}
-
+    \input{cp4/exercises/polygon_perimeter.tex}
 \end{enumerate}
 
 \newpage
@@ -721,89 +513,30 @@
 \begin{enumerate}
 % Intermediate
     \item \textbf{Invirtiendo}\\
-    \input{cp4/exercises/reverse_array}
+    \input{cp4/exercises/reverse_array.tex}
 
     \item \textbf{Filtrando positivos}
-    \input{cp4/exercises/filter_positive_numbers}
+    \input{cp4/exercises/filter_positive_numbers.tex}
 
     \item \textbf{Subarray}\\
-    \input{cp4/exercises/subarray}
+    \input{cp4/exercises/subarray.tex}
 
     \item \textbf{Operaciones sobre arrays}
-    \input{cp4/exercises/modifying_arrays}
+    \input{cp4/exercises/modifying_arrays.tex}
 
-\subsection*{Más avanzados}
 % Advanced
      \item \textbf{Rotando arrays}\\
-    \input{cp4/exercises/rotate_array}
+    \input{cp4/exercises/rotate_array.tex}
 
     \item \textbf{Invirtiendo bloques}\\
-    \input{cp6/exercises/reverse_subarrays}
+    \input{cp6/exercises/reverse_subarrays.tex}
 
     \item \textbf{Mezcla ordenada}\\
-    \input{cp4/exercises/merge_sorted_arrays}
+    \input{cp4/exercises/merge_sorted_arrays.tex}
 
     \item \textbf{Ordenando}\\
-    \input{cp4/exercises/sort_array}
+    \input{cp4/exercises/sort_array.tex}
 
     \item \textbf{Operaciones con conjuntos}\\
-    Dado dos conjuntos \( A \) y \( B \), representados mediante arreglos (arrays), implementa métodos para realizar las siguientes operaciones fundamentales de teoría de conjuntos. Cada método debe devolver un nuevo arreglo que represente el resultado de la operación, asegurándote de que los elementos no se repitan:
-    
-    \begin{enumerate}
-        \item \( A \cap B \): Devuelve los elementos que están en \( A \) \textbf{y} en \( B \) (intersección).
-        \item \( A \cup B \): Devuelve los elementos que están en \( A \) \textbf{o} en \( B \) (unión).
-        \item \( A \setminus B \): Devuelve los elementos que están en \( A \) pero \textbf{no} en \( B \) (diferencia).
-        \item \( A \, \Delta \, B \): Devuelve los elementos que están en \( A \) pero no en \( B \), \textbf{más} los elementos que están en \( B \) pero no en \( A \) (diferencia simétrica).
-    \end{enumerate}
-
-
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \( A = [1, 2, 3, 4] \), \( B = [3, 4, 5, 6] \)
-        \begin{enumerate}
-            \item \( A \cap B \): Intersección\\
-            Salida: \([3, 4]\)
-    
-            \item \( A \cup B \): Unión\\
-            Salida: \([1, 2, 3, 4, 5, 6]\)
-    
-            \item \( A \setminus B \): Diferencia\\
-            Salida: \([1, 2]\)
-    
-            \item \( A \, \Delta \, B \): Diferencia simétrica\\
-            Salida: \([1, 2, 5, 6]\)\\
-            Explicación: Los elementos exclusivos de cada conjunto son \(1, 2\) (de \(A\)) y \(5, 6\) (de \(B\)).
-        \end{enumerate}
-    
-        \item Entrada: \( A = [10, 20, 30] \), \( B = [30, 40, 50] \)
-        \begin{enumerate}
-            \item \( A \cap B \): Intersección\\
-            Salida: \([30]\)
-    
-            \item \( A \cup B \): Unión\\
-            Salida: \([10, 20, 30, 40, 50]\)
-    
-            \item \( A \setminus B \): Diferencia\\
-            Salida: \([10, 20]\)
-    
-            \item \( A \, \Delta \, B \): Diferencia simétrica\\
-            Salida: \([10, 20, 40, 50]\)\\
-            Explicación: Los elementos exclusivos son \(10, 20\) (de \(A\)) y \(40, 50\) (de \(B\)).
-        \end{enumerate}
-    
-        \item Entrada: \( A = [1, 2, 3] \), \( B = [] \)
-        \begin{enumerate}
-            \item \( A \cap B \): Intersección\\
-            Salida: \([]\)
-    
-            \item \( A \cup B \): Unión\\
-            Salida: \([1, 2, 3]\)
-    
-            \item \( A \setminus B \): Diferencia\\
-            Salida: \([1, 2, 3]\)
-    
-            \item \( A \, \Delta \, B \): Diferencia simétrica\\
-            Salida: \([1, 2, 3]\)
-        \end{enumerate}
-    \end{itemize}
+    \input{cp4/exercises/set_operations.tex}
 \end{enumerate}
