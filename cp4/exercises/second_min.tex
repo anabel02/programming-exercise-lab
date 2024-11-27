@@ -1,0 +1,22 @@
+Implemente un método que reciba un array de números enteros y determine el segundo menor valor presente en el array. El método debe considerar únicamente valores distintos, si el array contiene menos de dos elementos únicos, debe lanzar una excepción indicando que no es posible determinar un segundo menor.
+\subsection*{Ejemplos}
+\begin{itemize}
+    \item Entrada: \( \text{array} = [4, 1, 3, 2, 5] \)\\
+    Salida: \textcolor{blue}{2}\\
+    Explicación: Los elementos únicos ordenados son: \(1, 2, 3, 4, 5\).
+    El segundo menor es \( 2 \).
+
+    \item Entrada: \( \text{array} = [7, 7, 7, 7] \)\\
+    Salida: \textcolor{red}{\texttt{Exception: No se puede determinar el segundo menor}}\\
+    Explicación: El array solo tiene un valor único: \(7\).
+    Se lanza una excepción porque no hay suficientes valores únicos.
+
+    \item Entrada: \( \text{array} = [10, -3, -3, 0, 5] \)\\
+    Salida: \textcolor{blue}{0}\\
+    Explicación: Los elementos únicos ordenados son: \(-3, 0, 5, 10\).
+    El segundo menor es \( 0 \).
+
+    \item Entrada: \( \text{array} = [8] \)\\
+    Salida: \textcolor{red}{\texttt{Exception: No se puede determinar el segundo menor}}\\
+    Explicación: El array tiene un solo elemento. Se lanza una excepción porque no hay suficientes valores únicos.
+\end{itemize}

@@ -40,16 +40,16 @@
     \input{cp2/exercises/medium_of_3.tex}
         
     \item \textbf{Intercambio de variables}\\
-    \input{cp2/exercises/swap_variables}
+    \input{cp2/exercises/swap_variables.tex}
 
     \item \textbf{Circunferencias}\\
-    \input{cp2/exercises/circunferences}
+    \input{cp2/exercises/circunferences.tex}
 
     \item \textbf{Velocidad de escritura}\\
-    \input{cp2/exercises/typing_speed}
+    \input{cp2/exercises/typing_speed.tex}
 
     \item \textbf{Fecha de nacimiento}\\
-    \input{cp2/exercises/birthdate}
+    \input{cp2/exercises/birthdate.tex}
 \end{enumerate}
 
 \newpage
@@ -57,156 +57,51 @@
 \begin{enumerate}
 % Basic 
     \item \textbf{Número positivo, negativo o cero}\\
-    Escribe un programa que lea un número entero y determine si es positivo, negativo o igual a cero.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{-5}\\
-              Salida: \texttt{El número es negativo.}
-        \item Entrada: \texttt{0}\\
-              Salida: \texttt{El número es igual a cero.}
-        \item Entrada: \texttt{8}\\
-              Salida: \texttt{El número es positivo.}
-    \end{itemize}
+    \input{cp3/exercises/sign.tex}
 
     \item \textbf{Mayor de dos números}\\
-    Lee dos números enteros y muestra cuál de ellos es mayor, o indica si son iguales.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{12, 7}\\
-              Salida: \texttt{El número mayor es 12.}
-        \item Entrada: \texttt{4, 9}\\
-              Salida: \texttt{El número mayor es 9.}
-        \item Entrada: \texttt{10, 10}\\
-              Salida: \texttt{Ambos números son iguales.}
-    \end{itemize}
+    \input{cp3/exercises/max_of_2.tex}
 
     \item \textbf{Par o impar}\\
-    Escribe un programa que determine si un número entero no negativo dado es par o impar.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{6}\\
-              Salida: \texttt{El número es par.}
-        \item Entrada: \texttt{13}\\
-              Salida: \texttt{El número es impar.}
-        \item Entrada: \texttt{0}\\
-              Salida: \texttt{El número es par.}
-    \end{itemize}
+    \input{cp3/exercises/even_or_odd.tex}
 
     \item \textbf{Calificación}\\
-    Lee una calificación numérica (de 0 a 100) y determina si el estudiante aprobó o reprobó (se aprueba con 60 o más).
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{75}\\
-              Salida: \texttt{El estudiante aprobó.}
-        \item Entrada: \texttt{50}\\
-              Salida: \texttt{El estudiante reprobó.}
-        \item Entrada: \texttt{60}\\
-              Salida: \texttt{El estudiante aprobó.}
-    \end{itemize}
+    \input{cp3/exercises/califications.tex}
     
     \item \textbf{Divisible}\\
-    \input{cp3/exercises/divisible}
+    \input{cp3/exercises/divisible.tex}
 
     \item \textbf{Valor absoluto}\\
-    \input{cp3/exercises/abs}
+    \input{cp3/exercises/abs.tex}
 
 % Intermediate
     \item \textbf{Mayor de 3}\\
-    \input{cp3/exercises/maximum_of_three}
+    \input{cp3/exercises/max_of_3.tex}
 
     \item \textbf{Categoría de edad}\\
-    Escribe un programa que clasifique a una persona según su edad:
-    \begin{itemize}
-        \item Niño (0-12 años)
-        \item Adolescente (13-17 años)
-        \item Adulto (18-64 años)
-        \item Adulto mayor (65 o más años)
-    \end{itemize}
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{7}\\
-              Salida: \texttt{Niño}
-        \item Entrada: \texttt{15}\\
-              Salida: \texttt{Adolescente}
-        \item Entrada: \texttt{30}\\
-              Salida: \texttt{Adulto}
-        \item Entrada: \texttt{65}\\
-              Salida: \texttt{Adulto mayor}
-    \end{itemize}
+    \input{cp3/exercises/ages.tex}
 
     \item \textbf{Triángulo válido}\\
-    Dados tres números que representan las longitudes de los lados de un triángulo, determina si forman un triángulo válido. Un triángulo es válido si la suma de las longitudes de dos lados es mayor que la longitud del tercer lado para cualquier combinación de lados.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{3, 4, 5}\\
-              Salida: \texttt{Triángulo válido}
-        \item Entrada: \texttt{1, 2, 3}\\
-              Salida: \texttt{No es un triángulo válido}
-        \item Entrada: \texttt{6, 8, 10}\\
-              Salida: \texttt{Triángulo válido}
-    \end{itemize}
-
+    \input{cp3/exercises/is_triangle.tex}
+    
     \item \textbf{Número dentro de un rango}\\
-    Lee tres números \(a\), \(b\), y \(x\) (donde \(a \leq b\)) y determina si \(x\) se encuentra dentro del rango cerrado \([a, b]\).
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{2, 8, 5}\\
-              Salida: \texttt{Sí, 5 está dentro del rango [2, 8].}
-        \item Entrada: \texttt{1, 10, 15}\\
-              Salida: \texttt{No, 15 no está dentro del rango [1, 10].}
-        \item Entrada: \texttt{3, 9, 9}\\
-              Salida: \texttt{Sí, 9 está dentro del rango [3, 9].}
-    \end{itemize}
+    \input{cp3/exercises/is_in_range.tex}
 
-% Advanced
     \item \textbf{Días en un mes}\\
-    Escribe un programa que lea un número que representa un mes (1 para enero, 2 para febrero, etc.) y muestre la cantidad de días que tiene ese mes. Considera años no bisiestos, o sea, febrero siempre tendría 28 días.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{1}\\
-              Salida: \texttt{31 días}
-        \item Entrada: \texttt{2}\\
-              Salida: \texttt{28 días}
-        \item Entrada: \texttt{4}\\
-              Salida: \texttt{30 días}
-    \end{itemize}
-
-    \item \textbf{Año bisiesto}\\
-    Escribe un programa que determine si un año es bisiesto o no. Un año es bisiesto si es divisible entre 4, pero no es divisible entre 100, a menos que también sea divisible entre 400.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{2020}\\
-              Salida: \texttt{El año 2020 es bisiesto.}
-        \item Entrada: \texttt{1900}\\
-              Salida: \texttt{El año 1900 no es bisiesto.}
-        \item Entrada: \texttt{2000}\\
-              Salida: \texttt{El año 2000 es bisiesto.}
-    \end{itemize}
+    \input{cp3/exercises/days_in_month.tex}
 
     \item \textbf{Calculadora básica}\\
-    \input{cp3/exercises/calculator}
+    \input{cp3/exercises/calculator.tex}
 
-\subsection*{Más avanzados}
+% Advanced
+    \item \textbf{Año bisiesto}\\
+    \input{cp3/exercises/is_leap_year.tex}
+
     \item \textbf{Cálculo de tarifas}\\
-    Escribe un programa que calcule el costo de estacionamiento según el tiempo de permanencia:
-    \begin{itemize}
-        \item Primera hora: \$70
-        \item Horas adicionales: \$50 cada una
-        \item Máximo diario: \$1000
-    \end{itemize}
-    Lee el tiempo de permanencia (en horas) y calcula el costo total.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{1}\\
-              Salida: \texttt{El costo total es: \$70}
-        \item Entrada: \texttt{5}\\
-              Salida: \texttt{El costo total es: \$270}
-        \item Entrada: \texttt{20}\\
-              Salida: \texttt{El costo total es: \$1000}
-    \end{itemize}
+    \input{cp3/exercises/parking.tex}
     
     \item \textbf{Determinando el sexo}\\
-    \input{cp3/exercises/gender_id}
+    \input{cp3/exercises/gender_id.tex}
 \end{enumerate}
 
 \newpage
@@ -214,60 +109,36 @@
 \begin{enumerate}
 % Basic
     \item \textbf{Validando horas}\\
-     Dada una hora en formato de 24 horas representada por dos enteros horas y minutos, determine si es válida o no.
-     \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \texttt{h = 13, m = 45}\\
-              Salida: \texttt{La hora es válida.}
-        \item Entrada: \texttt{h = 25, m = 10}\\
-              Salida: \texttt{La hora no es válida.}
-        \item Entrada: \texttt{h = 7, m = 60}\\
-              Salida: \texttt{La hora no es válida.}
-        \item Entrada: \texttt{h = 0, m = 0}\\
-              Salida: \texttt{La hora es válida.}
-        \item Entrada: \texttt{h = 23, m = 59}\\
-              Salida: \texttt{La hora es válida.}
-    \end{itemize}
+    \input{cp3/exercises/valid_hour.tex}
 
      \item \textbf{Tipo de triángulo}\\
-    \input{cp3/exercises/triangle_type}
+    \input{cp3/exercises/triangle_type.tex}
 
 % Intermediate
     \item \textbf{Validando fechas}\\
-    \input{cp3/exercises/valid_date}
+    \input{cp3/exercises/valid_date.tex}
     
     \item \textbf{Conversión de Hora} \\
-    Escribe un método que reciba una hora en formato de 24 horas representada por dos enteros horas y minutos y devuelva una cadena que represente la hora en formato de 12 horas, incluyendo ``AM'' o ``PM''.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: h = 14, m = 30 (\texttt{"14:30"})\\
-              Salida: \texttt{"2:30 PM"}
-        \item Entrada: h - 9, m = 15 (\texttt{"09:15"})\\
-              Salida: \texttt{"9:15 AM"}
-        \item Entrada: h = 0, m = 0 (\texttt{"00:00"})\\
-              Salida: \texttt{"12:00 AM"}
-        \item Entrada: h = 12, m = 12 (\texttt{"12:00"})\\
-              Salida: \texttt{"12:00 M"}
-    \end{itemize}
+    \input{cp3/exercises/hour_converter.tex}
 
 % Advanced
     \item \textbf{Día siguiente}\\
-    \input{cp3/exercises/next_day}
+    \input{cp3/exercises/next_day.tex}
 
     \item \textbf{Horas}
-    \input{cp3/exercises/times}
+    \input{cp3/exercises/times.tex}
 
     \item \textbf{Signo zodiacal}\\
-    \input{cp3/exercises/zodiac_sign}
+    \input{cp3/exercises/zodiac_sign.tex}
 
     \item \textbf{Día de la semana}\\
-    \input{cp3/exercises/day_of_week}
+    \input{cp3/exercises/day_of_week.tex}
 
     \item \textbf{Distancia entre fechas}\\
-    \input{cp3/exercises/days_between}
+    \input{cp3/exercises/days_between.tex}
 
     \item \textbf{Punto interior}\\
-    \input{cp3/exercises/interior_point}
+    \input{cp3/exercises/interior_point.tex}
 \end{enumerate}
 
 \newpage
@@ -275,13 +146,13 @@
 \begin{enumerate}
 % Basic
     \item \textbf{Factorial}\\
-    \input{cp3/exercises/factorial}
+    \input{cp3/exercises/factorial.tex}
 
     \item \textbf{Sumando impares}\\
-    \input{cp4/exercises/odds_sum}
+    \input{cp4/exercises/odds_sum.tex}
 
     \item \textbf{Máximo, mínimo y promedio}\\
-    \input{cp4/exercises/lazy_max_min_avg}
+    \input{cp4/exercises/lazy_max_min_avg.tex}
 
     \item \textbf{Es primo}\\
     Escribe un programa que determine si un entero es primo o no.
@@ -304,6 +175,7 @@
         \item Entrada: \texttt{31}\\
               Salida: \textcolor{blue}{true}
     \end{itemize}
+
 % Intermediate
     \item \textbf{n-ésimo primo}\\
     Implemente un método que devuelva el $n$-ésimo primo de la sucesión de números primos.
@@ -334,7 +206,6 @@
     \input{cp4/exercises/products_table}
 
 % Advanced
-\subsection*{Más avanzados}
     \item \textbf{Primo más cercano}\\
     Implemente un método que, dado un número entero positivo \( n \), encuentre y retorne el número primo más cercano a \( n \). Si existen dos números primos equidistantes de \( n \), retorne el menor de los dos. 
     \subsection*{Ejemplos}
@@ -381,119 +252,21 @@
 \begin{enumerate}
 % Basic
     \item \textbf{Mayor}\\
-    Implemente un método que reciba un array de enteros y devuelva el mayor elemento del array.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \( a = [3, 7, 2, 8, 4] \)\\
-        Salida: \texttt{8}
-        
-        \item Entrada: \( a = [-5, -1, -10, -3] \)\\
-        Salida: \texttt{-1}
-        
-        \item Entrada: \( a = [42] \)\\
-        Salida: \texttt{42}
-    \end{itemize}
+    \input{cp4/exercises/max.tex}
     
     \item \textbf{Pertenece}\\
-     Implemente un método que reciba un array de enteros y devuelva si un número \(n\) pertenece al array \(a\).
-     \subsection*{Ejemplos}
-     \begin{itemize}
-        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 7 \)\\
-        Salida: \textcolor{blue}{true} 
-        
-        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 10 \)\\
-        Salida: \textcolor{blue}{false}
-        
-        \item Entrada: \( a = [], \, n = 5 \)\\
-        Salida: \textcolor{blue}{false}
-    \end{itemize}
+    \input{cp4/exercises/contains.tex}
      
     \item \textbf{Índice}\\
-     Implemente un método que reciba un array de enteros y devuelva la posición (índice) de la primera aparición del número \(n\) en el array. Devuelve -1 si no aparece.
-     \subsection*{Ejemplos}
-     \begin{itemize}
-        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 8 \)\\
-        Salida: \texttt{3}
-        
-        \item Entrada: \( a = [3, 7, 2, 8, 4], \, n = 10 \)\\
-        Salida: \texttt{-1}
-        
-        \item Entrada: \( a = [5, 5, 5], \, n = 5 \)\\
-        Salida: \texttt{0}
-    \end{itemize}
+    \input{cp4/exercises/index_of.tex}
      
 % Intermediate
     \item \textbf{Segundo menor}\\
-    Implemente un método que reciba un array de números enteros y determine el segundo menor valor presente en el array. El método debe considerar únicamente valores distintos, si el array contiene menos de dos elementos únicos, debe lanzar una excepción indicando que no es posible determinar un segundo menor.
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \( \text{array} = [4, 1, 3, 2, 5] \)\\
-        Salida: \textcolor{blue}{2}\\
-        Explicación: Los elementos únicos ordenados son: \(1, 2, 3, 4, 5\).
-        El segundo menor es \( 2 \).
-    
-        \item Entrada: \( \text{array} = [7, 7, 7, 7] \)\\
-        Salida: \textcolor{red}{\texttt{Exception: No se puede determinar el segundo menor}}\\
-        Explicación: El array solo tiene un valor único: \(7\).
-        Se lanza una excepción porque no hay suficientes valores únicos.
-    
-        \item Entrada: \( \text{array} = [10, -3, -3, 0, 5] \)\\
-        Salida: \textcolor{blue}{0}\\
-        Explicación: Los elementos únicos ordenados son: \(-3, 0, 5, 10\).
-        El segundo menor es \( 0 \).
-    
-        \item Entrada: \( \text{array} = [8] \)\\
-        Salida: \textcolor{red}{\texttt{Exception: No se puede determinar el segundo menor}}\\
-        Explicación: El array tiene un solo elemento. Se lanza una excepción porque no hay suficientes valores únicos.
-    \end{itemize}
+    \input{cp4/exercises/second_min.tex}
 
     \item \textbf{Promedio}\\
-    Implemente un método que reciba un array de enteros y devuelva: 
-    \begin{enumerate}
-        \item El promedio de todos los elementos de un array.
-        \item La cantidad de elementos que son mayor que el promedio en un array.
-    \end{enumerate}
-    \subsection*{Ejemplos}
-    \begin{itemize}
-        \item Entrada: \( \text{array} = [4, 8, 6, 10, 2] \)\\
-        Salida: 
-        \begin{itemize}
-            \item Promedio: 6.0.
-            \item Elementos mayores que el promedio: 2.
-        \end{itemize}
-        Explicación: \(\frac{4 + 8 + 6 + 10 + 2}{5} = 6\).  
-        Los elementos mayores que \( 6 \) son \( 8, 10 \), lo que da un total de \( 2 \).
-    
-        \item Entrada: \( \text{array} = [1, 1, 1, 1] \)\\
-        Salida: 
-        \begin{itemize}
-            \item Promedio: 1.0.
-            \item Elementos mayores que el promedio: 0.
-        \end{itemize}
-        Explicación: \(\frac{1 + 1 + 1 + 1}{4} = 1\).  
-        No hay elementos mayores que \( 1 \), por lo que el resultado es \( 0 \).
-    
-        \item Entrada: \( \text{array} = [15, -5, 0, 10, 5] \)\\
-        Salida: 
-        \begin{itemize}
-            \item Promedio: 5.0.
-            \item Elementos mayores que el promedio: 2.
-        \end{itemize}
-        Explicación: \(\frac{15 + (-5) + 0 + 10 + 5}{5} = 5\).  
-        Los elementos mayores que \( 5 \) son \( 15, 10 \), lo que da un total de \( 2 \).
-    
-        \item Entrada: \( \text{array} = [-10, -20, -30] \)\\
-        Salida: 
-        \begin{itemize}
-            \item Promedio: -20.0.
-            \item Elementos mayores que el promedio: 1.
-        \end{itemize}
-        Explicación: \(\frac{-10 + (-20) + (-30)}{3} = -20\).  
-        El único elemento mayor que \( -20 \) es \( -10 \), por lo que el resultado es \( 1 \).
-    \end{itemize}
+    \input{cp4/exercises/average.tex}
 
-    
-\subsection*{Más avanzados}
 % Advanced
     \item \textbf{Palíndromo}
     \input{cp4/exercises/is_palindrome.tex}
