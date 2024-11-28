@@ -10,8 +10,8 @@ def extract_exercises_from_tex(tex_file_path):
         "Condicionales": ["conditionals"],
         "Métodos": ["methods"],
         "Ciclos": ["loops"],
-        "Arrays 1": ["array1"],
-        "Arrays 2": ["array2"]
+        "Arrays 1": ["arrays1"],
+        "Arrays 2": ["arrays2"]
     }
 
     exercises = []
