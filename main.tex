@@ -54,6 +54,7 @@
 
 \lstset{
 language=csh,
+captionpos=b,      % Posición del caption (b: abajo, t: arriba)
 basicstyle=\footnotesize\ttfamily,
 % numbers=left,
 % numberstyle=\tiny,
@@ -127,6 +128,8 @@ inputencoding=utf8,
     classoffset=0,
 }
 
+\renewcommand{\lstlistingname}{Figura} % Cambia el prefijo de lstlisting a "Figura"
+
 % Define la variable para controlar la visibilidad de las respuestas
 \newif\ifshowanswers
 
@@ -136,5 +139,5 @@ inputencoding=utf8,
 % \showanswerstrue  % Comenta esta línea para ocultar las respuestas
 
 \begin{document}
-    \input{exercises.tex}
+    \input{cp7/cp7.tex}
 \end{document}

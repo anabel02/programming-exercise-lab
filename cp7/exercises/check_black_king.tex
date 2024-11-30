@@ -1,4 +1,5 @@
-Implemente un método que reciba un tablero de ajedrez, y determine si el rey negro está amenazado por alguna pieza blanca. 
+En el ajedrez, el rey negro está en jaque si una pieza blanca puede capturarlo en su siguiente turno.  
+Tu tarea es implementar un método que reciba un tablero de ajedrez representado como una matriz \(8 \times 8\) y determine si el rey negro está amenazado por alguna pieza blanca.
 
 El método deberá tener la siguiente signatura:
 
@@ -25,3 +26,22 @@ El método deberá tener la siguiente signatura:
         // ...
     }
 \end{lstlisting}
+
+% \textbf{Ejemplo:}
+
+% Supongamos que el tablero está representado como una matriz \(8 \times 8\) en la que cada celda contiene una pieza o está vacía (\texttt{ChessPiece.None}).  
+
+% \[
+% \begin{array}{cccccccc}
+% \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{None} & \text{WhiteRook} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{BlackKing} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} & \text{None} \\
+% \end{array}
+% \]
+
+% En este caso, el método debe devolver \texttt{true}, ya que la torre blanca (\texttt{WhiteRook}) amenaza al rey negro en la misma fila.  
