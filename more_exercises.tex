@@ -1,3 +1,4 @@
+\section{Problemas más avanzados}
 \begin{enumerate}
     \item
     \input{cp6/exercises/sorting_algorithms}
@@ -43,8 +44,11 @@
 
     \item
     \input{cp6/exercises/number_systems}
-    
-% Array bidimensional
+\end{enumerate}
+
+\newpage
+\section{Array bidimensionales}
+\begin{enumerate}
     \item
     Implemente un método que reciba dos matrices (arrays bidimensionales de tipo entero que representan matrices algebraicas) y devuelva su suma.
 
@@ -64,31 +68,7 @@
     Implemente un método que reciba una matriz \(M\) y devuelva otra matriz \(M'\). La matriz \(M'\) se forma a partir de \(M\), manteniendo sus valores originales pero haciendo cero cualquier columna o fila que tenga algún cero.
 
     \item
-    Implemente un método que reciba un array bidimensional de \(n\) filas y \(m\) columnas y retorne un array de una sola dimensión, de tamaño \(n \times m\). El array resultante debe tener todos los elementos de la espiral que se forma comenzando por la primera posición y moviéndose a favor de las manecillas del reloj.
-
-    \item
     Implemente un método que reciba un array bidimensional y devuelva, de existir, uno de sus puntos raros. Un punto raro es aquel que es el más pequeño de su fila, pero el más grande de su columna. En caso de existir alguno, devuelva una tupla con sus coordenadas. En caso de no existir, devuelva \texttt{null}.
-    
-    \item
-    \input{cp7/exercises/pascal_triangle}
-
-    \item
-    \input{cp7/exercises/magic_square}
-
-    \item
-    \input{cp7/exercises/four_in_a_row}
-
-    \item
-    \input{cp7/exercises/word_search}
-
-    \item
-    \input{cp7/exercises/knight_reachable_board}
-
-    \item
-    \input{cp7/exercises/queen_threat}
-
-    \item
-    \input{cp7/exercises/check_black_king}
     
     \item
     \input{cp7/exercises/rotate_matrix}
@@ -97,11 +77,232 @@
     \input{cp7/exercises/airport_construction}
 
     \item
-    \input{cp7/exercises/exploring_islands}
+    \input{cp7/exercises/pascal_triangle}
+
+    \item
+    \input{cp7/exercises/magic_square}
 
     \item
     \input{cp7/exercises/submatrix}
 
     \item
+    Implemente un método que reciba un array bidimensional de \(n\) filas y \(m\) columnas y retorne un array de una sola dimensión, de tamaño \(n \times m\). El array resultante debe tener todos los elementos de la espiral que se forma comenzando por la primera posición y moviéndose a favor de las manecillas del reloj.
+
+    \item
     \input{cp7/exercises/sorting_matrices}
 \end{enumerate}
+
+\newpage
+\section{Tableros. Simulación.}
+\begin{enumerate}
+    \item \textbf{4 en línea}\\
+    \input{cp7/exercises/four_in_a_row}
+
+    \item \textbf{Sopa de letras}\\
+    \input{cp7/exercises/word_search}
+
+    \item \textbf{Tablero alcanzable por caballos}\\
+    \input{cp7/exercises/knight_reachable_board}
+
+    \item \textbf{Dama amenazada}\\
+    \input{cp7/exercises/queen_threat}
+
+    \item \textbf{Recorriendo islas}\\
+    \input{cp7/exercises/exploring_islands}
+
+    \item \textbf{Tic-Tac-Toe}\\
+    Implementa un juego sencillo de Cerito-Cruz para dos jugadores. Ten en cuenta los siguientes requisitos:
+    \begin{itemize}
+        \item Usa un array bidimensional de 3x3 para representar el tablero.
+        \item Los jugadores deben turnarse para colocar sus símbolos (\texttt{X} o \texttt{O}). Comprueba que los movimientos sean válidos.
+        \item Verifica si algún jugador ha ganado o si hay un empate.
+    \end{itemize}
+
+    \item \textbf{El Mago y el Bosque Encantado}\\
+    En un bosque encantado, un mago ha decidido medir el poder de su hechizo de teletransportación. El bosque está representado como una cuadrícula de \(N \times M\), donde cada celda puede estar despejada o bloqueada por un obstáculo mágico. El mago comienza en una posición definida por el usuario, y desea calcular cuán lejos puede llegar su hechizo desde esa posición, sin atravesar los obstáculos.
+
+    \subsection*{Detalles del problema}
+    \begin{itemize}
+        \item El bosque se representa como una matriz booleana: 
+        \begin{itemize}
+            \item \texttt{false}: La celda está despejada (el hechizo puede pasar).  
+            \item \texttt{true}: La celda está bloqueada (el hechizo no puede pasar).  
+        \end{itemize}
+        \item La entrada incluye la posición inicial del mago \((x, y)\).  
+        \item El resultado debe ser una matriz que indique la distancia desde la posición inicial hasta cada celda accesible, respetando los obstáculos. Las celdas bloqueadas deben marcarse como \(-1\) en la salida.  
+    \end{itemize}
+
+    \subsection*{Ejemplo}
+    \text{Entrada:}
+    \begin{itemize}
+            \item Posición inicial del mago: \((2, 2)\).  
+            \item Bosque: 
+            \[ 
+            \begin{bmatrix}
+                \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} \\
+                \texttt{false} & \texttt{false} & \texttt{false} & \texttt{true}  & \texttt{false} \\
+                \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} \\
+                \texttt{false} & \texttt{false} & \texttt{false} & \texttt{true}  & \texttt{false} \\
+                \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} \\
+                \end{bmatrix}
+            \]
+    \end{itemize}
+    \text{Salida:}
+    \[
+    \begin{bmatrix}
+    4 & 3 & 2 & 3 & 4 \\
+    3 & 2 & 1 & -1 & 3 \\
+    2 & 1 & 0 & 1  & 2 \\
+    3 & 2 & 1 & -1 & 3 \\
+    4 & 3 & 2 & 3  & 4 \\
+    \end{bmatrix}
+    \]
+
+    \item \textbf{Validación de un Sudoku}\\
+    En este ejercicio, implementarás un programa que valide si un tablero de Sudoku es válido. El programa recibirá como entrada un tablero representado como una matriz de \(9 \times 9\), un tablero de Sudoku debe cumplir con las siguientes reglas:
+    \begin{enumerate}
+        \item Cada fila debe contener los números del \(1\) al \(9\) sin repetir.
+        \item Cada columna debe contener los números del \(1\) al \(9\) sin repetir.
+        \item Cada subcuadrícula de \(3 \times 3\) debe contener los números del \(1\) al \(9\) sin repetir.
+    \end{enumerate}
+
+    Algunas celdas estarán vacías, representadas por un \(0\).
+
+    \subsection*{Ejemplo de entrada}
+    \[
+    \text{sudoku} = 
+    \begin{bmatrix}
+    5 & 3 & 0 & 0 & 7 & 0 & 0 & 0 & 0 \\
+    6 & 0 & 0 & 1 & 9 & 5 & 0 & 0 & 0 \\
+    0 & 9 & 8 & 0 & 0 & 0 & 0 & 6 & 0 \\
+    8 & 0 & 0 & 0 & 6 & 0 & 0 & 0 & 3 \\
+    4 & 0 & 0 & 8 & 0 & 3 & 0 & 0 & 1 \\
+    7 & 0 & 0 & 0 & 2 & 0 & 0 & 0 & 6 \\
+    0 & 6 & 0 & 0 & 0 & 0 & 2 & 8 & 0 \\
+    0 & 0 & 0 & 4 & 1 & 9 & 0 & 0 & 5 \\
+    0 & 0 & 0 & 0 & 8 & 0 & 0 & 7 & 9 \\
+    \end{bmatrix}
+    \]
+    \subsection*{Salida esperada}
+
+    \begin{itemize}
+        \item Para el tablero de entrada anterior, el programa debe devolver:
+        \[
+        \text{El tablero de Sudoku es válido: Sí.}
+        \]
+        \item Si se modifica la celda \((1,2)\) del tablero para que contenga un \(5\), el programa debe devolver:
+        \[
+        \text{El tablero de Sudoku es válido: No.}
+        \]
+    \end{itemize}
+
+    \item \textbf{Validación de movimientos en Ajedrez}\\
+    Tu misión es implementar un programa que determine si un movimiento de una pieza de ajedrez es válido. Usarás el siguiente \textcolor{blue}{enum} para representar las piezas:
+
+    \begin{lstlisting}[caption=Enumeración para las piezas de ajedrez]
+    public enum ChessPiece
+    {
+        None,           // No piece (empty square)
+        WhitePawn,
+        WhiteKnight,
+        WhiteBishop,
+        WhiteRook,
+        WhiteQueen,
+        WhiteKing,
+        BlackPawn,
+        BlackKnight,
+        BlackBishop,
+        BlackRook,
+        BlackQueen,
+        BlackKing
+    }
+    \end{lstlisting}
+
+    El tablero se representará como una matriz de \(8 \times 8\) de tipo \texttt{ChessPiece}, donde cada celda indica la pieza presente o está vacía (\texttt{None}).
+
+    Tu programa debe:
+    \begin{enumerate}
+        \item Recibir como entrada:
+        \begin{itemize}
+            \item Un tablero \(8 \times 8\) inicializado con las piezas en su posición.
+            \item Coordenadas iniciales y finales del movimiento: \((x_1, y_1)\) y \((x_2, y_2)\).
+        \end{itemize}
+        \item Determinar si el movimiento es válido según las reglas de la pieza en la posición inicial.
+        \item Devolver si el movimiento es válido o no.
+    \end{enumerate}
+
+    \subsection*{Tareas}
+    \begin{enumerate}
+        \item Implementa una función para validar movimientos básicos de cada tipo de pieza. Por ejemplo:
+        \begin{itemize}
+            \item Los peones solo avanzan (o retroceden, si son negros) una casilla, excepto al inicio.
+            \item Los caballos se mueven en "L".
+            \item Los alfiles solo se mueven en diagonal.
+            \item Las torres solo se mueven en línea recta.
+            \item Las reinas combinan los movimientos de las torres y los alfiles.
+            \item Los reyes se mueven una casilla en cualquier dirección.
+        \end{itemize}
+        \item Valida si la celda destino está vacía o contiene una pieza del oponente.
+        \item Devuelve si el movimiento cumple las reglas de la pieza.
+    \end{enumerate}
+
+    \subsection*{Ejemplo de entrada}
+
+    \begin{lstlisting}[caption=Tablero inicial]
+    ChessPiece[,] board = new ChessPiece[8, 8]
+    {
+        { ChessPiece.BlackRook, ChessPiece.BlackKnight, ChessPiece.BlackBishop, ChessPiece.BlackQueen, ChessPiece.BlackKing, ChessPiece.BlackBishop, ChessPiece.BlackKnight, ChessPiece.BlackRook },
+        { ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn },
+        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
+        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
+        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
+        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
+        { ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn },
+        { ChessPiece.WhiteRook, ChessPiece.WhiteKnight, ChessPiece.WhiteBishop, ChessPiece.WhiteQueen, ChessPiece.WhiteKing, ChessPiece.WhiteBishop, ChessPiece.WhiteKnight, ChessPiece.WhiteRook }
+    };
+    \end{lstlisting}
+
+    Movimiento a validar:
+    \[
+    (x_1, y_1) = (6, 4), \quad (x_2, y_2) = (5, 4)
+    \]
+
+    \subsection*{Salida esperada}
+
+    \[
+    \text{Movimiento válido.}
+    \]
+
+    \subsection*{Extensiones del ejercicio}
+    \begin{itemize}
+        \item Valida movimientos especiales como:
+        \begin{itemize}
+            \item Enroque.
+            \item Captura al paso (\textit{en passant}).
+            \item Promoción de peones.
+        \end{itemize}
+        \item Determina si un movimiento pone al rey propio en jaque y evítalo.
+    \end{itemize}
+
+    \item \textbf{Jaque al rey}\\
+    \input{cp7/exercises/check_black_king}
+\end{enumerate}
+
+
+% \section{Busca el Tesoro}
+% \textbf{Descripción:}  
+% Crea un juego donde el jugador debe encontrar un "tesoro" oculto en un tablero de tamaño 5x5.
+
+% \textbf{Requisitos:}
+% \begin{itemize}
+%     \item Genera el tablero con celdas iniciales vacías (\texttt{-}).
+%     \item Oculta el tesoro en una posición aleatoria.
+%     \item Permite al jugador adivinar las coordenadas del tesoro.
+%     \item Muestra un mensaje cuando el jugador encuentra el tesoro.
+% \end{itemize}
+
+% \textbf{Extensiones:}
+% \begin{itemize}
+%     \item Añade un contador de intentos.
+%     \item Da pistas indicando si el tesoro está más cerca o lejos después de cada intento.
+% \end{itemize}
