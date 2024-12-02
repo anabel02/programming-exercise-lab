@@ -101,15 +101,6 @@
     \item \textbf{Sopa de letras}\\
     \input{cp7/exercises/word_search}
 
-    \item \textbf{Tablero alcanzable por caballos}\\
-    \input{cp7/exercises/knight_reachable_board}
-
-    \item \textbf{Dama amenazada}\\
-    \input{cp7/exercises/queen_threat}
-
-    \item \textbf{Recorriendo islas}\\
-    \input{cp7/exercises/exploring_islands}
-
     \item \textbf{Tic-Tac-Toe}\\
     Implementa un juego sencillo de Cerito-Cruz para dos jugadores. Ten en cuenta los siguientes requisitos:
     \begin{itemize}
@@ -118,10 +109,93 @@
         \item Verifica si algún jugador ha ganado o si hay un empate.
     \end{itemize}
 
+    \item \textbf{Tablero alcanzable por caballos}\\
+    \input{cp7/exercises/knight_reachable_board}
+
+    \item \textbf{Dama amenazada}\\
+    \input{cp7/exercises/queen_threat}
+
+    \item \textbf{Validación de un Sudoku}\\
+    En este ejercicio, implementarás un programa que valide si un tablero de Sudoku es válido. El programa recibirá como entrada un tablero representado como una matriz de \(9 \times 9\), un tablero de Sudoku debe cumplir con las siguientes reglas:
+    \begin{itemize}
+        \item Cada fila debe contener los números del \(1\) al \(9\) sin repetir.
+        \item Cada columna debe contener los números del \(1\) al \(9\) sin repetir.
+        \item Cada subcuadrícula de \(3 \times 3\) debe contener los números del \(1\) al \(9\) sin repetir.
+    \end{itemize}
+
+    Algunas celdas estarán vacías, representadas por un \(0\).
+
+    \subsection*{Ejemplo de entrada}
+    \[
+    \text{sudoku} = 
+    \begin{bmatrix}
+    5 & 3 & 0 & 0 & 7 & 0 & 0 & 0 & 0 \\
+    6 & 0 & 0 & 1 & 9 & 5 & 0 & 0 & 0 \\
+    0 & 9 & 8 & 0 & 0 & 0 & 0 & 6 & 0 \\
+    8 & 0 & 0 & 0 & 6 & 0 & 0 & 0 & 3 \\
+    4 & 0 & 0 & 8 & 0 & 3 & 0 & 0 & 1 \\
+    7 & 0 & 0 & 0 & 2 & 0 & 0 & 0 & 6 \\
+    0 & 6 & 0 & 0 & 0 & 0 & 2 & 8 & 0 \\
+    0 & 0 & 0 & 4 & 1 & 9 & 0 & 0 & 5 \\
+    0 & 0 & 0 & 0 & 8 & 0 & 0 & 7 & 9 \\
+    \end{bmatrix}
+    \]
+    \subsection*{Salida esperada}
+
+    \begin{itemize}
+        \item Para el tablero de entrada anterior, el programa debe devolver:
+        \[
+        \text{El tablero de Sudoku es válido: Sí.}
+        \]
+        \item Si se modifica la celda \((1,2)\) del tablero para que contenga un \(5\), el programa debe devolver:
+        \[
+        \text{El tablero de Sudoku es válido: No.}
+        \]
+    \end{itemize}
+
+    \item \textbf{Validación de movimientos en Ajedrez}\\
+    Tu misión es implementar un programa que determine si un movimiento de una pieza de ajedrez es válido. Usa el siguiente \textcolor{blue}{enum} para representar las piezas:
+
+    \begin{lstlisting}
+    public enum ChessPiece
+    {
+        None,           // No piece (empty square)
+        WhitePawn,
+        WhiteKnight,
+        WhiteBishop,
+        WhiteRook,
+        WhiteQueen,
+        WhiteKing,
+        BlackPawn,
+        BlackKnight,
+        BlackBishop,
+        BlackRook,
+        BlackQueen,
+        BlackKing
+    }
+    \end{lstlisting}
+
+    El tablero se representará como una matriz de \(8 \times 8\) de tipo \texttt{ChessPiece}, donde cada celda indica la pieza presente o está vacía (\texttt{None}).
+
+    Tu programa debe recibir como entrada un tablero, junto con las coordenadas iniciales y finales del movimiento, representadas como \((x_1, y_1)\) y \((x_2, y_2)\); a partir de esta información, deberá determinar si el movimiento indicado es válido, considerando las reglas correspondientes a la pieza ubicada en la posición inicial.
+
+    Las reglas de movimiento para cada tipo de pieza son las siguientes:
+    \begin{itemize}
+        \item \textbf{Peones} (Pawn): Avanzan (o retroceden, si son negros) una casilla hacia adelante, excepto en su primer movimiento, donde pueden avanzar dos casillas. Capturan piezas únicamente en diagonal y no pueden avanzar hacia casillas ocupadas.
+        \item \textbf{Caballos} (Knight): Se mueven en forma de "L", moviéndose dos casillas en una dirección y una en perpendicular. Pueden saltar sobre otras piezas, pero solo ocupan la casilla de destino si está vacía o contiene una pieza del oponente.
+        \item \textbf{Alfiles} (Bishop): Se mueven únicamente en diagonal, cualquier cantidad de casillas. No pueden atravesar ni ocupar casillas ocupadas, salvo para capturar una pieza del oponente en la casilla de destino.
+        \item \textbf{Torres} (Rook): Se mueven en línea recta, ya sea horizontal o verticalmente, cualquier número de casillas. No pueden atravesar ni ocupar casillas ocupadas, salvo para capturar una pieza del oponente en la casilla de destino.
+        \item \textbf{Reinas} (Queen): Combinan los movimientos de las torres y los alfiles, moviéndose tanto en línea recta como en diagonal.
+        \item \textbf{Reyes} (King): Se mueven una casilla en cualquier dirección: horizontal, vertical o diagonal. No pueden moverse a una casilla ocupada salvo para capturar una pieza del oponente en la casilla de destino.
+    \end{itemize}
+    
+    \textbf{Nota}: El ejercicio no requiere implementar lógica adicional como detectar jaque, jaque mate, enroque o promoción de peones. Solo se debe comprobar si el movimiento en cuestión cumple con las reglas básicas de la pieza.
+
+    \item \textbf{Jaque al rey}\\
+    \input{cp7/exercises/check_black_king}
+
     \item \textbf{El Mago y el Bosque Encantado}\\
     En un bosque encantado, un mago ha decidido medir el poder de su hechizo de teletransportación. El bosque está representado como una cuadrícula de \(N \times M\), donde cada celda puede estar despejada o bloqueada por un obstáculo mágico. El mago comienza en una posición definida por el usuario, y desea calcular cuán lejos puede llegar su hechizo desde esa posición, sin atravesar los obstáculos.
-
-    \subsection*{Detalles del problema}
     \begin{itemize}
         \item El bosque se representa como una matriz booleana: 
         \begin{itemize}
@@ -158,134 +232,8 @@
     \end{bmatrix}
     \]
 
-    \item \textbf{Validación de un Sudoku}\\
-    En este ejercicio, implementarás un programa que valide si un tablero de Sudoku es válido. El programa recibirá como entrada un tablero representado como una matriz de \(9 \times 9\), un tablero de Sudoku debe cumplir con las siguientes reglas:
-    \begin{enumerate}
-        \item Cada fila debe contener los números del \(1\) al \(9\) sin repetir.
-        \item Cada columna debe contener los números del \(1\) al \(9\) sin repetir.
-        \item Cada subcuadrícula de \(3 \times 3\) debe contener los números del \(1\) al \(9\) sin repetir.
-    \end{enumerate}
-
-    Algunas celdas estarán vacías, representadas por un \(0\).
-
-    \subsection*{Ejemplo de entrada}
-    \[
-    \text{sudoku} = 
-    \begin{bmatrix}
-    5 & 3 & 0 & 0 & 7 & 0 & 0 & 0 & 0 \\
-    6 & 0 & 0 & 1 & 9 & 5 & 0 & 0 & 0 \\
-    0 & 9 & 8 & 0 & 0 & 0 & 0 & 6 & 0 \\
-    8 & 0 & 0 & 0 & 6 & 0 & 0 & 0 & 3 \\
-    4 & 0 & 0 & 8 & 0 & 3 & 0 & 0 & 1 \\
-    7 & 0 & 0 & 0 & 2 & 0 & 0 & 0 & 6 \\
-    0 & 6 & 0 & 0 & 0 & 0 & 2 & 8 & 0 \\
-    0 & 0 & 0 & 4 & 1 & 9 & 0 & 0 & 5 \\
-    0 & 0 & 0 & 0 & 8 & 0 & 0 & 7 & 9 \\
-    \end{bmatrix}
-    \]
-    \subsection*{Salida esperada}
-
-    \begin{itemize}
-        \item Para el tablero de entrada anterior, el programa debe devolver:
-        \[
-        \text{El tablero de Sudoku es válido: Sí.}
-        \]
-        \item Si se modifica la celda \((1,2)\) del tablero para que contenga un \(5\), el programa debe devolver:
-        \[
-        \text{El tablero de Sudoku es válido: No.}
-        \]
-    \end{itemize}
-
-    \item \textbf{Validación de movimientos en Ajedrez}\\
-    Tu misión es implementar un programa que determine si un movimiento de una pieza de ajedrez es válido. Usarás el siguiente \textcolor{blue}{enum} para representar las piezas:
-
-    \begin{lstlisting}[caption=Enumeración para las piezas de ajedrez]
-    public enum ChessPiece
-    {
-        None,           // No piece (empty square)
-        WhitePawn,
-        WhiteKnight,
-        WhiteBishop,
-        WhiteRook,
-        WhiteQueen,
-        WhiteKing,
-        BlackPawn,
-        BlackKnight,
-        BlackBishop,
-        BlackRook,
-        BlackQueen,
-        BlackKing
-    }
-    \end{lstlisting}
-
-    El tablero se representará como una matriz de \(8 \times 8\) de tipo \texttt{ChessPiece}, donde cada celda indica la pieza presente o está vacía (\texttt{None}).
-
-    Tu programa debe:
-    \begin{enumerate}
-        \item Recibir como entrada:
-        \begin{itemize}
-            \item Un tablero \(8 \times 8\) inicializado con las piezas en su posición.
-            \item Coordenadas iniciales y finales del movimiento: \((x_1, y_1)\) y \((x_2, y_2)\).
-        \end{itemize}
-        \item Determinar si el movimiento es válido según las reglas de la pieza en la posición inicial.
-        \item Devolver si el movimiento es válido o no.
-    \end{enumerate}
-
-    \subsection*{Tareas}
-    \begin{enumerate}
-        \item Implementa una función para validar movimientos básicos de cada tipo de pieza. Por ejemplo:
-        \begin{itemize}
-            \item Los peones solo avanzan (o retroceden, si son negros) una casilla, excepto al inicio.
-            \item Los caballos se mueven en "L".
-            \item Los alfiles solo se mueven en diagonal.
-            \item Las torres solo se mueven en línea recta.
-            \item Las reinas combinan los movimientos de las torres y los alfiles.
-            \item Los reyes se mueven una casilla en cualquier dirección.
-        \end{itemize}
-        \item Valida si la celda destino está vacía o contiene una pieza del oponente.
-        \item Devuelve si el movimiento cumple las reglas de la pieza.
-    \end{enumerate}
-
-    \subsection*{Ejemplo de entrada}
-
-    \begin{lstlisting}[caption=Tablero inicial]
-    ChessPiece[,] board = new ChessPiece[8, 8]
-    {
-        { ChessPiece.BlackRook, ChessPiece.BlackKnight, ChessPiece.BlackBishop, ChessPiece.BlackQueen, ChessPiece.BlackKing, ChessPiece.BlackBishop, ChessPiece.BlackKnight, ChessPiece.BlackRook },
-        { ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn, ChessPiece.BlackPawn },
-        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
-        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
-        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
-        { ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None, ChessPiece.None },
-        { ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn, ChessPiece.WhitePawn },
-        { ChessPiece.WhiteRook, ChessPiece.WhiteKnight, ChessPiece.WhiteBishop, ChessPiece.WhiteQueen, ChessPiece.WhiteKing, ChessPiece.WhiteBishop, ChessPiece.WhiteKnight, ChessPiece.WhiteRook }
-    };
-    \end{lstlisting}
-
-    Movimiento a validar:
-    \[
-    (x_1, y_1) = (6, 4), \quad (x_2, y_2) = (5, 4)
-    \]
-
-    \subsection*{Salida esperada}
-
-    \[
-    \text{Movimiento válido.}
-    \]
-
-    \subsection*{Extensiones del ejercicio}
-    \begin{itemize}
-        \item Valida movimientos especiales como:
-        \begin{itemize}
-            \item Enroque.
-            \item Captura al paso (\textit{en passant}).
-            \item Promoción de peones.
-        \end{itemize}
-        \item Determina si un movimiento pone al rey propio en jaque y evítalo.
-    \end{itemize}
-
-    \item \textbf{Jaque al rey}\\
-    \input{cp7/exercises/check_black_king}
+    \item \textbf{Recorriendo islas}\\
+    \input{cp7/exercises/exploring_islands}
 \end{enumerate}
 
 
