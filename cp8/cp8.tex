@@ -1,37 +1,43 @@
+\begin{center}
+    \begin{large}
+    Cp 8 - Recursividad\\
+    Curso \academicyear\\
+    \end{large}
+    % \begin{figure}[h]
+    % 	\centering
+    % 	\includegraphics[width=0.5\linewidth]{cp5/classes.png}
+    % \end{figure}
+\end{center}
+
 \section{Factorial}
 \input{cp3/exercises/factorial.tex}
-
-\section{Máximo común divisor}
-\input{cp8/exercises/gcd}
-
-\[ mcd(a, b) = \begin{cases}
-b & \text{si } a \% b = 0 \\
-mcd(b, a \% b) & \text{de lo contrario}
-\end{cases} \]
-
-\section{Mínimo elemento}
-\input{cp8/exercises/min}
-
-\section{Palíndromo}
-Implemente una función recursiva que reciba un string y analice si este es palíndromo.
 
 \section{Cantidad de dígitos}
 \input{cp8/exercises/digits_count}
 
 \section{Suma de Dígitos}
-Implementar una función que calcule recursivamente la suma de los dígitos de un entero \( n \).
+\input{cp8/exercises/digits_sum}
 
 \section{Potencia}
 \input{cp8/exercises/pow}
 
-\section{Secuencia de Collatz}
-\input{cp8/exercises/collatz}
+\section{Máximo común divisor}
+\input{cp8/exercises/gcd}
 
 \section{Sucesión de Fibonacci}
 \input{cp8/exercises/fibonacci}
 
-\section{Descomposición en factores primos}
-\input{cp8/exercises/prime_factors}
+\section{Secuencia de Collatz}
+\input{cp8/exercises/collatz}
+
+\section{Superprimo}
+\input{cp8/exercises/super_prime}
+
+\section{Representación binaria}
+\input{cp4/exercises/binary_representation.tex}
+
+\section{Echo invertido}
+Implemente un método que permita al usuario escribir en la consola tantas líneas como quiera. Cuando el usuario de ''ENTER'' sin haber escrito algún texto, debe imprimir cada una de las líneas que escribió el usuario, pero en orden inverso. No debe usar array ni ninguna estructura de datos para almacenar todas las líneas de texto que ha ido escribiendo el usuario.
 
 \section{Torres de Hanoi}
 ¿Recuerdas el problema de las Torres de Hanoi? Este consiste en mover una pila de discos de una torre a otra, respetando las siguientes reglas:
@@ -43,7 +49,7 @@ Implementar una función que calcule recursivamente la suma de los dígitos de u
 
 Escribe un método recursivo para resolver el problema de las Torres de Hanoi, mostrando los movimientos de los discos.
 
-\textbf{Ejemplo:}
+\textbf{Ejemplo:}\\
 Si tienes 3 discos, la secuencia de movimientos sería:
 \begin{itemize}
     \item Mover disco 1 de A a C
@@ -55,68 +61,5 @@ Si tienes 3 discos, la secuencia de movimientos sería:
     \item Mover disco 1 de A a C
 \end{itemize}
 
-\section{Representación binaria}
-\input{cp4/exercises/binary_representation}
-
-\section{Superprimo}
-Determinar si un número es \texttt{super primo}. Un número es \texttt{super primo} si es primo y además al quitarle la última cifra sigue siendo \texttt{super primo}. Un número primo de una sola cifra se considera \texttt{super primo}. Ejemplo, 73 es superprimo.
-
-\section{Conjunto de Wirth}
-\input{cp8/exercises/wirth_set}
-
-\section{Suma de Elementos}
-Implementar un método que sume recursivamente todos los elementos de un array de enteros.
-
-\section{Inversión de Cadena}
-Implementar un método que invierta recursivamente un string y retorne el string invertido.
-
-\section{Echo invertido}
-Programe un método que permita al usuario escribir en la Consola tantas líneas como quiera. Cuando el usuario de ''ENTER'' sin haber escrito algún texto, debe imprimir cada una de las líneas que escribió el usuario, pero en orden inverso. No debe usar array ni ninguna estructura de datos para almacenar todas las líneas de texto que ha ido escribiendo el usuario.
-        
-\section{Suma de Elementos en Matriz}
-Implementar una función que sume recursivamente los elementos de una matriz.
-
 \section{Paréntesis balanceados}
 \input{cp8/exercises/parentheses}
-
-\section{Búsqueda binaria}
-\input{cp8/exercises/binary_search}
-
-\section{Subsecuencia Común Más Larga}
-Implementar una función recursiva que calcule la longitud de la subsecuencia común más larga entre dos strings.
-
-\section{Distancia entre Strings}
-Implementar una función recursiva que calcule la distancia entre dos strings, entendida como la cantidad de ediciones necesarias para convertir una cadena en otra (inserciones, eliminaciones o sustituciones).
-
-\section{Suma Decreciente}
-Implemente un método que reciba un entero \( n \) y muestre en la consola todas las secuencias distintas de enteros positivos que suman \( n \). Por ejemplo, para \( n = 4 \):
-\[
-4, 3+1, 2+2, 2+1+1, 1+1+1+1
-\]
-
-\section{Suma No Creciente}
-Implemente un método que reciba un entero \( n \) y muestre en la consola todas las secuencias no crecientes de enteros positivos que suman \( n \). Por ejemplo, para \( n = 4 \):
-\[
-4, 3+1, 2+2, 2+1+1, 1+1+1+1
-\]
-
-\section{Dígitos Crecientes}
-Implemente un método que reciba un entero \( n \) y muestre en la consola todos los números decimales de \( n \) dígitos cuyos dígitos son estrictamente crecientes. Por ejemplo, para \( n = 2 \):
-\[
-01, 02, 03, ..., 89
-\]
-        
-\section{Multiplicación}
-Multiplicar dos números sin utilizar operador \texttt{*}. Su solución debe hacer el menor número posible de llamados recursivos.
-
-\section{Inserciones Palíndromo}
-Calcular el mínimo número de inserciones necesarias para volver palíndromo una cadena de entrada.
-
-\section{Cantidad de caminos}
-\input{cp8/exercises/paths_count}
-
-\section{Máximo y mínimo}
-Implemente un método que, dado un array de enteros \(a\), encuentre el máximo y el mínimo realizando \(\frac{3 n}{2}\) comparaciones o menos.
-
-\section{Recorrido del caballo}
-\input{cp8/exercises/knight_tour}

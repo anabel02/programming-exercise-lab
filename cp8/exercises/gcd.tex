@@ -1,1 +1,14 @@
-Hallar el Máximo Común Divisor entre dos enteros utilizando el algoritmo de Euclides basado en el resto. \( MCD(a, b) = MCD(b, r) \) donde \( r = a \% b \).
+Implemente un método que halle el \textit{máximo común divisor} entre dos enteros utilizando el algoritmo de Euclides basado en el resto.
+
+El \(mcd(a, b)\) es el mayor número \(d\) que divide a \(a\) y a \(b\) simultáneamente. Si \(a = b \cdot q + r\), donde:
+\[
+\begin{aligned}
+q &\in \mathbb{Z}, \quad \text{(el cociente debe ser un número entero)} \\
+0 &\leq r < b, \quad \text{(el residuo \(r\) es un número no negativo y estrictamente menor que \(b\))}.
+\end{aligned}
+\]
+entonces:
+\[
+mcd(a, b) = mcd(b, r).
+\]
+Esto se debe a que cualquier divisor común de \(a\) y \(b\) también divide \(r\), y viceversa.
