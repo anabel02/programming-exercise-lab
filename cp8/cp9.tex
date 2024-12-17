@@ -1,65 +1,109 @@
-\section{Multiplicación}
-Multiplicar dos números sin utilizar operador \texttt{*}. Su solución debe hacer el menor número posible de llamados recursivos.
+\begin{center}
+    \begin{large}
+    Cp 9 - Recursividad\\
+    Curso \academicyear\\
+    \end{large}
+    % \begin{figure}[h]
+    % 	\centering
+    % 	\includegraphics[width=0.5\linewidth]{cp5/classes.png}
+    % \end{figure}
+\end{center}
 
-% \section{Palíndromo}
-% Implemente una función recursiva que reciba un string y analice si este es palíndromo.
+\section{Palíndromo}  
+Implemente un método recursivo que determine si una cadena de texto es un palíndromo.  
 
-% \section{Inversión de Cadena}
-% Implementar un método que invierta recursivamente un string y retorne el string invertido.
+\section{Inversión de Cadena}  
+Implemente un método recursivo que invierta una cadena de texto y devuelva el resultado.  
 
-\section{Búsqueda binaria}
-\input{cp8/exercises/binary_search}
+\section{Mínimo Elemento}  
+\input{cp8/exercises/min}  
 
-\section{Subsecuencia Común Más Larga}
-Implementar una función recursiva que calcule la longitud de la subsecuencia común más larga entre dos strings.
+\section{Suma de Elementos}  
+Implemente un método recursivo que sume todos los elementos de un arreglo de enteros.  
 
-\section{Distancia entre Strings}
-Implementar una función recursiva que calcule la distancia entre dos strings, entendida como la cantidad de ediciones necesarias para convertir una cadena en otra (inserciones, eliminaciones o sustituciones).
+\section{Suma de Elementos en Matriz}  
+Implemente un método recursivo que sume todos los elementos de una matriz de enteros.
 
-\section{Suma Decreciente}
-Implemente un método que reciba un entero \( n \) y muestre en la consola todas las secuencias distintas de enteros positivos que suman \( n \). Por ejemplo, para \( n = 4 \):
+\section{Multiplicación}  
+Implemente un método recursivo para multiplicar dos números enteros sin utilizar el operador \texttt{*}. Su implementación debe minimizar el número de llamadas recursivas.  
+
+\section{Cantidad de Caminos}  
+\input{cp8/exercises/paths_count_paren}  
+
+\section{Conteo de Pasos en una Escalera}
+Implemente un método recursivo que calcule de cuántas maneras distintas se puede subir una escalera de \( n \) peldaños, si se puede avanzar 1, 2 o 3 peldaños a la vez.  
+
+\subsection*{Ejemplo}
+Para una escalera de \( 4 \) peldaños, las combinaciones son:
+
 \[
-4, 3+1, 2+2, 2+1+1, 1+1+1+1
+1+1+1+1,\ 1+1+2,\ 1+2+1,\ 2+1+1,\ 2+2,\ 1+3,\ 3+1
 \]
 
-\section{Suma No Creciente}
-Implemente un método que reciba un entero \( n \) y muestre en la consola todas las secuencias no crecientes de enteros positivos que suman \( n \). Por ejemplo, para \( n = 4 \):
-\[
-4, 3+1, 2+2, 2+1+1, 1+1+1+1
-\]
+El resultado debe ser \( 7 \).
 
-\section{Inserciones Palíndromo}
-Calcular el mínimo número de inserciones necesarias para volver palíndromo una cadena de entrada.
+\section{Conjunto de Wirth}  
+\input{cp8/exercises/wirth_set}  
 
-\section{Cantidad de caminos}
-\input{cp8/exercises/paths_count}
+\section{Dígitos Crecientes}  
+Implemente un método que reciba un entero \( n \) y genere todos los números decimales de \( n \) dígitos cuyos dígitos sean estrictamente crecientes. 
 
-\section{Máximo y mínimo}
-Implemente un método que, dado un array de enteros \(a\), encuentre el máximo y el mínimo realizando \(\frac{3 n}{2}\) comparaciones o menos.
+\subsection*{Ejemplo}
+Para \( n = 2 \) debe imprimir:  
+\begin{equation}
+    \begin{aligned}  
+    12 \\ 
+    13 \\ 
+    14 \\ 
+    \ldots \\ 
+    78 \\
+    79 \\
+    89  
+    \end{aligned}
+\end{equation}
 
-\section{Recorrido del caballo}
-\input{cp8/exercises/knight_tour}
+\section{Suma Decreciente}  
+Implemente un método que reciba un entero \( n \) y muestre todas las secuencias distintas de enteros positivos que suman \( n \). Por ejemplo, para \( n = 4 \):  
+\begin{equation}
+    \begin{aligned}
+    4 \\ 
+    3+1 \\ 
+    2+2 \\ 
+    2+1+1 \\ 
+    1+1+1+1   
+    \end{aligned}
+\end{equation}
 
-\section{Representación binaria}
-\input{cp4/exercises/binary_representation}
+\section{Suma Creciente}  
+Implemente un método que reciba un entero \( n \) y muestre todas las secuencias crecientes de enteros positivos que suman \( n \). Por ejemplo, para \( n = 4 \):  
+\begin{equation}
+    \begin{aligned}
+    1+1+1+1 \\
+    1+1+2 \\
+    1+3 \\
+    4
+    \end{aligned}
+\end{equation}
 
-\section{Conjunto de Wirth}
-\input{cp8/exercises/wirth_set}
+\section{Búsqueda Binaria}  
+\input{cp8/exercises/binary_search}  
 
-% \section{Mínimo elemento}
-% \input{cp8/exercises/min}
+% \section{Subsecuencia Común Más Larga}
+% Implemente un método recursivo que calcule la longitud de la \textbf{subsecuencia común más larga} (LCS, por sus siglas en inglés) entre dos cadenas de texto dadas.
 
-% \section{Suma de Elementos}
-% Implementar un método que sume recursivamente todos los elementos de un array de enteros.
+% Una subsecuencia es una secuencia derivada de otra secuencia, eliminando algunos o ningún elemento, pero manteniendo el orden relativo de los elementos restantes. A diferencia de una subcadena, que requiere que los elementos sean contiguos, en una subsecuencia los caracteres pueden no ser adyacentes pero deben aparecer en el mismo orden.
 
-% \section{Descomposición en factores primos}
-% \input{cp8/exercises/prime_factors}
+% \subsection*{Ejemplo:}
+% Para las cadenas \texttt{''ABCBDBB''} y \texttt{''BDCAB''}, la subsecuencia común más larga es \texttt{''BCB''} y tiene una longitud de 3.
 
-% \section{Suma de Elementos en Matriz}
-% Implementar una función que sume recursivamente los elementos de una matriz.
+% \section{Inserciones para Palíndromo}  
+% Implemente un método que calcule el número mínimo de inserciones necesarias para convertir una cadena en un palíndromo.  
 
-% \section{Dígitos Crecientes}
-% Implemente un método que reciba un entero \( n \) y muestre en la consola todos los números decimales de \( n \) dígitos cuyos dígitos son estrictamente crecientes. Por ejemplo, para \( n = 2 \):
-% \[
-% 12, 13, 14, ..., 79, 89
-% \]
+% \section{Distancia entre Strings}  
+% Implemente un método recursivo que calcule la distancia entre dos cadenas de texto. Esta distancia se define como el número mínimo de operaciones (inserciones, eliminaciones o sustituciones) necesarias para convertir una cadena en la otra.  
+
+% \section{Recorrido del Caballo}  
+% \input{cp8/exercises/knight_tour}
+
+% \section{Máximo y Mínimo}  
+% Implemente un método que, dado un arreglo de enteros \(a\), encuentre el valor máximo y el mínimo utilizando \(\frac{3n}{2}\) comparaciones o menos.  

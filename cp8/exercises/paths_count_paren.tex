@@ -1,0 +1,20 @@
+Implemente el método que devuelva la cantidad de caminos que se pueden tomar para llegar desde la posición (0, 0) hasta la posición ($x$,$x$).
+
+Un camino es una secuencia de puntos con coordenadas enteras que cumple las siguientes condiciones:
+
+\begin{itemize}
+    \item \textbf{Distancia:} La distancia entre dos puntos consecutivos en el camino es exactamente una unidad.
+    \item \textbf{Secuencia no decreciente:} Las coordenadas \(x\) y \(y\) deben seguir una secuencia no decreciente a lo largo del camino, es decir, en cada paso las coordenadas no pueden disminuir.
+    \item \textbf{Restricción de la diagonal:} En ningún momento del camino se debe permitir que \(y\) sea mayor que \(x\), garantizando que siempre se esté debajo o en la misma línea de la diagonal \(y = x\).
+\end{itemize}
+
+\subsection*{Ejemplo}
+Para llegar a la posición \((3, 3)\), existen exactamente \textbf{5 caminos válidos} que respetan la restricción de la diagonal:
+
+\begin{itemize}
+    \item \((0, 0) \to (1, 0) \to (2, 0) \to (3, 0) \to (3, 1) \to (3, 2) \to (3, 3)\),
+    \item \((0, 0) \to (1, 0) \to (2, 0) \to (2, 1) \to (3, 1) \to (3, 2) \to (3, 3)\),
+    \item \((0, 0) \to (1, 0) \to (1, 1) \to (2, 1) \to (3, 1) \to (3, 2) \to (3, 3)\),
+    \item \((0, 0) \to (1, 0) \to (2, 0) \to (2, 1) \to (2, 2) \to (3, 2) \to (3, 3)\),
+    \item \((0, 0) \to (1, 0) \to (1, 1) \to (2, 1) \to (2, 2) \to (3, 2) \to (3, 3)\).
+\end{itemize}
