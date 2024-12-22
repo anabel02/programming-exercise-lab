@@ -1,4 +1,4 @@
-\section{Problemas más avanzados}
+\section{Resolución de Problemas}
 \begin{enumerate}
     \item
     \input{cp6/exercises/sorting_algorithms}
@@ -49,65 +49,65 @@
 \newpage
 \section{Array bidimensionales}
 \begin{enumerate}
-    \item
-    Implemente un método que reciba dos matrices (arrays bidimensionales de tipo entero que representan matrices algebraicas) y devuelva su suma.
-
-    \item
-    Implemente un método que reciba dos matrices (arrays bidimensionales de tipo entero que representan matrices algebraicas) y devuelva su multiplicación. Asuma que las matrices de entrada son multiplicables.
-
-    \item
+    \item \textbf{Traza de una matriz:}\\
     Implemente un método que reciba una matriz cuadrada (un array bidimensional de tipo entero que representa una matriz algebraica) y devuelva la suma de los elementos de su diagonal.
 
-    \item
-    Implemente un método que reciba una matriz (un array bidimensional de tipo entero que representa una matriz algebraica) y devuelva su transpuesta (intercambiar filas y columnas).
-
-    \item 
+    \item \textbf{Chequear simetría:}\\
     Implemente un método que reciba una matriz (un array bidimensional de tipo entero que representa una matriz algebraica) y devuelva \textcolor{blue}{true} si es simétrica, \textcolor{blue}{false} en caso contrario.
 
-    \item
-    Implemente un método que reciba una matriz \(M\) y devuelva otra matriz \(M'\). La matriz \(M'\) se forma a partir de \(M\), manteniendo sus valores originales pero haciendo cero cualquier columna o fila que tenga algún cero.
-
-    \item
-    Implemente un método que reciba un array bidimensional y devuelva, de existir, uno de sus puntos raros. Un punto raro es aquel que es el más pequeño de su fila, pero el más grande de su columna. En caso de existir alguno, devuelva una tupla con sus coordenadas. En caso de no existir, devuelva \texttt{null}.
-    
-    \item
-    \input{cp7/exercises/rotate_matrix}
-
-    \item
-    \input{cp7/exercises/airport_construction}
-
-    \item
-    \input{cp7/exercises/pascal_triangle}
-
-    \item
+    \item \textbf{Cuadrado mágico}\\
     \input{cp7/exercises/magic_square}
 
-    \item
+    \item \textbf{Suma de matrices:}\\
+    Implemente un método que reciba dos matrices (arrays bidimensionales de tipo entero que representan matrices algebraicas) y devuelva su suma.
+
+    \item \textbf{Transpuesta:}\\
+    Implemente un método que reciba una matriz (un array bidimensional de tipo entero que representa una matriz algebraica) y devuelva su transpuesta (intercambiar filas y columnas).
+
+    \item \textbf{Construcción de aeropuertos}\\
+    \input{cp7/exercises/airport_construction}
+
+    \item \textbf{Triángulo de Pascal}\\
+    \input{cp7/exercises/pascal_triangle}
+
+    \item \textbf{Cuidado con los ceros:}\\
+    Implemente un método que reciba una matriz \(M\) y devuelva otra matriz \(M'\). La matriz \(M'\) se forma a partir de \(M\), manteniendo sus valores originales pero haciendo cero cualquier columna o fila que tenga algún cero.
+
+    \item \textbf{Punto raro:}\\ 
+    Implemente un método que reciba una matriz y devuelva, de existir, uno de sus puntos raros. Un punto raro es aquel que es el más pequeño de su fila, pero el más grande de su columna. En caso de existir alguno, devuelva una tupla con sus coordenadas. En caso de no existir, devuelva \texttt{null}.	
+
+    \item \textbf{Multiplicación de matrices:}\\
+    Implemente un método que reciba dos matrices (arrays bidimensionales de tipo entero que representan matrices algebraicas) y devuelva su multiplicación. Asuma que las matrices de entrada son multiplicables.
+
+    \item \textbf{Espiral:}\\
+    Implemente un método que reciba una matriz de \(n\) filas y \(m\) columnas y retorne un array de una sola dimensión, de tamaño \(n \times m\). El array resultante debe tener todos los elementos de la espiral que se forma comenzando por la primera posición y moviéndose a favor de las manecillas del reloj.
+
+    \item \textbf{Rotar matrices}\\
+    \input{cp7/exercises/rotate_matrix}
+
+    \item \textbf{Submatriz}\\
     \input{cp7/exercises/submatrix}
 
-    \item
-    Implemente un método que reciba un array bidimensional de \(n\) filas y \(m\) columnas y retorne un array de una sola dimensión, de tamaño \(n \times m\). El array resultante debe tener todos los elementos de la espiral que se forma comenzando por la primera posición y moviéndose a favor de las manecillas del reloj.
-
-    \item
+    \item \textbf{Ordenando matrices}\\
     \input{cp7/exercises/sorting_matrices}
 \end{enumerate}
 
 \newpage
-\section{Tableros. Simulación.}
+\section{Tableros.}
 \begin{enumerate}
     \item \textbf{4 en línea}\\
     \input{cp7/exercises/four_in_a_row}
 
-    \item \textbf{Sopa de letras}\\
-    \input{cp7/exercises/word_search}
-
     \item \textbf{Tic-Tac-Toe}\\
-    Implementa un juego sencillo de Cerito-Cruz para dos jugadores. Ten en cuenta los siguientes requisitos:
+    Implementa un juego sencillo de Cerito-Cruz para dos jugadores humanos. Ten en cuenta los siguientes requisitos:
     \begin{itemize}
         \item Usa un array bidimensional de 3x3 para representar el tablero.
         \item Los jugadores deben turnarse para colocar sus símbolos (\texttt{X} o \texttt{O}). Comprueba que los movimientos sean válidos.
-        \item Verifica si algún jugador ha ganado o si hay un empate.
+        \item En cada turno verifica si algún jugador ha ganado o si hay un empate.
     \end{itemize}
+
+    \item \textbf{Sopa de letras}\\
+    \input{cp7/exercises/word_search}
 
     \item \textbf{Tablero alcanzable por caballos}\\
     \input{cp7/exercises/knight_reachable_board}
@@ -235,22 +235,3 @@
     \item \textbf{Recorriendo islas}\\
     \input{cp7/exercises/exploring_islands}
 \end{enumerate}
-
-
-% \section{Busca el Tesoro}
-% \textbf{Descripción:}  
-% Crea un juego donde el jugador debe encontrar un "tesoro" oculto en un tablero de tamaño 5x5.
-
-% \textbf{Requisitos:}
-% \begin{itemize}
-%     \item Genera el tablero con celdas iniciales vacías (\texttt{-}).
-%     \item Oculta el tesoro en una posición aleatoria.
-%     \item Permite al jugador adivinar las coordenadas del tesoro.
-%     \item Muestra un mensaje cuando el jugador encuentra el tesoro.
-% \end{itemize}
-
-% \textbf{Extensiones:}
-% \begin{itemize}
-%     \item Añade un contador de intentos.
-%     \item Da pistas indicando si el tesoro está más cerca o lejos después de cada intento.
-% \end{itemize}
