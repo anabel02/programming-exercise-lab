@@ -1,6 +1,6 @@
-Determina si un número entero positivo es perfecto. Un número entero positivo \( n \) se denomina \textit{perfecto} si la suma de sus divisores propios (excluyendo a \( n \)) es igual a \( n \).
+Determina si un número entero positivo es perfecto. Un número entero positivo \( n \) se denomina \textit{perfecto} si la suma de sus divisores propios (excluyendo a \( n \)) es igual a \( n \). Formalmente:
 \[
-n \text{ es perfecto} \iff \sum_{\substack{d \mid n \\ d < n}} d = n
+n \text{ es perfecto} \iff n = \sum_{\substack{d \mid n \\ d < n}} d,
 \]
 
 donde \( d \mid n \) indica que \( d \) es un divisor de \( n \), es decir, \( n \) es divisible por \( d \). 

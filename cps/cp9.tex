@@ -1,0 +1,150 @@
+\begin{center}
+    \begin{large}
+    Cp 9 - Tableros\\
+    Curso \academicyear\\
+    \end{large}
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\linewidth]{cp7/matrix.png}
+    \end{figure}
+\end{center}
+
+\section{4 en línea}
+\input{cp7/exercises/four_in_a_row}
+
+\section{Tic-Tac-Toe}
+Implementa un juego sencillo de Cerito-Cruz para dos jugadores humanos. Ten en cuenta los siguientes requisitos:
+\begin{itemize}
+    \item Usa un array bidimensional de 3x3 para representar el tablero.
+    \item Los jugadores deben turnarse para colocar sus símbolos (\texttt{X} o \texttt{O}). Comprueba que los movimientos sean válidos.
+    \item En cada turno verifica si algún jugador ha ganado o si hay un empate.
+\end{itemize}
+
+\section{Sopa de letras}
+\input{cp7/exercises/word_search}
+
+\section{Tablero alcanzable por caballos}
+\input{cp7/exercises/knight_reachable_board}
+
+\section{Dama amenazada}
+\input{cp7/exercises/queen_threat}
+
+\section{Validación de un Sudoku}
+En este ejercicio, implementarás un programa que valide si un tablero de Sudoku es válido. El programa recibirá como entrada un tablero representado como una matriz de \(9 \times 9\), un tablero de Sudoku debe cumplir con las siguientes reglas:
+\begin{itemize}
+    \item Cada fila debe contener los números del \(1\) al \(9\) sin repetir.
+    \item Cada columna debe contener los números del \(1\) al \(9\) sin repetir.
+    \item Cada subcuadrícula de \(3 \times 3\) debe contener los números del \(1\) al \(9\) sin repetir.
+\end{itemize}
+
+Algunas celdas estarán vacías, representadas por un \(0\).
+
+\subsection*{Ejemplo de entrada}
+\[
+\text{sudoku} = 
+\begin{bmatrix}
+5 & 3 & 0 & 0 & 7 & 0 & 0 & 0 & 0 \\
+6 & 0 & 0 & 1 & 9 & 5 & 0 & 0 & 0 \\
+0 & 9 & 8 & 0 & 0 & 0 & 0 & 6 & 0 \\
+8 & 0 & 0 & 0 & 6 & 0 & 0 & 0 & 3 \\
+4 & 0 & 0 & 8 & 0 & 3 & 0 & 0 & 1 \\
+7 & 0 & 0 & 0 & 2 & 0 & 0 & 0 & 6 \\
+0 & 6 & 0 & 0 & 0 & 0 & 2 & 8 & 0 \\
+0 & 0 & 0 & 4 & 1 & 9 & 0 & 0 & 5 \\
+0 & 0 & 0 & 0 & 8 & 0 & 0 & 7 & 9 \\
+\end{bmatrix}
+\]
+\subsection*{Salida esperada}
+
+\begin{itemize}
+    \item Para el tablero de entrada anterior, el programa debe devolver:
+    \[
+    \text{El tablero de Sudoku es válido: Sí.}
+    \]
+    \item Si se modifica la celda \((1,2)\) del tablero para que contenga un \(5\), el programa debe devolver:
+    \[
+    \text{El tablero de Sudoku es válido: No.}
+    \]
+\end{itemize}
+
+\section{Validación de movimientos en Ajedrez}
+Tu misión es implementar un programa que determine si un movimiento de una pieza de ajedrez es válido. Usa el siguiente \textcolor{blue}{enum} para representar las piezas:
+
+\begin{lstlisting}
+public enum ChessPiece
+{
+    None,           // No piece (empty square)
+    WhitePawn,
+    WhiteKnight,
+    WhiteBishop,
+    WhiteRook,
+    WhiteQueen,
+    WhiteKing,
+    BlackPawn,
+    BlackKnight,
+    BlackBishop,
+    BlackRook,
+    BlackQueen,
+    BlackKing
+}
+\end{lstlisting}
+
+El tablero se representará como una matriz de \(8 \times 8\) de tipo \texttt{ChessPiece}, donde cada celda indica la pieza presente o está vacía (\texttt{None}).
+
+Tu programa debe recibir como entrada un tablero, junto con las coordenadas iniciales y finales del movimiento, representadas como \((x_1, y_1)\) y \((x_2, y_2)\); a partir de esta información, deberá determinar si el movimiento indicado es válido, considerando las reglas correspondientes a la pieza ubicada en la posición inicial.
+
+Las reglas de movimiento para cada tipo de pieza son las siguientes:
+\begin{itemize}
+    \item \textbf{Peones} (Pawn): Avanzan (o retroceden, si son negros) una casilla hacia adelante, excepto en su primer movimiento, donde pueden avanzar dos casillas. Capturan piezas únicamente en diagonal y no pueden avanzar hacia casillas ocupadas.
+    \item \textbf{Caballos} (Knight): Se mueven en forma de "L", moviéndose dos casillas en una dirección y una en perpendicular. Pueden saltar sobre otras piezas, pero solo ocupan la casilla de destino si está vacía o contiene una pieza del oponente.
+    \item \textbf{Alfiles} (Bishop): Se mueven únicamente en diagonal, cualquier cantidad de casillas. No pueden atravesar ni ocupar casillas ocupadas, salvo para capturar una pieza del oponente en la casilla de destino.
+    \item \textbf{Torres} (Rook): Se mueven en línea recta, ya sea horizontal o verticalmente, cualquier número de casillas. No pueden atravesar ni ocupar casillas ocupadas, salvo para capturar una pieza del oponente en la casilla de destino.
+    \item \textbf{Reinas} (Queen): Combinan los movimientos de las torres y los alfiles, moviéndose tanto en línea recta como en diagonal.
+    \item \textbf{Reyes} (King): Se mueven una casilla en cualquier dirección: horizontal, vertical o diagonal. No pueden moverse a una casilla ocupada salvo para capturar una pieza del oponente en la casilla de destino.
+\end{itemize}
+
+\textbf{Nota}: El ejercicio no requiere implementar lógica adicional como detectar jaque, jaque mate, enroque o promoción de peones. Solo se debe comprobar si el movimiento en cuestión cumple con las reglas básicas de la pieza.
+
+\section{Jaque al rey}
+\input{cp7/exercises/check_black_king}
+
+\section{El Mago y el Bosque Encantado}
+En un bosque encantado, un mago ha decidido medir el poder de su hechizo de teletransportación. El bosque está representado como una cuadrícula de \(N \times M\), donde cada celda puede estar despejada o bloqueada por un obstáculo mágico. El mago comienza en una posición definida por el usuario, y desea calcular cuán lejos puede llegar su hechizo desde esa posición, sin atravesar los obstáculos.
+\begin{itemize}
+    \item El bosque se representa como una matriz booleana: 
+    \begin{itemize}
+        \item \texttt{false}: La celda está despejada (el hechizo puede pasar).  
+        \item \texttt{true}: La celda está bloqueada (el hechizo no puede pasar).  
+    \end{itemize}
+    \item La entrada incluye la posición inicial del mago \((x, y)\).  
+    \item El resultado debe ser una matriz que indique la distancia desde la posición inicial hasta cada celda accesible, respetando los obstáculos. Las celdas bloqueadas deben marcarse como \(-1\) en la salida.  
+\end{itemize}
+
+\subsection*{Ejemplo}
+\text{Entrada:}
+\begin{itemize}
+        \item Posición inicial del mago: \((2, 2)\).  
+        \item Bosque: 
+        \[ 
+        \begin{bmatrix}
+            \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} \\
+            \texttt{false} & \texttt{false} & \texttt{false} & \texttt{true}  & \texttt{false} \\
+            \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} \\
+            \texttt{false} & \texttt{false} & \texttt{false} & \texttt{true}  & \texttt{false} \\
+            \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} & \texttt{false} \\
+            \end{bmatrix}
+        \]
+\end{itemize}
+\text{Salida:}
+\[
+\begin{bmatrix}
+4 & 3 & 2 & 3 & 4  \\
+3 & 2 & 1 & -1 & 3 \\
+2 & 1 & 0 & 1  & 2 \\
+3 & 2 & 1 & -1 & 3 \\
+4 & 3 & 2 & 3  & 4 \\
+\end{bmatrix}
+\]
+
+\section{Recorriendo islas}
+\input{cp7/exercises/exploring_islands}
