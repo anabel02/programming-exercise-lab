@@ -1,0 +1,276 @@
+\begin{center}
+    \begin{large}
+    Cp 6.5 - Control de flujo. Consolidación.\\
+    Curso \academicyear\\
+    \end{large}
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\linewidth]{cp4.5/control_flow.jpg}
+    \end{figure}
+\end{center}
+
+Para cada ejercicio, se espera que intentes predecir el resultado de la ejecución del código sin ejecutarlo en un entorno de desarrollo. Una vez que hayas hecho tus predicciones, puedes ejecutar el código para comprobar tus respuestas.
+
+\begin{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int Calculate(int n)
+{
+    if (n < 5)
+    {
+        return n * 2;
+    }
+    else if (n < 10)
+    {
+        return n + 3;
+    }
+    else
+    {
+        return n - 2;
+    }
+}
+
+int result1 = Calculate(3);
+int result2 = Calculate(7);
+int result3 = Calculate(12);
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Qué valor devuelve \texttt{Calculate(3)}?
+    \item ¿Qué valor devuelve \texttt{Calculate(5)}?
+    \item ¿Qué valor devuelve \texttt{Calculate(12)}?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int x = 10;
+int y = 3;
+
+if (x > 5)
+{
+    x += y;
+}
+
+if (x < 15)
+{
+    y += x;
+}
+else
+{
+    y -= x;
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuál es el valor de \texttt{x} después del primer bloque \texttt{if}?
+    \item ¿Cuál es el valor final de \texttt{y}?
+\end{enumerate}
+\item Dado el siguiente código:
+\begin{lstlisting}
+int x = 10;
+int y = 5;
+int result = 0;
+
+if (x > y)
+{
+    result = x * y;
+}
+else
+{
+    result = x + y;
+}
+
+y = 0;
+
+if (result > 20)
+{
+    result -= 10;
+}
+else
+{
+    result += 10;
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Qué valor tiene \texttt{result} después del primer bloque \texttt{if}?
+    \item ¿Qué valor tiene \texttt{result} después del segundo bloque \texttt{if}?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int result = 0;
+
+for (int i = 0; i < 5; i++)
+{
+    if (i % 2 == 0)
+    {
+        result += i;
+    }
+    else
+    {
+        result -= i;
+    }
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuál es el valor de \texttt{sum} después de la primera iteración?
+    \item ¿Cuál es el valor de \texttt{sum} al final del bucle?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+string[] fruits = [ "apple", "banana", "cherry" ];
+string message = "";
+
+for (int i = 0; i < fruits.Length; i++)
+{
+    switch (fruits[i])
+    {
+        case "apple":
+            message += "A";
+            break;
+        case "banana":
+            message += "B";
+            break;
+        case "cherry":
+            message += "C";
+            break;
+        default:
+            message += "?";
+            break;
+    }
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuál es el valor de \texttt{message} al final del bucle \texttt{for}?
+    \item ¿Qué ocurre si se agrega ''orange'' al arreglo \texttt{fruits}?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int result = 1;
+
+for (int i = 1; i <= 5; i++)
+{
+    if (i % 2 == 0)
+    {
+        result *= i;
+    }
+    else
+    {
+        result += i;
+    }
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuál es el valor de \texttt{result} después de la primera iteración?
+    \item ¿Cuál es el valor de \texttt{result} al final del bucle?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int a = 0;
+int count = 0;
+
+while (a < 10)
+{
+    a++;
+    if (a % 2 == 0)
+    {
+        continue;
+    }
+    count++;
+    if (count == 3)
+    {
+        break;
+    }
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Qué valor tiene \texttt{a} cuando el bucle se detiene?
+    \item ¿Cuántas veces se incrementa \texttt{count}?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int sum = 0;
+
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 2; j++)
+    {
+        sum += i + j;
+    }
+}
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuántas veces se ejecuta el bucle \texttt{for} interno?
+    \item ¿Cuál es el valor de \texttt{sum} al final del código?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+void Increment(int number)
+{
+    number += 5;
+}
+
+int originalNumber = 10;
+Increment(originalNumber);
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuál es el valor de \texttt{originalNumber} antes de llamar al método \texttt{Increment}?
+    \item ¿Cuál es el valor de \texttt{originalNumber} después de llamar al método \texttt{Increment}?
+    \item ¿Por qué sucede esto?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+void ModifyArray(int[] numbers)
+{
+    numbers[0] = 99;
+}
+
+int[] originalArray = [1, 2, 3, 4];
+ModifyArray(originalArray);
+\end{lstlisting}
+\begin{enumerate}
+    \item ¿Cuál es el valor de \texttt{originalArray[0]} antes de llamar al método \texttt{ModifyArray}?
+    \item ¿Cuál es el valor de \texttt{originalArray[0]} después de llamar al método \texttt{ModifyArray}?
+    \item ¿Por qué sucede esto?
+\end{enumerate}
+
+\item Dado el siguiente código:
+\begin{lstlisting}
+int Method1(int[] arr)
+{
+    int i = 0;
+    int result = 0;
+    while (i < 4)
+    {
+        result += arr[i++];
+    }
+    return result;
+}
+
+int Method2(int[] arr)
+{
+    int i = 0;
+    int result = 0;
+    while (i < 4)
+    {
+        result += arr[++i];
+    }
+    return result;
+}
+
+int[] myArray = [ 10, 20, 30, 40, 50 ];
+int result1 = Method1(myArray);
+int result2 = Method2(myArray);
+\end{lstlisting}
+
+\begin{enumerate}
+    \item ¿Qué valor guarda result1?
+    \item ¿Qué valor guarda result2?
+\end{enumerate}
+
+\end{enumerate}
