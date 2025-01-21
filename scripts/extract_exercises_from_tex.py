@@ -63,7 +63,7 @@ def extract_exercises_from_tex(tex_file_path):
 
 # Main function to execute the extraction and save to JSON
 def main():
-    tex_file_path = 'exercises.tex'  # Replace with your .tex file path
+    tex_file_path = 'src/exercises.tex'  # Replace with your .tex file path
     exercises = extract_exercises_from_tex(tex_file_path)
 
     # Convert to JSON format
