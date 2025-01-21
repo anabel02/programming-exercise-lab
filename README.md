@@ -1,7 +1,5 @@
 # Programming Exercise Lab
 
-## Overview
-
 Welcome to the Programming Exercise Lab repository! This repository contains a collection of lab exercises designed for students to practice and enhance their programming skills. The exercises are written in LaTeX and cover a wide range of topics, from basic programming concepts to advanced algorithms.
 
 ## Features
