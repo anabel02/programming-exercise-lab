@@ -1,5 +1,6 @@
 import json
 import re
+import os
 
 
 # Function to extract exercises from a .tex file
@@ -40,11 +41,19 @@ def extract_exercises_from_tex(tex_file_path):
         path_match = re.match(r'\s*\\input\{(.+?)\}', line)
         if path_match:
             path = path_match.group(1)
+            # Read the content from the file specified in the path
+            content = ""
+            exercise_path = os.path.join(os.path.dirname(tex_file_path), path)
+            if os.path.exists(exercise_path):
+                with open(exercise_path, 'r', encoding='utf-8') as exercise_file:
+                    content = exercise_file.read()
+
             categories = category_mapping.get(current_section, [])
 
             exercises.append({
                 "title": title,
                 "path": path,
+                "content": content.strip(),
                 "difficulty": current_difficulty,
                 "categories": categories
             })
