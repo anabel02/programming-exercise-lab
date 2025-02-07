@@ -1,0 +1,32 @@
+Dado que un número \(n\) es primo si solo es divisible por 1 y por sí mismo, y además se conoce que si \(d\) es divisor de \(n\) entonces \(d \leq n\), para determinar si un número \(n\) es primo, basta con verificar si es divisible por algún número \(d\) tal que \(2 \leq d < n\). Si encontramos algún divisor en ese rango, podemos concluir que \(n\) no es primo.
+
+Una primera implementación podría iterar desde \(2\) hasta \(n - 1\), verificando si \(n\) es divisible por algún número:
+      
+\begin{lstlisting}
+bool IsPrime(int n)
+{
+    int d = 2;
+    while (d < n)
+    {
+        if (n % d == 0) return false;
+        else d++;
+    }
+    return true;
+}
+\end{lstlisting}
+    
+La solución anterior es correcta, aunque realiza iteraciones innecesarias, ya que basta con comprobar divisores hasta la raíz cuadrada de \(n\). Esto se debe a que si \(n\) tiene un divisor mayor que \(\sqrt{n}\), necesariamente debe tener otro menor que \(\sqrt{n}\). Reduciendo el rango de búsqueda, podemos mejorar la eficiencia del algoritmo:
+    
+\begin{lstlisting}
+bool IsPrime(int n)
+{
+    int d = 2;
+    int sqr = (int)Math.Sqrt(n);
+    while (d <= sqr)
+    {
+        if (n % d == 0) return false;
+        d++;
+    }
+    return true;
+}
+\end{lstlisting}
