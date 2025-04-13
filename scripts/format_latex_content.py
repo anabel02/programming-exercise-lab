@@ -53,7 +53,7 @@ def call_llm(llm: GoogleGenerativeAI, content: str) -> str:
         raise
 
 
-def format_topics_json(topics: List[Dict[str, Any]], llm: GoogleGenerativeAI) -> List[Dict[str, Any]]:
+def format_latex_content(topics: List[Dict[str, Any]], llm: GoogleGenerativeAI) -> List[Dict[str, Any]]:
     """
     Formats the input JSON data into a structured list of topics with exercises.
 
@@ -93,7 +93,7 @@ def main() -> None:
         llm = get_llm()
 
         # Format the data into topics
-        topics = format_topics_json(data, llm)
+        topics = format_latex_content(data, llm)
 
         # Save the formatted data to a new JSON file
         save_json_data(output_path, topics)
